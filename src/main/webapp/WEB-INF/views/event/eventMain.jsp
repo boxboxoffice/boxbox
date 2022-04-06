@@ -39,7 +39,7 @@
 				<div class="card" style="width: 20rem;">
 					<a href="eventView.ev?evNum=${event.evNum }&pageNum=${currentPage}"><img src="images/event/${event.evTitlePhoto }" class="card-img-top" alt="#"></a>
 					<div class="card-body">
-						<a href="eventView.ev?evNum=${event.evNum }&pageNum=${currentPage}" class="card-text">${event.evTitle }</a><br />
+						<a href="eventView.ev?evNum=${event.evNum }&pageNum=${currentPage}" class="card-text" >${event.evTitle }</a><br />
 						<a href="eventView.ev?evNum=${event.evNum }&pageNum=${currentPage}" class="evPeriod">${event.evStart } ~ ${event.evEnd }</a>
 					 </div>
 				</div>

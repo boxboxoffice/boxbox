@@ -21,11 +21,12 @@ select * from review;
 create sequence ev_seq;
 
 delete event;
+
 drop table event;
 
 create table event(	-- 이벤트게시판
 evNum number(10) primary key,	-- 이벤트 게시판 번호
-evTitle varchar2(20),	-- 이벤트 게시판 제목
+evTitle varchar2(100),	-- 이벤트 게시판 제목
 evContent varchar2(1000),	-- 이벤트 게시판 내용
 id varchar2(20),	-- 사용자 id
 evTitlePhoto varchar2(100),	-- 이벤트 게시글 제목 사진
@@ -37,25 +38,26 @@ evDel VARCHAR2(2) default 'n', -- 게시글 삭제
 evReadCount NUMBER -- 조회수
 );
 
-insert into event values(1, 'sonicEvent1', 'test1', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(2, 'sonicEvent2', 'test2', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(3, 'sonicEvent3', 'test3', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(4, 'sonicEvent4', 'test4', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(5, 'sonicEvent5', 'test5', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(6, 'sonicEvent6', 'test6', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(7, 'sonicEvent7', 'test7', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(8, 'sonicEvent8', 'test8', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(9, 'sonicEvent9', 'test9', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(10, 'sonicEvent10', 'test10', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(11, 'sonicEvent11', 'test11', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(12, 'sonicEvent12', 'test12', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(13, 'sonicEvent13', 'test13', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(14, 'sonicEvent14', 'test14', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(15, 'sonicEvent15', 'test15', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(16, 'sonicEvent16', 'test16', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(17, 'sonicEvent17', 'test17', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(18, 'sonicEvent18', 'test18', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
-insert into event values(19, 'sonicEvent19', 'test19', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
+insert into event values(1, '캐시비/티머니', ' ', 'master', 'eventTitle9.jpg', 'eventContent9.jpg', sysdate, '2018-09-03', '2023-08-31', 'n', 0);
+insert into event values(2, '마이신한포인트', ' ', 'master', 'eventTitle10.jpg', 'eventContent10.jpg', sysdate, '2019-09-01', '2023-06-30', 'n', 0);
+insert into event values(3, '기아레드멤버스', ' ', 'master', 'eventTitle11.jpg', 'eventContent11.jpg', sysdate, '2019-12-27', '2023-12-31', 'n', 0);
+insert into event values(4, '현대블루멤버스', ' ', 'master', 'eventTitle12.jpg', 'eventContent12.jpg', sysdate, '2019-12-27', '2023-12-31', 'n', 0);
+insert into event values(5, '굿노트다이어리', ' ', 'master', 'eventTitle7.jpg', 'eventContent7.jpg', sysdate, '2021-05-31', '2099-12-31', 'n', 0);
+insert into event values(6, '소닉 투명카드 증정', ' ', 'master', 'sonicTitle.jpg', 'sonicContent.jpg', sysdate, '2022-04-06', '2022-04-30', 'n', 0);
+insert into event values(7, '소방공무원', ' ', 'master', 'eventTitle4.jpg', 'eventContent4.jpg', sysdate, '2022-01-01', '2022-12-31', 'n', 0);
+insert into event values(8, '국군장병', ' ', 'master', 'eventTitle5.jpg', 'eventContent5.jpg', sysdate, '2022-01-01', '2022-12-31', 'n', 0);
+insert into event values(9, '경찰-해양경찰', ' ', 'master', 'eventTitle6.jpg', 'eventContent6.jpg', sysdate, '2022-01-01', '2022-12-31', 'n', 0);
+insert into event values(10, '카카오뱅크', ' ', 'master', 'eventTitle8.jpg', 'eventContent8.jpg', sysdate, '2022-02-01', '2022-07-31', 'n', 0);
+insert into event values(11, '모비우스 아트카드', ' ', 'master', 'mobrbiusTitle.jpg', 'mobrbiusContent.jpg', sysdate, '2022-03-30', '2022-04-30', 'n', 0);
+insert into event values(12, '4월 릴레이 관림 이벤트', ' ', 'master', 'eventTitle.jpg', 'eventContent.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
+insert into event values(13, '아카데미 수상작 상영전', ' ', 'master', 'eventTitle2.jpg', 'eventContent2.jpg', sysdate, '2022-03-31', '2022-04-12', 'n', 0);
+insert into event values(14, '"뜨거운 피" 를 보여주세요', ' ', 'master', 'eventTitle3.jpg', 'eventContent3.jpg', sysdate, '2022-03-30', '2022-04-12', 'n', 0);
+insert into event values(15, '소닉 현장 증정 이벤트', ' ', 'master', 'sonicTitle2.jpg', 'sonicContent2.jpg', sysdate, '2022-04-06', '2022-04-30', 'n', 0);
+insert into event values(16, '소닉 아트카드', ' ', 'master', 'sonicTitle3.jpg', 'sonicContent3.jpg', sysdate, '2022-04-06', '2022-04-30', 'n', 0);
+insert into event values(17, '모비우스 포스터 증정', ' ', 'master', 'mobrbiusTitle2.jpg', 'mobrbiusContent2.jpg', sysdate, '2022-03-30', '2022-04-30', 'n', 0);
+insert into event values(18, '소닉 스페셜 경품 이벤트', ' ', 'master', 'sonicTitle4.jpg', 'sonicContent4.jpg', sysdate, '2022-04-01', '2022-04-30', 'n', 0);
+insert into event values(19, '개봉 8주차 이벤트', ' ', 'master', '0Title.jpg', 'sonicContent.jpg', sysdate, '2022-04-07', '2022-04-14', 'n', 0);
+insert into event values(20, '스텔라 무대인사', ' ', 'master', 'stellarTitle.jpg', 'stellarContent.jpg', sysdate, '2022-04-09', '2022-04-10', 'n', 0);
 select * from event;
 
 ---------------------------------------------------------------------------------------------------------------
