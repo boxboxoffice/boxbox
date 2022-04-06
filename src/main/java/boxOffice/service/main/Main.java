@@ -13,7 +13,7 @@ public class Main implements CommandProcess {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		MovieDao md = MovieDao.getInstance();
-		List<Movie> list = md.list();
+		List<Movie> list = md.mainList();
 		
 		request.setAttribute("list", list);
 		

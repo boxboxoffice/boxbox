@@ -30,8 +30,8 @@ public class MovieDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Movie> list() {
-		return session.selectList("moviens.list");
+	public List<Movie> mainList() {
+		return session.selectList("moviens.mainList");
 	}
 	
 	public int getTotalComing() {
