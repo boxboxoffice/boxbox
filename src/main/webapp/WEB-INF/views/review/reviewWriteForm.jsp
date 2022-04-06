@@ -10,8 +10,8 @@
 </head>
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
 <body>
-	<div id="mainContainer" align="center">
-		<form action="reviewWrite.rv" name="rvForm" id="rvForm">
+	<div id="mainContainer" align="center" >
+		<form action="reviewWrite.rv" name="rvForm" id="rvForm" >
 		<input type="hidden" name="rvNum" value="${rvNum }">
 		<input type="hidden" name="rvLike" value="${rvLike }">
 		<input type="hidden" name="rvReadCount" value="${rvReadCount }">
@@ -30,18 +30,18 @@
 				<tr>
 					<th width="15%">영화제목</th>
 					<td><select class="form-control" name="mvTitle" required="required" style="text-align: center; font-weight: bold;">
-						<option value="스파이더맨 노 웨이 홈">스파이더맨 노 웨이 홈</option>
-						<option value="극장판 주술회전 0">극장판 주술회전 0</option>
-						<option value="더 배트맨">더 배트맨</option>
-						<option value="씽2게더">씽2게더</option>
-						<option value="이상한 나라의 수학자">이상한 나라의 수학자</option>
-						<option value="문폴">문폴</option>
-					</select></td>
+								<option value="">영화선택</option>
+								<option value="스파이더맨 노 웨이 홈">스파이더맨 노 웨이 홈</option>
+								<option value="극장판 주술회전 0">극장판 주술회전 0</option>
+								<option value="더 배트맨">더 배트맨</option>
+								<option value="씽2게더">씽2게더</option>
+								<option value="이상한 나라의 수학자">이상한 나라의 수학자</option>
+								<option value="문폴">문폴</option></select></td>
 				</tr>
 				<tr>
 					<th width="15%">평점</th>
 					<td><input class="form-control" type="range" min="1" max="10" class="slider" id="myRange" name="rvGrade">
-						<div id="value" align="center" style="font-weight: bold;"></div></td>
+						<div id="value" align="center" style="font-weight: bold; font-size: 1.2em;"></div></td>
 				</tr>
 				<tr>
 					<th width="15%">내용<br><sup>(<span id="nowByte">0</span>/1000bytes)</sup></th>

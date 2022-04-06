@@ -1,3 +1,4 @@
+delete NOWSHOWING;
 insert into NOWSHOWING values(01,01,01,01,'3월 31일월 31일','n');
 insert into NOWSHOWING values(02,01,01,02,'3월 31일월 31일','n');
 insert into NOWSHOWING values(3월 31일,01,01,3월 31일,'3월 31일월 31일','n');
