@@ -8,12 +8,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Ticket&Review</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <style type="text/css">@import url("css/ticket1.css");</style>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 	$(function(){ 
-		var people=1;
+		var people=1;   
 		var count;
 		$("select[name=people]").change(function(){
 			people=$(this).val(); //value값 가져오기
@@ -65,7 +64,7 @@
 
 	<section>
 		<div id="maincontent">
-			<a id="title1">| 인원 및 좌석선택</a>
+			<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px">인원 및 좌석선택</a>
 			<div id="movieNowBox">
 			
 			<form action="ticketing6.re" method="post" name="frm">
@@ -175,7 +174,7 @@
 
 
 <!-- <footer><div id="footcontent"><jsp:include page="../public/bottom.jsp"></jsp:include></div></footer> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
