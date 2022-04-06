@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberbo">
+	<select id="select" parameterType="string" resultType="member">
+		select * from member where id=#{id}
+	</select>
+	<select id="insert" parameterType="member">
+		insert into member values(#{id}, #{password}, #{name}, 0, 0, #{tel}, #{address}, sysdate, 'n')
+	</select>
+	
+	<select id="selectScore" parameterType="string" resultType="int">
+		select score from member where id=#{id}
+	</select>
+	<select id="reduceScore" parameterType="member">
+		update member set score = score-20 where id=#{id}
+	</select>
+	<update id="plusScore" parameterType="member">
+		update member set score = score+2 where id=#{id }
+	</update>
+	<update id="textcountAdd" parameterType="string">
+		update member set textcount = textcount +1 where id=#{id}
+	</update>
+	<update id="ticketcountAdd" parameterType="string">
+		update member set ticketcount = ticketcount +1 where id=#{id}
+	</update>
+</mapper> 
