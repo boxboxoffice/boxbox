@@ -1,3 +1,27 @@
+drop table store cascade constraints;
+CREATE table STORE(
+pdCode NUMBER PRIMARY KEY NOT NULL,
+pdName VARCHAR2(20),
+pdPrice NUMBER,
+
+);
+
+delete from store;
+INSERT INTO store values(1,'오리지널팝콘' , 4000);
+INSERT INTO store values(2,'어니언팝콘', 5000);
+INSERT INTO store values(3,'치즈팝콘', 5000);
+INSERT INTO store values(4,'콜라', 3000);
+INSERT INTO store values(5,'사이다',3000);
+INSERT INTO store values(6,'환타',3000);
+INSERT INTO store values(7,'즉석구이오징어',4000);
+INSERT INTO store values(8,'츄러스',3000);
+INSERT INTO store values(9,'플레인핫도그',5000);
+
+
+
+
+
+
 drop table reservation cascade constraints;
 CREATE table RESERVATION
 (
@@ -14,12 +38,8 @@ rvCheck VARCHAR2(2) default 'n' 	-- 리뷰 확인									rvCheck
 );
 
 
-select * from reservation;
 
 delete from RESERVATION;
-
-
-delete from reservation;
 
 insert into RESERVATION values(1,02,01,'A1','shyun',1,10000,'y','y','y');
 insert into RESERVATION values(2,10,02,'A1','shyun',2,12000,'y','y','y');

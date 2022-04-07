@@ -18,6 +18,7 @@
 		<typeAlias alias="screen" type="boxOffice.model.Screen"/>
 		<typeAlias alias="likes" type="boxOffice.model.Likes"/>
 		<typeAlias alias="movie" type="boxOffice.model.Movie"/>
+		<typeAlias alias="store" type="boxOffice.model.Store"/>
 	</typeAliases>
 	<!-- DataBase 연결에 대한 정보 -->
 	<environments default="development">
@@ -42,6 +43,7 @@
 		<mapper resource="screen.xml"/>
 		<mapper resource="likes.xml"/>
 		<mapper resource="movie.xml"/>
+		<mapper resource="store.xml"/>
 	</mappers>
 	 
 </configuration>
