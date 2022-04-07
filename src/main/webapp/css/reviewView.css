@@ -3,8 +3,10 @@
 
 #mainTable {width: 100%; text-align: center;}
 
-h1 {color: black; font-family:Century; }
+h1 {color: black;}
 
 #rvTitle {font-size: 18px; color: #F95700; font-weight: bold;}
 
 #tbody th { background-color: orange; color: white; vertical-align:middle;}
+
+body {font-family:  'Arita-dotum-Medium';}

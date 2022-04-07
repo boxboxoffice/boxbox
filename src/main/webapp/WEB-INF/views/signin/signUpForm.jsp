@@ -50,8 +50,15 @@ margin-left : 10px;
 	text-align: left;
     color: #F95700;
 }
+@font-face
+{
+	font-family: 'Arita-dotum-Medium';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+	font-weight: normal;
+	 font-style: normal;
+}
+body {font-family:  'Arita-dotum-Medium';}
 </style>
-
 
 <!-- Custom styles for this template -->
 <link href="form-validation.css" rel="stylesheet">

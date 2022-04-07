@@ -19,3 +19,5 @@ insert into member values('test1','123','신현태',0,0,'010-0000-0000','없음'
 insert into member values('test2','123','김진성',0,0,'010-0000-0000','없음',sysdate,100,'n');
 insert into member values('test3','123','김진만',0,0,'010-0000-0000','없음',sysdate,100,'n');
 insert into member values('test4','123','서정훈',0,0,'010-0000-0000','없음',sysdate,100,'n');
+insert into member values('master','master','master',0,0,'010-0000-0000','없음',sysdate,100,'n');
+
