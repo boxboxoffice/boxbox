@@ -25,7 +25,7 @@ public class SearchReservationList implements CommandProcess {
 		{
 			whereMS="아이디";
 		}
-		if(whereM.equals("movieTitle"))
+		if(whereM.equals("mvTitle"))
 		{
 			whereMS="영화제목";
 		}

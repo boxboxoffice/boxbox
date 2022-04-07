@@ -39,10 +39,10 @@
 		select count(*) from reservation where id=#{id} and shCheck ='y'
 	</select>
 	<select id="selectTiketList" resultType="reservation">
-		select *  from (select rowNum rn, a.* from(select r.ticketCode,r.finalPrice,r.shCheck,r.rsCheck,r.id,m.mvTitle,r.nsCode from reservation r, movie m where m.mvcode=r.mvcode and (id=#{id} and shCheck ='n') group by r.ticketCode,r.finalPrice,r.shCheck,r.rsCheck,r.id,m.mvTitle,r.nsCode order by ticketCode desc)a) where rn between #{startRow} and #{endRow}
+		select *  from (select rowNum rn, a.* from(select r.ticketCode,r.shCheck,r.rsCheck,r.id,m.mvTitle,r.nsCode from reservation r, movie m where m.mvcode=r.mvcode and (id=#{id} and shCheck ='n') group by r.ticketCode,r.shCheck,r.rsCheck,r.id,m.mvTitle,r.nsCode order by ticketCode desc)a) where rn between #{startRow} and #{endRow}
 	</select>
 	<select id="selectEndTiketList" resultType="reservation">
-		select * from (select rowNum rn, a.* from(select r.ticketCode,r.finalPrice,r.shCheck,r.rsCheck,r.id,m.mvTitle,r.nsCode from reservation r, movie m where  m.mvcode=r.mvcode and (id=#{id} and shCheck ='y') group by r.ticketCode,r.finalPrice,r.shCheck,r.rsCheck,r.id,m.mvTitle,r.nsCode order by ticketCode desc)a) where rn between #{startRow} and #{endRow}
+		select * from (select rowNum rn, a.* from(select r.ticketCode,r.shCheck,r.rsCheck,r.id,m.mvTitle,r.nsCode from reservation r, movie m where  m.mvcode=r.mvcode and (id=#{id} and shCheck ='y') group by r.ticketCode,r.shCheck,r.rsCheck,r.id,m.mvTitle,r.nsCode order by ticketCode desc)a) where rn between #{startRow} and #{endRow}
 	</select>	
 	<select id="selectCode" parameterType="string" resultType="string" >
 		select rsCode from reservation where ticketCode=#{ticketCode} and ROWNUM <![CDATA[<=]]> 1

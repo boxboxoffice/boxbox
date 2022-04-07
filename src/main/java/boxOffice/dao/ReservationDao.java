@@ -60,7 +60,7 @@ public class ReservationDao {
 	}
 	public int getEndTiketTotal(String id) {
 		// TODO Auto-generated method stub
-		return (int) session.selectOne("reservationnss.getEndTiketTotal",id);
+		return (int) session.selectOne("reservationns.getEndTiketTotal",id);
 	}
 	
 	@SuppressWarnings("unchecked")

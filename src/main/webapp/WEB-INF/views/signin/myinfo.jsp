@@ -19,7 +19,7 @@
 			<li><a href="#">예매 내역</a></li>
 			<li><a href="ticketing.re">예매</a></li>
 			<li><a href="logout.si">로그아웃</a></li>
-			<li><a href="memberDel.si">회원탈퇴</a></li>
+			<li><a href="#">회원탈퇴</a></li>
 		</ul>
 	</div> 
 	<div id="info">
@@ -36,6 +36,7 @@
 		</div>
 		<div class="addr"><div>주소</div><input type="text" value="${member.address }" readonly="readonly"></div>
 	</div>
+</div>
 </div>
 </body>
 </html>

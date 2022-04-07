@@ -1,10 +1,9 @@
-
-d
 html, body {
 	margin:0;
 	padding:0;
 	width:100%;
 	height: 100%;
+	font-family: 'Arita-dotum-Medium';
 }
 #headbar{
 	width :1300px;
@@ -40,14 +39,14 @@ section{
 	left: 0;
 	background: #FFFFFF;
 	top: 55px;
+	color: black;
     width: 100%;
 	height: 830px;
 	z-index: 1;
-	margin-top: 10%;
 }
 footer{
 	position: absolute;
-	background: black;
+	background: #FFFFFF;
 	height: 130px;
     width: 100%;
     left:0;
@@ -55,7 +54,7 @@ footer{
 	z-index: 300;
 }
 #title1{
-	color: #F95700;
+	color: yellow;
 	font-size: 300%;
 	font-weight: bold;
 	position: absolute;
@@ -63,7 +62,7 @@ footer{
 	left: 170px;
 }
 #title2{
-	color: #F95700;
+	color: black;
 	font-size: 160%;
 	font-weight: bold;
 	position: absolute;
@@ -495,16 +494,23 @@ font-size: 100%;
 	position: absolute;	
 }
 #ticketView{
-	border: 1px solid gray;
-	width: 700px;
-	height: 800px;
+	border: 2px solid gray;
+	width: 200px;
+	height: 700px;
 	position: absolute;
 	top:300px;
 	left: 300px;
-	text-align: center;
+	text-align: left;
+	padding :50px;
+	background : #FFFFFF;
 }
 #ticketcontent{
 	height: 150px;
+	
+}
+#ticketView th{
+	background : orange;
+	color : white;
 }
 a[class="button"] {
 	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
@@ -532,8 +538,41 @@ a.button:hover {
 	left: 300px;
 }
 #payInfoTable{
+	margin-top:105%;
 	border: 1px solid gray;
-	width: 700px;
+	width: 450px;
 	text-align: center;
+	margin-left :25%
+	
 }
 
+#hyun2{
+	margin-top : 20%;
+	
+}
+
+.main {
+	width:230px;
+	height : 50px;
+	text-align:center;
+    background-color:#FFFFFF;
+	border:0; 
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    color : black; 
+	margin-bottom : 5%;
+	margin-left:250px;
+	
+	
+}
+
+.main:hover {
+	background-color: orange;
+}
+.main:active{
+	background-color :  orange;
+}
+#main1{
+	position: absolute;
+	margin-top : 90%;	
+	
+}
