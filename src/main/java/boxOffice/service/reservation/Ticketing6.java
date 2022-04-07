@@ -65,6 +65,50 @@ public class Ticketing6 implements CommandProcess  {
 		ReservationDao rd = ReservationDao.getInstance();
 		int ticketCode = rd.selectCode1();
 		
+		if(rsCheck.equals("무통장 입금 :카카오뱅크1111-333-4444-5555")) {
+			if (seats == null) return "ticketing7";
+			else {
+				for(int i=0; i<seats.length;i++) {
+					Reservation reservation = new Reservation();
+					reservation.setId(id);
+					reservation.setNsCode(nsCode);
+					reservation.setMvCode(mvCode);
+					reservation.setFinalPrice((int)finalPrice);
+					reservation.setSeats(seats[i]);
+					reservation.setTicketCode(ticketCode);
+					int result = rd.insertm(reservation);
+					System.out.println(result);					
+					md.plusScore(id);
+					request.setAttribute("finalPrice", (int)finalPrice);
+					
+					
+				}		
+			}
+		}
+		else {
+			if (seats == null) return "ticketing7";
+			else {
+				for(int i=0; i<seats.length;i++) {
+					if(score>=seats.length*20) {
+						Reservation reservation = new Reservation();
+						reservation.setId(id);
+						reservation.setNsCode(nsCode);
+						reservation.setMvCode(mvCode);
+						reservation.setFinalPrice(0);
+						reservation.setSeats(seats[i]);
+						reservation.setTicketCode(ticketCode);											
+						int result = rd.insertp(reservation);
+						System.out.println(result);
+						md.reduceScore(id);
+						finalPrice = 0;
+						request.setAttribute("finalPrice", (int)finalPrice);
+					}
+					else {						
+						return "ticketing7";
+					}
+				}		
+			}
+		}
 		
 	
 		

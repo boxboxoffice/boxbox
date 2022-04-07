@@ -11,6 +11,7 @@ public class Reservation {
 	private int finalPrice;
 	private String rsCheck;
 	private String shCheck;
+	private String mvTitle;
 	private String rvCheck;
 	
 	public String getRvCheck() {
@@ -25,7 +26,15 @@ public class Reservation {
 	public void setSeats(String seats) {
 		this.seats = seats;
 	}
+	
+	
 
+	public String getMvTitle() {
+		return mvTitle;
+	}
+	public void setMvTitle(String mvTitle) {
+		this.mvTitle = mvTitle;
+	}
 	public String getShCheck() {
 		return shCheck;
 	}

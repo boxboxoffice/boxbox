@@ -16,7 +16,7 @@
 		<ul>
 			<li><a href="myReview.si">게시글 보러가기</a></li>
 			<li><a href="reviewWriteForm.rv">게시글 작성</a></li>
-			<li><a href="#">예매 내역</a></li>
+			<li><a href="myticket.si">예매 내역</a></li>
 			<li><a href="ticketing.re">예매</a></li>
 			<li><a href="logout.si">로그아웃</a></li>
 			<li><a href="#">회원탈퇴</a></li>
