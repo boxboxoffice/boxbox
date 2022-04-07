@@ -10,7 +10,7 @@
 <body>
 
 	<script type="text/javascript">
-		alert( "!!!!!!!!!!!!!!");
+		alert( "포인트가 부족합니다!!!!");
 		history.go(-1);
 	</script>
    

@@ -55,18 +55,18 @@
 				
 				<p>예약 ID: ${id }</p>
 				<c:if test="${age ==1 }">
-					<p>결제 총 가격: ${mvPrice*people * 70 / 100 }원</p>
+					<p>결제 총 가격: ${finalPrice }원</p>
 					<p id="discount">&nbsp;* 청소년할인 : 30% 적용</p>
 				</c:if>
 				<c:if test="${age ==2 }">
-					<p>결제 총 가격: ${mvPrice*people }원</p>
+					<p>결제 총 가격: ${finalPrice }원</p>
 				</c:if>
 				<c:if test="${age ==3 }">
-					<p>결제 총 가격: ${mvPrice*people * 80 /100 }원</p>
+					<p>결제 총 가격: ${finalPrice}원</p>
 					<p id="discount">&nbsp;* 경로할인 : 20% 적용</p>
 				</c:if>
 				<c:if test="${age ==4 }">
-					<p>결제 총 가격: ${mvPrice*people * 70 / 100 }원</p>
+					<p>결제 총 가격: ${finalPrice}원</p>
 					<p id="discount">&nbsp;* 우대할인 : 30% 적용</p>
 				</c:if>
 			</div>

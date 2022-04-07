@@ -166,7 +166,7 @@
 				<select name="rsCheck" required="required">
 					<option></option>
 					<option>무통장 입금 :카카오뱅크1111-333-4444-5555</option>
-					<option>휴대폰 결제</option>
+					<option>포인트 결제</option>
 				</select>
 			</div>
 			

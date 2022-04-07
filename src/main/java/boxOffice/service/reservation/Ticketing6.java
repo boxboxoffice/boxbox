@@ -38,8 +38,10 @@ public class Ticketing6 implements CommandProcess  {
 		String[] seats = request.getParameterValues("seat");
 		
 		double age2 = 0.0;
-		if(age==1) {age2=0.5;}
-		else if (age==2) {age2=0.7;}
+		if(age==1) {age2=0.7;}
+		else if (age==2) {age2=1;}
+		else if (age==3) {age2=0.8;}
+		else if (age==4) {age2=0.7;}
 		else {age2=1;}
 		
 		double finalPrice = 0;
@@ -51,11 +53,11 @@ public class Ticketing6 implements CommandProcess  {
 		md.ticketcountAdd(id); 
 		
 		double discount = 0.0;
-		if(0<=score && score<=20) {discount = 0.95;}
-		else if(21<=score && score<=40) {discount = 0.9;}
-		else if(41<=score && score<=60) {discount = 0.85;}
-		else if(61<=score && score<=80) {discount = 0.8;}
-		else {discount = 0.75;}
+		if(0<=score && score<=20) {discount = 1;}
+		else if(21<=score && score<=40) {discount = 1;}
+		else if(41<=score && score<=60) {discount = 1;}
+		else if(61<=score && score<=80) {discount = 1;}
+		else {discount = 1;}
 		
 		
 		finalPrice = (people*mvPrice)*discount*age2;
