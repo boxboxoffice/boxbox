@@ -6,7 +6,7 @@
 		select * from member where id=#{id}
 	</select>
 	<select id="insert" parameterType="member">
-		insert into member values(#{id}, #{password}, #{name}, 0, 0, #{tel}, #{address}, sysdate, 'n')
+		insert into member values(#{id}, #{password}, #{name}, 0, 0, #{tel}, #{address}, sysdate, 100, 'n')
 	</select>
 	
 	<select id="selectScore" parameterType="string" resultType="int">
@@ -16,7 +16,7 @@
 		update member set score = score-20 where id=#{id}
 	</select>
 	<update id="plusScore" parameterType="member">
-		update member set score = score+2 where id=#{id }
+		update member set score = score +2 where id=#{id }
 	</update>
 	<update id="textcountAdd" parameterType="string">
 		update member set textcount = textcount +1 where id=#{id}
