@@ -24,7 +24,7 @@
 
 	<section>   
 		<div id="maincontent">
-			<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px">영화 선택</a>
+			<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px"> 영화 선택</a>
 			
 				<div class="reserve-container">
 			        <div class="movie-part">
