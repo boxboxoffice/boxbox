@@ -538,10 +538,12 @@ a.button:hover {
 	left: 300px;
 }
 #payInfoTable{
-	margin-top:70%;
+	margin-top:105%;
 	border: 1px solid gray;
-	width: 700px;
+	width: 450px;
 	text-align: center;
+	margin-left :25%
+	
 }
 
 #hyun2{
@@ -550,13 +552,17 @@ a.button:hover {
 }
 
 .main {
-	width:330px;
+	width:230px;
+	height : 50px;
 	text-align:center;
     background-color:#FFFFFF;
 	border:0; 
     box-shadow: 1px 1px 3px 1px #dadce0;
     color : black; 
-	margin : auto;
+	margin-bottom : 5%;
+	margin-left:250px;
+	
+	
 }
 
 .main:hover {
@@ -565,10 +571,8 @@ a.button:hover {
 .main:active{
 	background-color :  orange;
 }
-
-.main1{
-	margin-top : 90%;
-	margin-left : 40%;
-	
+#main1{
+	position: absolute;
+	margin-top : 90%;	
 	
 }

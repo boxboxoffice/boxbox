@@ -91,7 +91,7 @@
 </style> 
 <body>
 <div class="test">
-<div class="test1"><a href="myReview.si">게시글 보러기</a><p>예약 현황<p>로그아웃<p>회원탈퇴</div> 
+<div class="test1"><a href="myReview.si">게시글 보러기</a><p><a href="myticket.si">예약 현황</a><p>로그아웃<p>회원탈퇴</div> 
 	<div id="info">
 		<div class="mb">회원정보</div>
 		<div class="my1">

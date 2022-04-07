@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Ticket&Review</title>
-<style type="text/css">@import url("css/ticketreview2.css");
+<style type="text/css">@import url("css/ticketreview3.css");
 @font-face
  {
 	    font-family: 'Arita-dotum-Medium';
@@ -53,12 +53,13 @@
 				</tr>
 				
 		</table>
-		<div id="payinfo"><table id="payInfoTable"><tr><td>결제 정보 : </td><td>무통장 입금 카카오뱅크 :1111-333-4444-5555</td><td> </tr></table></div>
+		<div id="payinfo"><table id="payInfoTable"><tr><td>결제 정보 :무통장 입금 카카오뱅크 :1111-333-4444-5555</td></tr></table></div>
+			<div id="main1">
+		 		<button  class="main" onclick="location.href='main.do'" ><b>메인으로 가기</b></button>
+		 		<button class="main" onclick="location.href='myticket.si'"><b>예약 현황</b></button>
+			</div>
 		</div>
 		<br>
-		<div class="main1">
-		 <button  class="main" onclick="location.href='main.do'" ><b>메인으로 가기</b></button>
-		</div>
 	</section>
 
 </body>

@@ -62,12 +62,13 @@ footer{
 	left: 170px;
 }
 #title2{
-	color: #F95700;
+	color: black;
 	font-size: 160%;
 	font-weight: bold;
 	position: absolute;
 	top: 150px;
 	left: 150px;
+	margin-left:10%;
 }
 #mainvideo
 {
