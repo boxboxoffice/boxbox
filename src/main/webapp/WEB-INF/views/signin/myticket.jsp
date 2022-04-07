@@ -34,7 +34,6 @@
 					<tr>
 						<th>티켓번호</th>
 						<th width="40%">타이틀</th>
-						<th>가격</th>
 						<th>결제여부</th>
 					</tr>
 				</thead>
@@ -52,9 +51,8 @@
 						
 									<td class="title">
 										<!-- 답변글은 들여쓰기를 해야하므로 level이 0보다 크다 --> 
-										<a href="myTicketView.si?ticketCode=${val1.ticketCode}&movieTitle=${val1.movieTitle }&nsCode=${val1.nsCode }">${val1.movieTitle }</a>
+										<a href="myTicketView.si?ticketCode=${val1.ticketCode}&mvTitle=${val1.mvTitle }&nsCode=${val1.nsCode }">${val1.mvTitle }</a>
 									</td>
-									<td>${val1.finalPrice }</td>
 									<td>${val1.rsCheck }</td>
 							</tr>
 						</c:forEach>
@@ -93,7 +91,6 @@
 					<tr>
 						<th>티켓번호</th>
 						<th width="40%">타이틀</th>
-						<th>가격</th>
 						<th>결제여부</th>
 					</tr>
 				</thead>
@@ -111,7 +108,6 @@
 										<!-- 답변글은 들여쓰기를 해야하므로 level이 0보다 크다 --> 
 												<a href="myTicketView.si?ticketCode=${val2.ticketCode }&mvTitle=${val2.mvTitle }&nsCode=${val2.nsCode }">${val2.mvTitle }</a>
 									</td>
-									<td>${val2.finalPrice }</td>
 									<td>${val2.rsCheck }</td>			
 							</tr>
 						</c:forEach>
