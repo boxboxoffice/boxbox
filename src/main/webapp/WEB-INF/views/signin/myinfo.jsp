@@ -9,6 +9,7 @@
 </head>
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
 <link href="css/myInfo.css?update" rel="stylesheet" type="text/css">
+
 <body>
 <div class="mymenu">
 	<div class="mym">
@@ -18,7 +19,7 @@
 			<li><a href="#">예매 내역</a></li>
 			<li><a href="ticketing.re">예매</a></li>
 			<li><a href="logout.si">로그아웃</a></li>
-			<li><a href="#">회원탈퇴</a></li>
+			<li><a href="memberDel.si">회원탈퇴</a></li>
 		</ul>
 	</div> 
 	<div id="info">
