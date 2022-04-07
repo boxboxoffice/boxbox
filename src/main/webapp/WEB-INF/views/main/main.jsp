@@ -23,6 +23,17 @@
 		</div>
 	</c:forEach>
 </div>
+<div id="mainEv">
+<div class="evTitle">이벤트</div>
+<div class="event_wrap">
+		<div><img alt="" src="images/event/eventContent3.jpg" height="511px" width="296px" class="img01"></div>
+		<div><img alt="" src="images/event/eventTitle8.jpg" height="250px" width="450px" class="img02"></div>
+		<div><img alt="" src="images/event/eventTitle.jpg" height="250px" width="350px" class="img03"></div>
+		<div><img alt="" src="images/event/eventTitle4.jpg" height="250px" width="246px" class="img04"></div>
+		<div><img alt="" src="images/event/eventTitle2.jpg" height="250px" width="300px" class="img05"></div>
+		<div><img alt="" src="images/event/eventTitle9.jpg" height="250px" width="241px" class="img06"></div>
+</div>
+</div>
 <br />
 <br />
 <footer><div id="footer"><jsp:include page="../public/footer.jsp"></jsp:include></div></footer>

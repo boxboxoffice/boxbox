@@ -3,6 +3,7 @@
 #mv {
    display: flex;
    justify-content: center;   
+   padding-bottom: 8%;
 }
 
 .movie {
@@ -18,6 +19,7 @@
 
 .img {
    margin-right: 30px;
+   border-radius: 10px;
 }
 
 .mvtk {
@@ -85,12 +87,52 @@
 
 
 .mvtg {
-   letter-spacing: -1px;   
+    letter-spacing: -1px;   
     white-space: nowrap;
-   position: absolute;
+    position: absolute;
     top: 103%;
-   left: 44%; 
+    left: 44%; 
     transform: translate(-50%, -50%);
     font-size: 15px;
     
+}
+
+#mainEv {
+	position: relative;
+}
+.event_wrap {
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1400px;	
+    margin: auto;
+}
+
+.event_wrap img {
+	border-radius: 25px;
+}
+
+.evTitle {
+	text-align: center;
+	font-size: 22px;	
+	padding-bottom: 5px;
+}
+.img01 {
+	position: absolute;
+}
+.img02 {
+	margin-left: 310px;
+	margin-bottom: 7px;
+}
+.img03 {
+	margin: 0 0 0 15px;
+}
+.img04 {
+	margin: 0 0 0 310px;
+}
+.img05 {
+	margin: 0 0 0 15px;
+}
+.img06 {
+	margin: 0 0 0 15px;
 }

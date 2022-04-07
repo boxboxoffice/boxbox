@@ -342,7 +342,7 @@ insert into SCREEN values(240,'22:45',04);
 
 
 select * from SCREEN;
-
+drop table NOWSHOWING;
 drop table NOWSHOWING cascade constraint;
 CREATE TABLE NOWSHOWING(
 nsCode NUMBER primary key not null, --상영코드
