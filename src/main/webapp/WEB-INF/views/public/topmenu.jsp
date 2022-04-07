@@ -37,6 +37,9 @@
 		<div class="menu">
 			<a href="main.do" id="logoText">BoxOffice</a>
 		</div>
+		<div class="menu">
+				<a href="store.st">스토어</a>
+			</div>
 		<div class="signin">
 			<c:if test="${empty id }">
 				<a href="signInForm.do" class="login">로그인</a>

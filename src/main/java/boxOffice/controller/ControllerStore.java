@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import boxOffice.service.event.CommandProcess;
+import boxOffice.service.store.CommandProcess;
 // urlPatterns="*.do", 끝이 .do인 url을 처리하겠다
 @WebServlet(urlPatterns="*.st",	
 	initParams={@WebInitParam(name="config",value="/WEB-INF/st_command.properties")})

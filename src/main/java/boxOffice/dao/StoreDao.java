@@ -10,8 +10,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import boxOffice.model.Movie;
-import boxOffice.model.Store;
+import boxOffice.model.*;
 
 public class StoreDao {
 
