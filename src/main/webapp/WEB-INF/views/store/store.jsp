@@ -33,7 +33,7 @@
     
     <div class="products">
      
-	     <c:forEach items="${select }" var="val">    
+	     <c:forEach items="${list }" var="val">    
 	      <a href="store2.st">
 		        <img src="#">
 		        <p>${val.pdName }</p>
