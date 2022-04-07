@@ -37,6 +37,5 @@
 		<div class="addr"><div>주소</div><input type="text" value="${member.address }" readonly="readonly"></div>
 	</div>
 </div>
-</div>
 </body>
 </html>
