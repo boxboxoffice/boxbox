@@ -9,7 +9,17 @@
 <meta charset="UTF-8">
 <title>Ticket&Review</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<style type="text/css">@import url("css/ticket1.css");</style>
+<style type="text/css">@import url("css/ticket2.css");
+
+	@font-face
+ 	{
+	    font-family: 'Arita-dotum-Medium';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}	
+	
+</style>
 
 </head>
 <body>
@@ -61,9 +71,9 @@
 				</c:if>
 			</div>
 			<br>
-			<button style="width:330px; text-align:center; background-color:white; color : #F95700;" class="button" onclick="location.href='main.do'" ><b>메인으로 가기</b></button>
+			<button class="button" onclick="location.href='main.do'" ><b>메인으로 가기</b></button>
 			<br><br>
-			<button style="width:330px; text-align:center; background-color:white; color : #F95700;" class="button" onclick="location.href='myTicketView.si?ticketCode=${ticketCode }&mvTitle=${mvTitle }&nsCode=${nsCode }'" ><b>예매 확인으로 가기</b></button>
+			<button class="button" onclick="location.href='myTicketView.si?ticketCode=${ticketCode }&mvTitle=${mvTitle }&nsCode=${nsCode }'" ><b>예매 확인으로 가기</b></button>
 		
 		
 		
@@ -72,8 +82,7 @@
 	</section>
             
 
-
-<footer></footer>
+<footer><div id="footer"><jsp:include page="../public/footer.jsp"></jsp:include></div></footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

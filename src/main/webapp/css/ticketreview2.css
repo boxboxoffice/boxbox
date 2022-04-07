@@ -3,6 +3,7 @@ html, body {
 	padding:0;
 	width:100%;
 	height: 100%;
+	font-family: 'Arita-dotum-Medium';
 }
 #headbar{
 	width :1300px;
@@ -537,6 +538,7 @@ a.button:hover {
 	left: 300px;
 }
 #payInfoTable{
+	margin-top:70%;
 	border: 1px solid gray;
 	width: 700px;
 	text-align: center;
@@ -544,5 +546,29 @@ a.button:hover {
 
 #hyun2{
 	margin-top : 20%;
+	
+}
+
+.main {
+	width:330px;
+	text-align:center;
+    background-color:#FFFFFF;
+	border:0; 
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    color : black; 
+	margin : auto;
+}
+
+.main:hover {
+	background-color: orange;
+}
+.main:active{
+	background-color :  orange;
+}
+
+.main1{
+	margin-top : 90%;
+	margin-left : 40%;
+	
 	
 }

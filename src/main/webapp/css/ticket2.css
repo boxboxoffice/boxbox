@@ -184,22 +184,32 @@ a.button {
 }
 
 a.button:hover {
-	color: rgba(0, 0, 0, 1);
-	box-shadow: rgba(255, 54, 0, 0.85) 0 0px 0px 40px inset;
+	background-color: orange;
 }
 
 button.button {
-	color: rgba(255, 255, 255, 0.85);
-	box-shadow: rgba(255, 54, 0, 0.85) 0 0px 0px 2px inset;
+	width:330px;
+	 text-align:center;
+	  background-color:#FFFFFF;
+	   border:0; 
+	    box-shadow: 1px 1px 3px 1px #dadce0;
+	     color : black; 
+	      margin : auto;
 }
 
 button.button:hover {
-	color: rgba(0, 0, 0, 1);
-	box-shadow: rgba(255, 54, 0, 0.85) 0 0px 0px 40px inset;
+	background-color: orange;
+}
+section button:active{
+	background-color :  orange;
 }
 
 
+section button:hover{
+	box-shadow:0 0 0 0 rgba(0,0,0,0.25) inset;
+	background-color: orange;
 
+}
 
 .mymenu:hover{
 	text-decoration: underline;
@@ -268,18 +278,16 @@ button.button:hover {
 }
 
 .theater-wrapper {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 50px;
     padding-top: 2px;    
     width: 260px;
-    height: 70px;    
 }
 
 .theater-location-wrapper {
     margin-top: 1px;
     flex-grow: 1;    
     flex-direction: column;   
-    height: 70px;    
 }
 
 .theater-location {
@@ -291,6 +299,7 @@ button.button:hover {
     margin-top: 1px;
     width:80px;
     box-shadow: 1px 1px 3px 1px #dadce0;
+    border : 0;
 }
 
 .theater-place-wrapper {
@@ -304,11 +313,9 @@ button.button:hover {
     
     color:  black;
     background-color: #FFFFFF;
-    padding: 6px 5px;
-    height: 40px;
-    font-weight: bold;
     text-align: center;
     box-shadow: 1px 1px 3px 1px #dadce0;
+    border : 0;
    
 }
 
@@ -330,13 +337,12 @@ button.button:hover {
     width:80px;
     font-size : 0.9em;
     box-shadow: 1px 1px 3px 1px #dadce0;
+    border : 0;
 }
 
 
 .reserve-where {
-    margin-top: 25px;
     margin-left: 40px;
-    margin-bottom: 25px;    
     font-weight: bold;    
 }
 
@@ -351,10 +357,10 @@ button.button:hover {
     height: 50px;
     background-color:#FFFFFF;
     margin-top: 10px;
-    margin-right: 10px;
     margin-left:30px;
-     font-size :0.9em;
-     box-shadow: 1px 1px 3px 1px #dadce0;
+    font-size :0.9em;
+    box-shadow: 1px 1px 3px 1px #dadce0;
+    border : 0;
 }
 
 .reserve-time-want {

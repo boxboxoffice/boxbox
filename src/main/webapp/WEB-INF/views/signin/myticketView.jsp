@@ -7,7 +7,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Ticket&Review</title>
-<style type="text/css">@import url("css/ticketreview1.css");</style>
+<style type="text/css">@import url("css/ticketreview2.css");
+@font-face
+ {
+	    font-family: 'Arita-dotum-Medium';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+	}	
+	#button {
+	margin-top : 70%;
+	}
+</style>
 </head>
 <body>
 
@@ -40,24 +51,13 @@
 				<tr>
 					<th>상영관</th><td> ${screen.screenNum}</td>
 				</tr>
-		<tr>
-		<td colspan="7">
-			<c:if test="${reservation.shCheck eq 'y' }">
-				<c:if test="${reservation.rsCheck eq 'y' }">
-					<c:if test="${reservation.rvCheck eq 'n' }">
-						<a href="reviewWriteForm.re?mvCode=${movie.mvCode }&rsCode=${reservation.rsCode}" class="button">리뷰 남기기</a>
-					</c:if>
-					<c:if test="${reservation.rvCheck eq 'y' }">
-						<a href="reviewMain.re?" class="button">리뷰 보러가기</a>
-					</c:if>
-				</c:if>
-			</c:if>
-		</td>
-		</tr>
+				
 		</table>
-		<c:if test="${reservation.shCheck eq 'n' }">
-		<div id="payinfo"><table id="payInfoTable"><tr><td>결제 정보 : </td><c:if test="${reservation.rsCheck eq 'n' }"><td>무통장 입금 카카오뱅크 :1111-333-4444-5555</td><td> ${reservation.mvPrice }원</td></c:if><c:if test="${reservation.rsCheck eq 'y' }"> <td>결제 완료</td></c:if></tr></table></div>
-		</c:if>
+		<div id="payinfo"><table id="payInfoTable"><tr><td>결제 정보 : </td><td>무통장 입금 카카오뱅크 :1111-333-4444-5555</td><td> </tr></table></div>
+		</div>
+		<br>
+		<div class="main1">
+		 <button  class="main" onclick="location.href='main.do'" ><b>메인으로 가기</b></button>
 		</div>
 	</section>
 
