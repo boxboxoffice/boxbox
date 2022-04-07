@@ -8,90 +8,19 @@
 <title>Insert title here</title>
 </head>
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
-<style> 
-#info {
-	display: flex;
-	border: solid 1px;
-	padding: 10px;
-	width: 550px;
-	height: 400px;
-    margin-left: 280px;
-    
-	
-} 
-.myinfo {
-	display: flex;
-	margin-bottom: 30px;
-	margin-top: 20px
-}
-.myinfo div {
-    text-align: center;
-    width: 91px;
-    height: 35px;
-    line-height: 35px;
-    border: solid 1px;
-    border-radius: 30px;
-    margin: 7px;
-}
-.myinfo input {
-	border: solid 0px;
-	width: 120px;
-	text-align: center;
-	font-size: 15px;
-}
-
-.my1 {
-	border: 0px;
-	padding: 60px 40px 0 40px;
-}
-
-.my2 {
-	border: 0px;
-	padding-top: 60px;
-}
-
-.mb {
-	position: absolute;
-    font-size: 32px;
-    margin-left: 208px;
-}
-.test {
-	display: flex;
-}
-
-.test1 {
-    border: solid 1px;
-    width: 150px;
-    margin-left: 250px
-}
-
-.addr {
-    display: flex;
-    position: absolute;
-    padding: 320px 0 0 40px;
-}
-
-.addr div {
-	border: solid 1px;
-    width: 91px;
-    height: 35px;
-    margin: 7px;
-    line-height: 36px;
-    text-align: center;
-    border-radius: 30px;
-}
-
-.addr input {
-	height: 35px;
-    margin: 7px;
-    border: solid 0px;
-    width: 358px;
-    text-align: center;
-}
-</style> 
+<link href="css/myInfo.css?update" rel="stylesheet" type="text/css">
 <body>
-<div class="test">
-<div class="test1"><a href="myReview.si">게시글 보러기</a><p>예약 현황<p>로그아웃<p>회원탈퇴</div> 
+<div class="mymenu">
+	<div class="mym">
+		<ul>
+			<li><a href="myReview.si">게시글 보러가기</a></li>
+			<li><a href="reviewWriteForm.rv">게시글 작성</a></li>
+			<li><a href="#">예매 내역</a></li>
+			<li><a href="ticketing.re">예매</a></li>
+			<li><a href="logout.si">로그아웃</a></li>
+			<li><a href="#">회원탈퇴</a></li>
+		</ul>
+	</div> 
 	<div id="info">
 		<div class="mb">회원정보</div>
 		<div class="my1">
