@@ -74,7 +74,7 @@
 
 	<section>
 		<div id="maincontent">
-			<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px">인원 및 좌석선택</a>
+			<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px"> 인원 및 좌석선택</a>
 			<div id="movieNowBox">
 			
 			<form action="ticketing6.re" method="post" name="frm">
