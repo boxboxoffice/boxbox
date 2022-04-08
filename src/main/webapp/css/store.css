@@ -46,6 +46,7 @@ font-family: 'Arita-dotum-Medium';
  	 width: 80%;
  	  display: block; 
  	  margin: 0px auto;
+ 	  margin-top : 25px;
 
 }
 
@@ -64,7 +65,7 @@ body h1{
   padding: 0;
   width: 740px;
   text-align: center;
-  margin-top:20px;
+  margin-top:50px;
 }
 
 .products img{
@@ -101,7 +102,7 @@ body h1{
 	position: absolute;
 	left:50%;
 	margin-left: -650px;
-	margin-top : 7%;
+	margin-top : 5%;
 }
 
 

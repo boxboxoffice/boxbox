@@ -32,63 +32,61 @@
 			<img class="hero_header" src="images/store/pop.jpg" alt="">
     
     <div class="products">
-     
-	     <c:forEach items="${list }" var="val">    
-	      <a href="store2.st">
-		        <img src="#">
-		        <p>${val.pdName }</p>
-		        <p class="price">${val.pdPrice }</p>
-	      </a>
-		</c:forEach>     
-	
 	
       <a href="store2.st">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">89,000</p>
+	        <img src="images/store/orPop.jpg">
+	        <p>오리지널 팝콘</p>
+	        <p class="price">5,000</p>
       </a>
       
       <a href="store2.st">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">69,000</p>
+	        <img src="images/store/caPop.jpg">
+	        <p>카라멜 팝콘</p>
+	        <p class="price">6,000</p>
       </a>
       
       <a href="store2.st">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">79,000</p>
+	        <img src="images/store/chPop.jpg">
+	        <p>더블치즈 팝콘</p>
+	        <p class="price">6,000</p>
       </a>
       
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">29,000</p>
+      <a href="store2.st">
+	        <img src="images/store/hDog.jpg">
+	        <p>플레인 핫도그</p>
+	        <p class="price">3,500</p>
       </a>
       
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">99,000</p>
+      <a href="store2.st">
+	        <img src="images/store/naC.jpg">
+	        <p>칠리나쵸</p>
+	        <p class="price">4,900</p>
       </a>
       
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">39,000</p>
+      <a href="store2.st">
+	        <img src="images/store/squ.jpg">
+	        <p>즉석구이 오징어</p>
+	        <p class="price">4,000</p>
       </a>
       
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">99,000</p>
+      <a href="store2.st">
+	       <img src="images/store/coke.jpg">
+	        <p>콜라</p>
+	        <p class="price">3,000</p>
       </a>
       
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">79,000</p>
+      <a href="store2.st">
+	        <img src="images/store/Cof.jpg">
+	        <p>(ICE)아메리카노</p>
+	        <p class="price">3,500</p>
       </a>
+      
+      <a href="store2.st">
+	        <img src="images/store/hCof.jpg">
+	        <p>(HOT)아메리카노</p>
+	        <p class="price">3,000</p>
+      </a>
+      
       
       <div class="clearfix"></div>
     </div>

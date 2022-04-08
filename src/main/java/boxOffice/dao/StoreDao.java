@@ -1,6 +1,7 @@
 package boxOffice.dao;
 
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,6 +33,10 @@ public class StoreDao {
 	}
 	public Store select(int pdCode) {
 		return (Store)session.selectOne("storest.select", pdCode);
-		
 	}
+	@SuppressWarnings("unchecked")
+	public List<Store> callList(int pdCOde) {
+		return session.selectList("storest.callList");
+	}
+
 }
