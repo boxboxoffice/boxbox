@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link href="css/reviewUpdateForm.css?update" rel="stylesheet" type="text/css">
+<style type="text/css">
+	@font-face
+    {
+       font-family: 'Arita-dotum-Medium';
+       src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+   }
+   body {font-family:  'Arita-dotum-Medium';}
+</style>
 </head>
 <body>
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
@@ -18,33 +28,33 @@
 				<caption class="caption">리뷰 수정</caption>
 				<tr>
 					<th width="18%">제목</th>
-					<td><input type="text" name="rvTitle" required="required" autofocus="autofocus"
+					<td><input class="form-control" type="text" name="rvTitle" required="required" autofocus="autofocus"
 						size="77" placeholder="제목을 입력하세요. (20자)" maxlength="20"></td>
 				</tr>
 				<tr>
 					<th width="18%">작성자</th>
-					<td>&nbsp;${id }</td>
+					<td style="color: #F95700; text-align: center;">${id }</td>
 				</tr>
 				<tr>
 					<th width="18%">비밀번호</th>
-					<td>&nbsp;<input type="password" name="password" required="required" placeholder="비밀번호" /></td>
+					<td><input class="form-control" type="password" name="password" required="required" placeholder="비밀번호" /></td>
 				</tr>
 				<tr>
 					<th width="18%">비밀번호 확인</th>
-					<td>&nbsp;<input type="password" name="password2" required="required" placeholder="비밀번호 확인 " /></td>
+					<td><input class="form-control" type="password" name="password2" required="required" placeholder="비밀번호 확인 " /></td>
 				</tr>
 				<tr>
 					<th width="18%">영화제목</th>
-					<td>&nbsp;${review.mvTitle }</td>
+					<td style="color: #F95700; text-align: center;">${review.mvTitle }</td>
 				</tr>
 				<tr >
 					<th width="18%">평점</th>
-					<td>&nbsp;<input type="range" min="1" max="10" class="slider" id="myRange" name="rvGrade">
-						<span id="value"></span></td>
+					<td><input class="form-control" type="range" min="1" max="10" class="slider" id="myRange" name="rvGrade">
+						<div id="value" align="center" style="font-weight: bold; font-size: 1.2em;"></div></td>
 				</tr>
 				<tr>
 					<th width="18%">내용<br><sup>(<span id="nowByte">0</span>/1000bytes)</sup></th>
-					<td><textarea rows="8" cols="79" name="rvContent" required="required"
+					<td><textarea class="form-control" rows="8" cols="79" name="rvContent" required="required"
 						placeholder="리뷰 내용을 입력하세요. (1000bytes)" onkeyup="fn_checkByte(this)"></textarea></td>
 				</tr>
 			</table>
@@ -56,10 +66,10 @@
 <script type="text/javascript">
 	var slider = document.getElementById("myRange");
 	var output = document.getElementById("value");
-	output.innerHTML = "★" + slider.value;
+	output.innerHTML = "⭐" + slider.value+"⭐";
 	
 	slider.oninput = function() {
-	    output.innerHTML ="★" + this.value;
+	    output.innerHTML ="⭐" + this.value+"⭐";
 }
 	function chk() {
 		if (frm.password.value != frm.password2.value) {

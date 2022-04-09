@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link href="css/reviewWriteForm.css?update" rel="stylesheet" type="text/css">
+<style type="text/css">
+	@font-face
+    {
+       font-family: 'Arita-dotum-Medium';
+       src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+   }
+   body {font-family:  'Arita-dotum-Medium';}
+</style>
 </head>
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
 <body>
@@ -25,11 +35,11 @@
 				</tr>
 				<tr>
 					<th width="15%">작성자</th>
-					<td>&nbsp;${id }</td>
+					<td style="color: #F95700; text-align: center;">${id }</td>
 				</tr>
 				<tr>
 					<th width="15%">영화제목</th>
-					<td><select class="form-control" name="mvTitle" required="required" style="text-align: center; font-weight: bold;">
+					<td ><select class="form-control" name="mvTitle" required="required" style="text-align: center; font-weight: bold;">
 								<option value="">영화선택</option>
 								<option value="스파이더맨 노 웨이 홈">스파이더맨 노 웨이 홈</option>
 								<option value="극장판 주술회전 0">극장판 주술회전 0</option>

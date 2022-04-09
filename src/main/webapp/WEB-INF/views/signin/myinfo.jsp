@@ -9,7 +9,16 @@
 </head>
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
 <link href="css/myInfo.css?update" rel="stylesheet" type="text/css">
-
+<style type="text/css">
+	@font-face
+    {
+       font-family: 'Arita-dotum-Medium';
+       src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+   }
+   body {font-family:  'Arita-dotum-Medium';}
+</style>
 <body>
 <div class="mymenu">
 	<div class="mym">
