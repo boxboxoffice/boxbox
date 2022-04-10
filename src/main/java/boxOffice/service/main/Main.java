@@ -16,7 +16,7 @@ public class Main implements CommandProcess {
 		List<Movie> list = md.mainList();
 		
 		request.setAttribute("list", list);
-		
+		      
 			
 		return "main";
 	}

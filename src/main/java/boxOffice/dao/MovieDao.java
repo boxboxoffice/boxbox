@@ -27,7 +27,7 @@ public class MovieDao {
 		}catch (Exception e) {
 			System.out.println("연결에러 : "+e.getMessage());
 		}
-	}
+	}    
 
 	@SuppressWarnings("unchecked")
 	public List<Movie> mainList() {
