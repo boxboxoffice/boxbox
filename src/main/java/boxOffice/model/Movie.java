@@ -17,7 +17,11 @@ public class Movie {
 	private int mvPrice;
 	private String mvGrade;
 	private String mvAge;
+	private int movieStar;
 	
+	public int getMovieStar() {
+		return movieStar;
+	}
 	public int getMvCode() {
 		return mvCode;
 	}

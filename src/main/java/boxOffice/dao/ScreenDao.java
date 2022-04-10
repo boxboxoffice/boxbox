@@ -78,5 +78,8 @@ public class ScreenDao {
 		
 		return session.selectList("screenns.selectScreenCode3",map);
 	}
+	public List<Screen> getScreenlist() {
+		return session.selectList("screensc.getScreenlist");
+	}
 
 }

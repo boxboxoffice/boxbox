@@ -38,11 +38,11 @@ ${val.releaseDate } 개봉 --%>
 <table class="movieTable">
 <tbody>
 <tr>
-<td rowspan="7" width="280px"><a href="movieInfo.mv?movieCode=${val.movieCode }"><img alt="포스터" src="images/poster/${val.poster }" width="240"></a></td>
-<td width="420px">제목: ${val.movieTitle }</td>
+<td rowspan="7" width="280px"><a href="movieInfo.mv?mvCode=${val.mvCode }"><img alt="포스터" src="images/posters/${val.poster }" width="240"></a></td>
+<td width="420px">제목: ${val.mvTitle }</td>
 </tr>
 <tr>
-<td>개봉일: ${val.releaseDate }</td>
+<td>개봉일: ${val.openDate }</td>
 </tr>
 <tr>
 <td>감독: ${val.director }</td>
@@ -67,7 +67,7 @@ ${val.releaseDate } 개봉 --%>
 </td>
 </tr>
 <tr>
-<td>주연: ${val.actor }</td>
+<td>주연: ${val.majorActor }</td>
 </tr>
 <tr>
 <td>상영시간: ${val.runningTime }분</td>
