@@ -28,17 +28,17 @@
 <br>
 <c:forEach items="${list }" var="val">
 <div id="movieList${val }">
-<%-- <a href="#"><img alt="포스터" src="images/poster/${val.poster }" width="240"></a>
+<%-- <a href="#"><img alt="포스터" src="images/posters/${val.posters }" width="240"></a>
 <br>
-${val.movieTitle }
+${val.mvTitle }
 <br>
 평점: ${val.movieStar }점
 <br>
-${val.releaseDate } 개봉 --%>
+${val.openDate } 개봉 --%>
 <table class="movieTable">
 <tbody>
 <tr>
-<td rowspan="7" width="280px"><a href="movieInfo.mv?mvCode=${val.mvCode }"><img alt="포스터" src="images/posters/${val.poster }" width="240"></a></td>
+<td rowspan="7" width="280px"><a href="mvInfo.mv?mvCode=${val.mvCode }"><img alt="포스터" src="images/posters/${val.poster }" width="240"></a></td>
 <td width="420px">제목: ${val.mvTitle }</td>
 </tr>
 <tr>

@@ -68,7 +68,7 @@
 	select movieStar from movie where mvCode=#{mvCode}
 	</select>
 	<update id="updateMovieStar" parameterType="string">
-	update movie set movieStar=#{nowStar} where mvCode=#{mvCode}
+	update movie set movieStar=#{nowstar} where mvCode=#{mvCode}
 	</update>
 	
 </mapper>
