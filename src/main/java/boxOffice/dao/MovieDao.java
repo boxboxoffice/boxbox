@@ -34,6 +34,11 @@ public class MovieDao {
 		return session.selectList("moviens.mainList");
 	}
 	
+	public Movie select(int mvCode) {
+		return (Movie)session.selectOne("moviens.select", mvCode);
+
+	}
+	
 	public int getTotalComing() {
 		int total=0;
 		return (int)session.selectOne("moviens.gettotalComing", total);
@@ -51,25 +56,99 @@ public class MovieDao {
 	}
 	
 	@SuppressWarnings("unchecked")
+	public List<Movie> selectList(int mvCode, int startRow, int endRow) {
+		HashMap<String, Integer> map=new HashMap<String,Integer>();
+		map.put("mvCode", mvCode);
+		map.put("startRow", startRow);
+		map.put("endRow", endRow);
+		return session.selectList("moviens.selectInfo",map);
+	}
+	
+	
+	@SuppressWarnings("unchecked")
 	public List<Movie> selectNowList(int startRow, int endRow) {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		map.put("startRow", startRow);
 		map.put("endRow", endRow);
 		return session.selectList("moviens.selectNowList", map);
 	}
-	public Movie select(int mvCode) {
-		return (Movie)session.selectOne("moviens.select", mvCode);
-
-	}
+	
+	@SuppressWarnings("unchecked")
 	public List<Movie> selectClosedList(int startRow, int endRow) {
-		// TODO Auto-generated method stub
-		return null;
-
+		HashMap<String, Integer> map=new HashMap<String,Integer>();
+		map.put("startRow", startRow);
+		map.put("endRow", endRow);
+		
+		
+		return session.selectList("moviens.selectClosedList",map);
 	}
+	@SuppressWarnings("unchecked")
 	public List<Movie> selectComingList(int startRow, int endRow) {
-		// TODO Auto-generated method stub
-		return null;
+		HashMap<String, Integer> map=new HashMap<String,Integer>();
+		map.put("startRow", startRow);
+		map.put("endRow", endRow);
+		
+		
+		return session.selectList("moviens.selectComingList",map);
 	}
 
 	
+	@SuppressWarnings("unchecked")
+	public List<Movie> searchMovie(String result, String mresultnum) {
+		HashMap<String, String> map=new HashMap<String,String>();
+		map.put("result", result);
+		map.put("mresultnum", mresultnum);
+		return session.selectList("movietr.searchMovielist",map);
+	}
+	
+	public int updateNow(int mvCode) {
+		
+		return (int)session.update("moviens.updateNow",mvCode);
+	}
+	public int updateClosed(int mvCode) {
+		
+		return (int)session.update("moviens.updateClosed",mvCode);
+	}
+	public int selectMvCode() {
+		
+		return (int)session.selectOne("moviens.selectMvCode");
+	}
+	public int insert(Movie movie) {
+		
+		return session.insert("moviens.insert", movie);
+	}
+	
+public String selectTitle(int mvCode) {
+		
+		return (String) session.selectOne("moviens.selectTitle", mvCode);
+	}
+	
+	
+	public int getTotal() {
+		int total=0;
+		return (int)session.selectOne("moviens.gettotal",total);
+	}
+	
+	
+	public int getStar(int mvCode) {
+		
+		return (int)session.selectOne("moviens.getStar",mvCode);
+	}
+	public int updateMovieStar(int nowstar, int mvCode) {
+		HashMap<String, Integer> map=new HashMap<String,Integer>();
+		map.put("nowstar", nowstar);
+		map.put("mvCode", mvCode);
+		return (int)session.update("movietr.updateMovieStar",map);
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	public List<Movie> selectList(int startRow, int endRow) {
+		HashMap<String, Integer> map=new HashMap<String,Integer>();
+		map.put("startRow", startRow);
+		map.put("endRow", endRow);
+		
+		return session.selectList("moviens.selectList",map);
+	}
+
 }

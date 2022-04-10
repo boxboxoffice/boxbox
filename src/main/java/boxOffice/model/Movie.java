@@ -102,5 +102,14 @@ public class Movie {
 	public void setMvAge(String mvAge) {
 		this.mvAge = mvAge;
 	}
+	public void setMvGrade(int mvGrade2) {
+		
+	}
+	public void setRunningTime(int runningTime2) {
+		
+	}
+	public void setMovieStar(int movieStar) {
+		
+	}
 	
 }

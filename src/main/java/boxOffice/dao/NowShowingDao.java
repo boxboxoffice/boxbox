@@ -90,10 +90,10 @@ public class NowShowingDao {
 		return (int)session.selectOne("nowShowingns.gettotal",total);
 	}
 	
-	public int updatePchk(String showingDay, String screenTime) {
+	public int updatePchk(String showingDay, int screenTime) {
 		HashMap<String, String> map=new HashMap<String,String>();
 		
-		String screenTime2 = new String(screenTime);
+		String screenTime2 = Integer.toString (screenTime);
 		
 		map.put("screenTime", screenTime2);
 		map.put("showingDay", showingDay);
@@ -101,11 +101,11 @@ public class NowShowingDao {
 		return (int)session.update("nowShowingns.updatePchk",map);
 	}
 	
-	public int updatePchk2(String showingDay, String screenTime) {
+	public int updatePchk2(String showingDay, int screenTime) {
 		
 		HashMap<String, String> map=new HashMap<String,String>();
 		
-		String screenTime2 = new String(screenTime);
+		String screenTime2 = Integer.toString (screenTime);
 		
 		map.put("screenTime", screenTime2);
 		map.put("showingDay", showingDay);
@@ -127,6 +127,5 @@ public class NowShowingDao {
 		
 		return session.selectList("nowShowingns.selectNsCode3",map);
 	}
-	
 	
 }
