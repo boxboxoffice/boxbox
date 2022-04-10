@@ -18,7 +18,7 @@ public class NowShowingUpdate implements CommandProcess {
 		
 		
 		String showingDay = request.getParameter("showingDay");
-		Integer screenTime = Integer.parseInt(request.getParameter("screenTime"));
+		String screenTime = request.getParameter("screenTime");
 		String pchk=request.getParameter("pchk");		
 		String pchk2 = "n";
 		String pchk3 = "y";
