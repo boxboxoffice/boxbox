@@ -78,13 +78,9 @@ public class ScreenDao {
 		
 		return session.selectList("screenns.selectScreenCode3",map);
 	}
+	@SuppressWarnings("unchecked")
 	public List<Screen> getScreenlist() {
-<<<<<<< HEAD
 		return session.selectList("screensc.getScreenlist");
-=======
-		// TODO Auto-generated method stub
-		return null;
->>>>>>> branch 'master' of https://github.com/boxboxoffice/boxbox.git
 	}
 
 }

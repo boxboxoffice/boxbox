@@ -93,11 +93,7 @@ public class NowShowingDao {
 	public int updatePchk(String showingDay, String screenTime) {
 		HashMap<String, String> map=new HashMap<String,String>();
 		
-<<<<<<< HEAD
 		String screenTime2 = screenTime;
-=======
-		String screenTime2 = new String(screenTime);
->>>>>>> branch 'master' of https://github.com/boxboxoffice/boxbox.git
 		
 		map.put("screenTime", screenTime2);
 		map.put("showingDay", showingDay);
@@ -109,11 +105,7 @@ public class NowShowingDao {
 		
 		HashMap<String, String> map=new HashMap<String,String>();
 		
-<<<<<<< HEAD
 		String screenTime2 = screenTime;
-=======
-		String screenTime2 = new String(screenTime);
->>>>>>> branch 'master' of https://github.com/boxboxoffice/boxbox.git
 		
 		map.put("screenTime", screenTime2);
 		map.put("showingDay", showingDay);
