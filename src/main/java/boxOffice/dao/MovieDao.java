@@ -98,7 +98,7 @@ public class MovieDao {
 		HashMap<String, String> map=new HashMap<String,String>();
 		map.put("result", result);
 		map.put("mresultnum", mresultnum);
-		return session.selectList("movietr.searchMovielist",map);
+		return session.selectList("moviens.searchMovielist",map);
 	}
 	
 	public int updateNow(int mvCode) {
@@ -138,7 +138,7 @@ public String selectTitle(int mvCode) {
 		HashMap<String, Integer> map=new HashMap<String,Integer>();
 		map.put("nowstar", nowstar);
 		map.put("mvCode", mvCode);
-		return (int)session.update("movietr.updateMovieStar",map);
+		return (int)session.update("moviens.updateMovieStar",map);
 	}
 	
 	

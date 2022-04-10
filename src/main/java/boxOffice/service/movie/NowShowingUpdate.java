@@ -18,7 +18,11 @@ public class NowShowingUpdate implements CommandProcess {
 		
 		
 		String showingDay = request.getParameter("showingDay");
+<<<<<<< HEAD
 		String screenTime =request.getParameter("screenTime");
+=======
+		String screenTime = request.getParameter("screenTime");
+>>>>>>> branch 'master' of https://github.com/boxboxoffice/boxbox.git
 		String pchk=request.getParameter("pchk");		
 		String pchk2 = "n";
 		String pchk3 = "y";
