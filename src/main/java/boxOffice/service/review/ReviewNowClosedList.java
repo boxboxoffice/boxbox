@@ -34,7 +34,7 @@ public class ReviewNowClosedList implements CommandProcess{
 		int endPage = startPage + PAGE_PER_BLOCK - 1;
 //		만약 endPage가 총페이지보다 크면 endPage는 총페이지로 변경
 		if (endPage > totalPage) endPage = totalPage;
-		List<Review> list = rd.reviewNowList(startRow, endRow, mvCode);
+		List<Review> list = rd.reviewNowClosedList(startRow, endRow, mvCode);
 		
 
 		request.setAttribute("list", list);

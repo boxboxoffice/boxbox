@@ -14,7 +14,7 @@
 	<select id="reviewList" parameterType="map" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review order by rvNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
-	<select id="reviewNowList" parameterType="map" resultType="review">
+	<select id="reviewNowClosedList" parameterType="map" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review where mvCode = #{mvCode} order by rvNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
 	<insert id="insert" parameterType="review">

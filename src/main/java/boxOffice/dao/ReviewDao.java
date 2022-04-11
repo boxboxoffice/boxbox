@@ -61,12 +61,12 @@ public class ReviewDao {
 		
 	}
 	@SuppressWarnings("unchecked")
-	public List<Review> reviewNowList(int startRow, int endRow, int mvCode) {
+	public List<Review> reviewNowClosedList(int startRow, int endRow, int mvCode) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("startRow", startRow);
 		map.put("endRow", endRow);
 		map.put("mvCode", mvCode);
-		return session.selectList("reviewns.reviewNowList", map);
+		return session.selectList("reviewns.reviewNowClosedList", map);
 	}
 	public int deleteMaster(int rvNum) {
 		return session.delete("reviewns.deleteMaster", rvNum);
