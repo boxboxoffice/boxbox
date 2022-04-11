@@ -61,46 +61,12 @@ public class ReviewDao {
 		
 	}
 	@SuppressWarnings("unchecked")
-	public List<Review> review0List(int startRow, int endRow) {
+	public List<Review> reviewNowList(int startRow, int endRow, int mvCode) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("startRow", startRow);
 		map.put("endRow", endRow);
-		return session.selectList("reviewns.review0List", map);
-	}
-	@SuppressWarnings("unchecked")
-	public List<Review> reviewBatList(int startRow, int endRow) {
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		map.put("startRow", startRow);
-		map.put("endRow", endRow);
-		return session.selectList("reviewns.reviewBatList", map);
-	}
-	@SuppressWarnings("unchecked")
-	public List<Review> reviewMathList(int startRow, int endRow) {
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		map.put("startRow", startRow);
-		map.put("endRow", endRow);
-		return session.selectList("reviewns.reviewMathList", map);
-	}
-	@SuppressWarnings("unchecked")
-	public List<Review> reviewMoonList(int startRow, int endRow) {
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		map.put("startRow", startRow);
-		map.put("endRow", endRow);
-		return session.selectList("reviewns.reviewMoonList", map);
-	}
-	@SuppressWarnings("unchecked")
-	public List<Review> reviewSingList(int startRow, int endRow) {
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		map.put("startRow", startRow);
-		map.put("endRow", endRow);
-		return session.selectList("reviewns.reviewSingList", map);
-	}
-	@SuppressWarnings("unchecked")
-	public List<Review> reviewSpiList(int startRow, int endRow) {
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		map.put("startRow", startRow);
-		map.put("endRow", endRow);
-		return session.selectList("reviewns.reviewSpiList", map);
+		map.put("mvCode", mvCode);
+		return session.selectList("reviewns.reviewNowList", map);
 	}
 	public int deleteMaster(int rvNum) {
 		return session.delete("reviewns.deleteMaster", rvNum);
@@ -117,22 +83,7 @@ public class ReviewDao {
 		
 		return session.selectList("reviewns.mylist",map);
 	}
-	public int get0Total() {
-		return (int) session.selectOne("reviewns.get0Total");
-	}
-	public int getSpiTotal() {
-		return (int) session.selectOne("reviewns.getSpiTotal");
-	}
-	public int getBatTotal() {
-		return (int) session.selectOne("reviewns.getBatTotal");
-	}
-	public int getMathTotal() {
-		return (int) session.selectOne("reviewns.getMathTotal");
-	}
-	public int getMoonTotal() {
-		return (int) session.selectOne("reviewns.getMoonTotal");
-	}
-	public int getSingTotal() {
-		return (int) session.selectOne("reviewns.getSingTotal");
+	public int getNowClosedTotal(int mvCode) {
+		return (int) session.selectOne("reviewns.getNowClosedTotal", mvCode);
 	}
 }
