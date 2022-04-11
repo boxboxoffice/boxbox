@@ -2,7 +2,7 @@ drop table store cascade constraints;
 
 CREATE table STORE
 (
-pdCode NUMBER PRIMARY KEY NOT NULL,
+pdCode NUMBER PRIMARY KEY NOT NULL,ㅁ
 pdName VARCHAR2(30),
 pdPrice NUMBER
 

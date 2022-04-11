@@ -51,6 +51,7 @@ public class Ticketing6 implements CommandProcess  {
 		System.out.println(score);
 		
 		md.ticketcountAdd(id); 
+		md.scoreUpTT(id);
 		
 		double discount = 0.0;
 		if(0<=score && score<=20) {discount = 1;}
