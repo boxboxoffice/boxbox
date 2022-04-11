@@ -6,6 +6,9 @@
 	<select id="select" parameterType="integer" resultType="store">
 		select * from store where pdCode = #{pdCode}
 	</select>
+	<select id="callList" resultType="store" parameterType="String">
+		select * from store
+	</select>
 	
 
 

@@ -30,6 +30,7 @@
 		<div id="maincontent">
 		<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px">예약 내역</a>
 		<a id="title2">| 예약이 완료되었습니다</a>
+		<a id="title3" href="store.st"><img   alt="로고" src="images/store/store.jpg" height="120px" width="120px">스토어 가기</a>
 		<div id="movieNowBox">
 		
 			

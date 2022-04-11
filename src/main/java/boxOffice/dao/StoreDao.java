@@ -35,7 +35,7 @@ public class StoreDao {
 		return (Store)session.selectOne("storest.select", pdCode);
 	}
 	@SuppressWarnings("unchecked")
-	public List<Store> callList(int pdCOde) {
+	public List<Store> callList() {
 		return session.selectList("storest.callList");
 	}
 
