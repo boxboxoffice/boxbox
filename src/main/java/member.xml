@@ -24,4 +24,16 @@
 	<update id="ticketcountAdd" parameterType="string">
 		update member set ticketcount = ticketcount +1 where id=#{id}
 	</update>
+	<select id="memberlist" parameterType="map" resultType="member">
+		select * from (select rowNum rn, a.* from(select * from member order by reg_date desc)a) where rn between #{startRow} and #{endRow}
+	</select>
+	<select id="getTotal" resultType="integer" parameterType="string">
+		select count(*) from member 
+	</select>
+	<update id="scoreUpTT" parameterType="string">
+		update member set score = score + 10 where id=#{id}
+	</update>
+	<update id="scoreUpRe" parameterType="string">
+		update member set score = score + 5 where id=#{id}
+	</update>
 </mapper> 

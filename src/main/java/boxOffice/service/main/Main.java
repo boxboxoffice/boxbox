@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import boxOffice.dao.MovieDao;
 import boxOffice.model.Movie;
 
+
 public class Main implements CommandProcess {
 
 	@Override
@@ -16,7 +17,7 @@ public class Main implements CommandProcess {
 		List<Movie> list = md.mainList();
 		
 		request.setAttribute("list", list);
-		      
+		   
 			
 		return "main";
 	}
