@@ -19,4 +19,14 @@ public class Store implements CommandProcess {
 		return "store";
 	}
 
+	public static void setPdCode(int pdCode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void setPdPrice(int pdPrice) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

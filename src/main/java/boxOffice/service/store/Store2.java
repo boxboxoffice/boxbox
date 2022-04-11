@@ -8,10 +8,17 @@ public class Store2 implements CommandProcess {
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		
-		request.getParameter("image");
-		request.getParameter("pdPrice");
-		request.getParameter("pdName");
-		request.getParameter("pdCode");
+		
+		
+		String image =request.getParameter("image");
+		String pdName =request.getParameter("pdName");
+		
+		
+		
+		request.setAttribute("image", image);
+		request.setAttribute("pdName", pdName);
+		
+		
 		return "store2";
 	}
 

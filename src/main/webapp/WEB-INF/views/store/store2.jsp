@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-	@import url("css/store2.css");
+	@import url("css/store22.css");
 	@font-face
    {
 	    font-family: 'Arita-dotum-Medium';
@@ -21,13 +21,13 @@
 <section>
 	<div id="maincontent">
 		<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px">구매 상품</a>
-		<table id="storeView" style="margin-left:10%; border : solid 1px;" >
+		<table id="storeView" style="margin : auto; border : solid 1px;" >
 		<tr id="storecontent">
 			<td  colspan="2"><a href="store.st?pdCode=${store.pdCode }"><img alt="포스터" src="images/store/${store.image }" width="320" ></a><br><br><br></td>
 		</tr>
 				
 				<tr>
-					<th>상품명 : </th><td>${pdName }</td>
+					<th>상품명 : </th><td>${store.pdName }</td>
 				</tr>
 				<tr>
 					<th>상품 수량 : </th><td>
@@ -39,7 +39,7 @@
 													</td>
 				</tr>
 				<tr>
-					<th> 총  가격 :</th><td> ${pdPrice}</td>
+					<th> 총  가격 :</th><td> ${store.pdPrice}</td>
 				</tr>
 				
 		</table>
