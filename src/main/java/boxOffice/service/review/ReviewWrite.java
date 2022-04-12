@@ -48,7 +48,7 @@ public class ReviewWrite implements CommandProcess {
 		int nowGrade = mv.getGrade(mvCode);
 		int mvCodeCount = rd.getCodeTotal(mvCode);
 		
-		if (mvCodeCount == 0) {
+		if (mvCodeCount==0) {
 			int gradeUp = (nowGrade+mvGrade)/2;
 			mv.updateGrade(gradeUp, mvCode);
 		} else {
