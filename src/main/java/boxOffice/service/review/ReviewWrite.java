@@ -52,7 +52,7 @@ public class ReviewWrite implements CommandProcess {
 			int gradeUp = (nowGrade+mvGrade)/2;
 			mv.updateGrade(gradeUp, mvCode);
 		} else {
-			int gradeUp = (nowGrade+mvGrade)/(mvCodeCount+1);
+			int gradeUp = ((nowGrade*(mvCodeCount))+mvGrade)/(mvCodeCount+1);
 			mv.updateGrade(gradeUp, mvCode);
 		}
 		
