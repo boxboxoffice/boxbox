@@ -24,4 +24,7 @@
 	<update id="ticketcountAdd" parameterType="string">
 		update member set ticketcount = ticketcount +1 where id=#{id}
 	</update>
+	<update id="memberDel" parameterType="string">
+		update member set memberdel='y' where id=#{id}
+	</update>
 </mapper> 

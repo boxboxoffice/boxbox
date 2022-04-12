@@ -19,7 +19,7 @@
 			<li><a href="myticket.si">예매 내역</a></li>
 			<li><a href="ticketing.re">예매</a></li>
 			<li><a href="logout.si">로그아웃</a></li>
-			<li><a href="#">회원탈퇴</a></li>
+			<li><a href="memberDelForm.si">회원탈퇴</a></li>
 		</ul>
 	</div> 
 	<div id="info">

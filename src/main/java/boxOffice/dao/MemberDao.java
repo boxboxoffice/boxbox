@@ -54,4 +54,8 @@ public class MemberDao {
 		return session.update("memberbo.ticketcountAdd", id);
 		
 	}
+	public int memberDel(String id) {
+		return session.update("memberbo.memberDel", id);
+		
+	}
 }
