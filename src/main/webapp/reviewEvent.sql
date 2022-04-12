@@ -18,11 +18,11 @@ create table review( -- 리뷰게시판
 );
 select * from review;
 
-insert into review values(1, '쏘쏘', 'test', 'test3', 7, 0, sysdate, 'n', '반지의 제왕', 3, 0);
-insert into review values(2, '대 명 작', 'test', 'test3', 10, 0, sysdate, 'n', '반지의 제왕', 3, 0);
-insert into review values(3, '영화 너무 김', 'test', 'test3', 2, 0, sysdate, 'n', '반지의 제왕', 3, 0);
-insert into review values(4, '노잼', 'test', test3, 3, 0, sysdate, 'n', '반지의 제왕', 3, 0);
-insert into review values(5, '나쁘지 않았음', 'test', 'test3', 6, 0, sysdate, 'n', '반지의 제왕', 3, 0);
+insert into review values(1, '쏘쏘', 'test', 'test3', 7, 0, sysdate, 'n', '반지의 제왕: 반지 원정대', 3, 0);
+insert into review values(2, '대 명 작', 'test', 'test3', 10, 0, sysdate, 'n', '반지의 제왕: 반지 원정대', 3, 0);
+insert into review values(3, '영화 너무 김', 'test', 'test3', 2, 0, sysdate, 'n', '반지의 제왕: 반지 원정대', 3, 0);
+insert into review values(4, '노잼', 'test', test3, 3, 0, sysdate, 'n', '반지의 제왕: 반지 원정대', 3, 0);
+insert into review values(5, '나쁘지 않았음', 'test', 'test3', 6, 0, sysdate, 'n', '반지의 제왕: 반지 원정대', 3, 0);
 insert into review values(6, '쏘쏘2', 'test', 'test3', 7, 0, sysdate, 'n', '이터널스', 5, 0);
 insert into review values(7, '대 명 작2', 'test', 'test3', 10, 0, sysdate, 'n', '이터널스', 5, 0);
 insert into review values(8, '영화 너무 김2', 'test', 'test3', 2, 0, sysdate, 'n', '이터널스', 5, 0);

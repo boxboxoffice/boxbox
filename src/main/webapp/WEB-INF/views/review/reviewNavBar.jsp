@@ -33,7 +33,7 @@
             상영종료영화
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="reviewNowClosedList.rv?mvCode=3">반지의 제왕</a></li>
+            <li><a class="dropdown-item" href="reviewNowClosedList.rv?mvCode=3">반지의 제왕: 반지 원정대</a></li>
             <li><a class="dropdown-item" href="reviewNowClosedList.rv?mvCode=5">이터널스</a></li>
             <li><a class="dropdown-item" href="reviewNowClosedList.rv?mvCode=7">조커</a></li>
             <li><a class="dropdown-item" href="reviewNowClosedList.rv?mvCode=8">덩케르트</a></li>
