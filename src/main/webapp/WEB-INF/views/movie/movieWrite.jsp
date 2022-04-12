@@ -5,8 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ticket&Review</title>
-<link href="css/main.css?update" rel="stylesheet" type="text/css">
+<title>BoxOffice</title>
 <link rel="icon" href="images/logo/tricon.ico">
 </head>
 <body>

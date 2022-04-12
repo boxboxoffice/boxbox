@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ticket&Review</title>
+<title>BoxOffice</title>
 <script type="text/javascript" src="se2/js/service/HuskyEZCreator.js"
 	charset="utf-8"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -55,7 +55,6 @@ function chk() {
 		}
 	}
 </script>
-<link href="css/moviewriteform.css?update" rel="stylesheet" type="text/css">
 <link rel="icon" href="images/logo/tricon.ico">
 </head>
 <body>

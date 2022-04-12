@@ -6,8 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ticket&Review</title>
-<link href="css/movieInfo.css?update" rel="stylesheet" type="text/css">
+<title>BoxOffice</title>
 <link rel="icon" href="images/logo/tricon.ico">
 </head>
 <body>
@@ -35,7 +34,7 @@
       <a id="category3" href="movieNotyet.mv" class="mymenu"><u>상영 예정</u></a>
       </c:if>
     </form>
-<a id="title2">| Movie Info</a>
+<a id="title2">| MovieInfo</a>
 <div id="movieNowBox">
 <div id="movieList" style="top:20px; font-size:100%">
 <a href="#"><img alt="포스터" src="images/poster/${movie.poster }" width="360"></a>
@@ -96,11 +95,11 @@
 <tr height="50px"></tr>
 <tr>
 	<c:if test="${movie.mvTag eq 1}">
-    <td><a href="searchRvmainlist.re?whereRv=mvTitle&rvsearch=${movie.mvTitle }" style="width:300px; text-align:center" class="button2"><b>Review</b></a></td>
+    <td><a href="reviewNowClosedList.rv=${movie.mvTitle }" style="width:300px; text-align:center" class="button2"><b>Review</b></a></td>
     </c:if>
     <c:if test="${movie.mvTag eq 2}">
-    <td><a href="ticketing2.mv?movieCode=${movie.mvCode }" style="width:300px; text-align:center" class="button2"><b>예매하기</b></a>
-    <a href="searchRvmainlist.re?whereRv=mvTitle&rvsearch=${movie.mvTitle }" style="width:300px; text-align:center" class="button2"><b>Review</b></a></td>
+    <td><a href="ticketing2.re?movieCode=${movie.mvCode }" style="width:300px; text-align:center" class="button2"><b>예매하기</b></a>
+    <a href="reviewNowClosedList.rv=${movie.mvTitle }" style="width:300px; text-align:center" class="button2"><b>Review</b></a></td>
     </c:if>
 </tr>
 </tbody>

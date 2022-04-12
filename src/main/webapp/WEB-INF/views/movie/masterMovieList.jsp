@@ -7,14 +7,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ticket&Review</title>
-<link href="css/movieList.css?update" rel="stylesheet" type="text/css">
+<title>BoxOffice</title>
 <link rel="icon" href="images/logo/tricon.ico">
 </head>
 <body>
 <section>
 <div id="maincontent">
-<a href="main.do"><img alt="로고" src="images/logo/T&R.png" height="30px" width="30px" id="logo"></a><a id="title1" href="masterpage.do">| T & R 관리페이지</a>
+<a href="main.do"><img alt="로고" src="images/logo/T&R.png" height="30px" width="30px" id="logo"></a><a id="title1" href="masterpage.do">| BoxOffice</a>
 <div id="contentBox">
 <div id="mcount">총:&nbsp;&nbsp;${total } 개</div>
 <div id="memberlist">
@@ -38,7 +37,7 @@
 <c:if test="${val.mvTag == 3}">
 <td align="center">&nbsp;&nbsp; 상영 예정</td>
 </c:if>
-<td align="center">&nbsp;&nbsp; ${val.openDate }</td><td align="center">&nbsp;&nbsp; ${val.cDate }</td>
+<td align="center">&nbsp;&nbsp; ${val.openDate }</td>
 </tr>
 <tr>
 <td colspan="4"><div id="space">&nbsp;</div></td>

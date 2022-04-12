@@ -7,14 +7,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ticket&Review</title>
-<link href="css/memberlinfoM.css?update" rel="stylesheet" type="text/css">
+<title>BoxOffice</title>
 <link rel="icon" href="images/logo/tricon.ico">
 </head>
 <body>
 <section>
 <div id="maincontent">
-<a href="main.do"><img alt="로고" src="images/logo/T&R.png" height="30px" width="30px" id="logo"></a><a id="title1" href="masterpage.do">| T & R 관리페이지</a>
+<a href="main.do"><img alt="로고" src="images/logo/T&R.png" height="30px" width="30px" id="logo"></a><a id="title1" href="masterpage.do">| BoxOffice</a>
 <div id="contentBox">
 <div id="infotitle">| 영화정보</div>
 <div id="memberinfo">
@@ -46,7 +45,7 @@
 </tr>
 </table>
 <div id="goback" class="action"><a href="javascript:window.history.back();">뒤로가기</a></div>
-<c:if test="${movie.movieTag == 2 }">
+<c:if test="${movie.mvTag == 2 }">
 <div id="activecheck" ><a href="movieUpdate.mv?mvCode=${movie.mvCode }&mvTag=${movie.mvTag }" >상영종료</a></div>
 </c:if>
 <c:if test="${movie.mvTag == 3 }">
