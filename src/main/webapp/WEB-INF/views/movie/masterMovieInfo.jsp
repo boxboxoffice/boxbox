@@ -8,15 +8,13 @@
 <head>
 <meta charset="UTF-8">
 <title>BoxOffice</title>
-<link rel="icon" href="images/logo/tricon.ico">
 </head>
 <body>
 <section>
 <div id="maincontent">
-<a href="main.do"><img alt="로고" src="images/logo/T&R.png" height="30px" width="30px" id="logo"></a><a id="title1" href="masterpage.do">| BoxOffice</a>
+<a href="main.do"> BoxOffice</a>
 <div id="contentBox">
-<div id="infotitle">| 영화정보</div>
-<div id="memberinfo">
+<div id="infotitle"> 영화정보</div>
 <table>
 <tr>
 <td>무비 코드:</td><td><input type="text" value="${movie.mvCode }" readonly="readonly" class="info"></td>
@@ -51,7 +49,6 @@
 <c:if test="${movie.mvTag == 3 }">
 <div id="activecheck" ><a href="movieUpdate.mv?mvCode=${movie.mvCode }&mvTag=${movie.mvTag }" >상영시작</a></div>
 </c:if>
-</div>
 </div>
 
 </div>
