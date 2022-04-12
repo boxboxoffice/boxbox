@@ -1,1 +1,43 @@
 body {font-family:  'Arita-dotum-Medium';}
+
+#title1{
+	color: black;
+	font-size: 30px;
+	margin-left: 400px;
+	
+}
+
+#title2 {
+	color: black;
+	font-size: 30px;
+	margin-left: 420px;
+	
+}
+
+
+a[id="category1"] {
+
+color: black;
+	font-size: 20px;
+	margin-left: 350px;
+	
+
+
+	}
+  
+a[id="category2"] {
+
+color: black;
+	font-size: 20px;
+	
+	
+}
+
+a[id="category3"]
+{
+
+color: black;
+	font-size: 20px;
+	
+
+}
