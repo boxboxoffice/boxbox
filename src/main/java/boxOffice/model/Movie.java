@@ -17,7 +17,11 @@ public class Movie {
 	private int mvPrice;
 	private String mvGrade;
 	private String mvAge;
+	private int movieStar;
 	
+	public int getMovieStar() {
+		return movieStar;
+	}
 	public int getMvCode() {
 		return mvCode;
 	}
@@ -101,6 +105,15 @@ public class Movie {
 	}
 	public void setMvAge(String mvAge) {
 		this.mvAge = mvAge;
+	}
+	public void setMvGrade(int mvGrade2) {
+		
+	}
+	public void setRunningTime(int runningTime2) {
+		
+	}
+	public void setMovieStar(int movieStar) {
+		
 	}
 	
 }

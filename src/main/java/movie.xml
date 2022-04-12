@@ -19,4 +19,56 @@
 	<select id="gettotalComing" parameterType="String" resultType="_int">
 		select count(*) from movie where mvTag = 3
 	</select>
+	
+	<select id="selectClosedList" resultType="movie">
+	select * from (select rowNum rn, a.* from(select * from movie where mvTag = 1 order by mvCode )a) where rn between #{startRow} and #{endRow} 
+	</select>
+	<select id="selectComingList" resultType="movie">
+	select * from (select rowNum rn, a.* from(select * from movie where mvTag = 3 order by mvCode )a) where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<select id="searchMovielist" resultType="movie">
+	select * from (select rowNum rn, a.* from(select * from movie where lower(mvTitle) like lower('%' ||  #{result} || '%') or majorActor like lower('%' ||  #{result} || '%')  or director like lower('%' ||  #{result} || '%') order by mvTitle desc,actor desc,director desc)a) where rn <![CDATA[<=]]> #{mresultnum}
+	</select>
+	
+	<select id="selectInfo" resultType="movie">
+	select * from (select rowNum rn, a.* from
+	(select * from movie where mvCode=#{mvCode} order by mvCode )a) 
+	where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<select id="gettotal" parameterType="String" resultType="_int">
+	select count(*) from movie
+	</select>
+	
+	<select id="selectList" resultType="movie">
+	select * from (select rowNum rn, a.* from(select * from movie order by mvCode )a) where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<update id="updateClosed" parameterType="string">
+	update movie set mvTag=1 where mvCode=#{mvCode} and mvTag=2
+	</update>
+	
+	<update id="updateNow" parameterType="string">
+	update movie set mvTag=2 where mvCode=#{mvCode} and mvTag=3
+	</update>
+	<select id="selectTitle" resultType="string" parameterType="integer">
+		select mvTitle from movie where mvCode = #{mvCode }
+	</select>
+	
+	<insert id="insert" parameterType="movie">		
+	
+		insert into movie values(#{mvCode}, #{mvTitle}, #{mvTag},#{openDate},#{director}, #{majorActor}, #{mvInfo}, #{mvContent}, #{mvGrade}, #{poster,jdbcType=VARCHAR}, #{movieStar}, #{runningTime}, #{mvPrice}, 'n', #{Genre})
+	</insert>
+	
+	<select id="selectMvCode" resultType="_int">
+	select (max(movieCode)+1) mvCode from movie
+	</select>
+	<select id="getStar" resultType="_int">
+	select movieStar from movie where mvCode=#{mvCode}
+	</select>
+	<update id="updateMovieStar" parameterType="string">
+	update movie set movieStar=#{nowstar} where mvCode=#{mvCode}
+	</update>
+	
 </mapper>

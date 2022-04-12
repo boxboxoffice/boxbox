@@ -1,6 +1,9 @@
 package boxOffice.dao;
 
 import java.io.Reader;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -56,6 +59,25 @@ public class MemberDao {
 	}
 	public int memberDel(String id) {
 		return session.update("memberbo.memberDel", id);
+		
+	}
+	public int getTotal() {
+		return (int) session.selectOne("memberbo.getTotal");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Member> memberList(int startRow, int endRow) {
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		map.put("startRow", startRow);
+		map.put("endRow", endRow);
+		return session.selectList("memberbo.memberlist", map);
+	}
+	public int scoreUpTT(String id) {
+		return session.update("memberbo.scoreUpTT", id);
+		
+	}
+	public int scoreUpRe(String id) {
+		return session.update("memberbo.scoreUpRe", id);
 		
 	}
 }

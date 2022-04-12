@@ -1,21 +1,28 @@
 drop table store cascade constraints;
-CREATE table STORE(
-pdCode NUMBER PRIMARY KEY NOT NULL,
-pdName VARCHAR2(20),
+
+CREATE table STORE
+(
+pdCode NUMBER PRIMARY KEY NOT NULL,ㅁ
+pdName VARCHAR2(30),
 pdPrice NUMBER,
+image VARCHAR2(300)
 
 );
 
+select * from store;
+
+
 delete from store;
-INSERT INTO store values(1,'오리지널팝콘' , 4000);
-INSERT INTO store values(2,'어니언팝콘', 5000);
-INSERT INTO store values(3,'치즈팝콘', 5000);
-INSERT INTO store values(4,'콜라', 3000);
-INSERT INTO store values(5,'사이다',3000);
-INSERT INTO store values(6,'환타',3000);
-INSERT INTO store values(7,'즉석구이오징어',4000);
-INSERT INTO store values(8,'츄러스',3000);
-INSERT INTO store values(9,'플레인핫도그',5000);
+
+INSERT INTO store values(1,'오리지널팝콘' , 5000, 'orPop.jpg');
+INSERT INTO store values(2,'카라멜팝콘', 6000,'caPop.jpg');
+INSERT INTO store values(3,'치즈팝콘', 6000,'chPop.jpg');
+INSERT INTO store values(4,'콜라', 3000,'coke.jpg');
+INSERT INTO store values(5,'아이스아메리카노',4000,'Cof.jpg');
+INSERT INTO store values(6,'아메리카노',3500,'hCof.jpg');
+INSERT INTO store values(7,'즉석구이오징어',4000,'squ.jpg');
+INSERT INTO store values(8,'칠리나쵸',4900,'naC.jpg');
+INSERT INTO store values(9,'플레인핫도그',3500,'hDog.jpg');
 
 
 

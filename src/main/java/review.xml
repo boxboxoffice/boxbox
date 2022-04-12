@@ -5,47 +5,17 @@
 	<select id="select" parameterType="integer" resultType="review">
 		select * from review where rvNum = #{rvNum}
 	</select>
-	<select id="getTotal" resultType="integer" parameterType="string">
+	<select id="getTotal" resultType="integer" >
 		select count(*) from review 
 	</select>
-	<select id="get0Total" resultType="integer" parameterType="string">
-		select count(*) from review where mvCode = 4
-	</select>
-	<select id="getSpiTotal" resultType="integer" parameterType="string">
-		select count(*) from review where mvCode = 1
-	</select>
-	<select id="getBatTotal" resultType="integer" parameterType="string">
-		select count(*) from review where mvCode = 6
-	</select>
-	<select id="getMathTotal" resultType="integer" parameterType="string">
-		select count(*) from review where mvCode = 16
-	</select>
-	<select id="getMoonTotal" resultType="integer" parameterType="string">
-		select count(*) from review where mvCode = 18
-	</select>
-	<select id="getSingTotal" resultType="integer" parameterType="string">
-		select count(*) from review where mvCode = 9
+	<select id="getNowClosedTotal" resultType="integer">
+		select count(*) from review where mvCode = #{mvCode}
 	</select>
 	<select id="reviewList" parameterType="map" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review order by rvNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
-	<select id="review0List" parameterType="map" resultType="review">
-		select * from (select rowNum rn, a.* from(select * from review where mvCode = 4 order by rvNum desc)a) where rn between #{startRow} and #{endRow}
-	</select>
-	<select id="reviewSpiList" parameterType="map" resultType="review">
-		select * from (select rowNum rn, a.* from(select * from review where mvCode = 1 order by rvNum desc)a) where rn between #{startRow} and #{endRow}
-	</select>
-	<select id="reviewBatList" parameterType="map" resultType="review">
-		select * from (select rowNum rn, a.* from(select * from review where mvCode = 6 order by rvNum desc)a) where rn between #{startRow} and #{endRow}
-	</select>
-	<select id="reviewMathList" parameterType="map" resultType="review">
-		select * from (select rowNum rn, a.* from(select * from review where mvCode = 16 order by rvNum desc)a) where rn between #{startRow} and #{endRow}
-	</select>
-	<select id="reviewMoonList" parameterType="map" resultType="review">
-		select * from (select rowNum rn, a.* from(select * from review where mvCode = 18 order by rvNum desc)a) where rn between #{startRow} and #{endRow}
-	</select>
-	<select id="reviewSingList" parameterType="map" resultType="review">
-		select * from (select rowNum rn, a.* from(select * from review where mvCode = 9 order by rvNum desc)a) where rn between #{startRow} and #{endRow}
+	<select id="reviewNowClosedList" parameterType="map" resultType="review">
+		select * from (select rowNum rn, a.* from(select * from review where mvCode = #{mvCode} order by rvNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
 	<insert id="insert" parameterType="review">
 		<selectKey keyProperty="rvNum" order="BEFORE" resultType="integer">
@@ -63,7 +33,7 @@
 		update review set rvDel='m' where rvNum=#{rvNum}
 	</update>
 	<update id="update">
-		update review set rvTitle= #{rvTitle }, rvGrade = #{rvGrade }, rvContent = #{rvContent}, mvCode = #{mvCode}  where rvNum = #{rvNum }
+		update review set rvTitle= #{rvTitle }, rvGrade = #{rvGrade }, rvContent = #{rvContent} where rvNum = #{rvNum }
 	</update>
 	<update id="updateLike" parameterType="integer">
 		update review set rvLike = rvLike + 1 where rvNum = #{rvNum }
@@ -74,5 +44,6 @@
 	<select id="mylist" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review where id=#{id} order by rvNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
+	
 </mapper>
 

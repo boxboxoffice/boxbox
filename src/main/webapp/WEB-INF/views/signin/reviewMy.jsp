@@ -8,8 +8,15 @@
 <title>Insert title here</title>
 <link href="css/reviewMain.css?update" rel="stylesheet" type="text/css">
 </head>
-<style>
-
+<style type="text/css">
+	@font-face
+    {
+       font-family: 'Arita-dotum-Medium';
+       src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+   }
+   body {font-family:  'Arita-dotum-Medium';}
 </style>
 <body>
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
@@ -73,14 +80,14 @@
 <div align="center">
 	<!-- 앞에 보여줄 것이 있다 -->
 	<c:if test="${startPage  > PAGE_PER_BLOCK }">
-		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewMain.rv?pageNum=${startPage-1}'">이전</button>
+		<button class="btn btn-outline-dark btn-sm" onclick="location.href='myReview.si?pageNum=${startPage-1}'">이전</button>
 	</c:if>
 	<c:forEach var="i" begin="${startPage }" end="${endPage }">
-		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewMain.rv?pageNum=${i}'">${i}</button>
+		<button class="btn btn-outline-dark btn-sm" onclick="location.href='myReview.si?pageNum=${i}'">${i}</button>
 	</c:forEach>
 	<!-- 아직 보여줄 것이 남아 있다 -->
 	<c:if test="${endPage < totalPage }">
-		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewMain.rv?pageNum=${endPage+1}'">다음</button>
+		<button class="btn btn-outline-dark btn-sm" onclick="location.href='myReview.si?pageNum=${endPage+1}'">다음</button>
 	</c:if>
 </div>
 <footer>

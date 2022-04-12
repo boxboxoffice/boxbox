@@ -24,6 +24,7 @@ public class ReviewWrite implements CommandProcess {
 		
 		MemberDao md = MemberDao.getInstance();
 		md.textcountAdd(id); 
+		md.scoreUpRe(id);
 		
 		if(mvTitle.equals("스파이더맨 노 웨이 홈")) {			
 			mvCode = 1;

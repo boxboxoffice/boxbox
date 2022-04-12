@@ -67,11 +67,7 @@ public class ScreenDao {
 		return session.selectList("screenns.selectScreenList",map);
 	}
 	
-	@SuppressWarnings("unchecked")
-	public List<Screen> getScreenlist() {
-		// TODO Auto-generated method stub
-		return session.selectList("screenns.getScreenlist");
-	}
+
 	@SuppressWarnings("unchecked")
 	public List<Screen> selectScreenCode3( String screenTime) {
 		HashMap<String, String> map=new HashMap<String,String>();
@@ -81,6 +77,10 @@ public class ScreenDao {
 		map.put("screenTime", screenTime1);
 		
 		return session.selectList("screenns.selectScreenCode3",map);
+	}
+	@SuppressWarnings("unchecked")
+	public List<Screen> getScreenlist() {
+		return session.selectList("screensc.getScreenlist");
 	}
 
 }

@@ -39,23 +39,22 @@
 		</thead>
 			<tbody>
 				<c:if test="${empty list }">
+				<tr>
+					<th colspan="8">게시글이 없습니다.</th>
+				</tr>
+			</c:if>
+			<c:if test="${not empty list}">
+				<c:forEach items="${list }" var="review">
 					<tr>
-						<th colspan="7">게시글이 없습니다.</th>
-					</tr>
-				</c:if>
-				<c:if test="${not empty list}">
-					<c:forEach items="${list }" var="review">
-					<c:if test="${review.mvCode == 9 }">
-						<tr>
-							<td>${review.rvNum }</td>
-							<c:if test="${review.rvDel == 'y' }">
-								<th colspan="6">삭제된 게시글 입니다.</th>
-							</c:if>
-							<c:if test="${review.rvDel == 'm' }">
-								<th colspan="6">관리자에 의해 삭제된 게시글 입니다.</th>
-							</c:if>
-							<c:if test="${review.rvDel != 'y' and review.rvDel != 'm' }">
-								<td width="35%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }</a></td>
+						<td>${review.rvNum }</td>
+						<c:if test="${review.rvDel == 'y' }">
+							<th colspan="6">삭제된 게시글 입니다.</th>
+						</c:if>
+						<c:if test="${review.rvDel == 'm' }">
+							<th colspan="6">관리자에 의해 삭제된 게시글 입니다.</th>
+						</c:if>
+						<c:if test="${review.rvDel != 'y' and review.rvDel != 'm' }">
+							<td width="35%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }</a></td>
 								<td>${review.mvTitle }</td>
 								<td>${review.id }</td>
 								<td>⭐${review.rvGrade }</td>
@@ -65,16 +64,15 @@
 								</c:if>
 								<c:if test="${review.rvReadCount <= 49}">
 									<td>${review.rvReadCount }</td>
-								</c:if>	
+								</c:if>
 							</c:if>
 						</tr>
-						</c:if>
-					</c:forEach>
-				</c:if>
-			</tbody>
-		</table>
-		<br>
-		<button class="btn btn-outline-dark btn-sm" onclick="return chk()" style="float: right;">리뷰작성</button>
+				</c:forEach>
+			</c:if>
+		</tbody>
+	</table>
+	<br>
+	<button class="btn btn-outline-dark btn-sm" onclick="return chk()" style="float: right;">리뷰작성</button>
 </div>
 <br>
 <br>
@@ -82,14 +80,14 @@
 <div align="center">
 	<!-- 앞에 보여줄 것이 있다 -->
 	<c:if test="${startPage  > PAGE_PER_BLOCK }">
-		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewSingView.rv?pageNum=${startPage-1}'">이전</button>
+		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewNowClosedList.rv?pageNum=${startPage-1}&mvCode=${mvCode }'">이전</button>
 	</c:if>
 	<c:forEach var="i" begin="${startPage }" end="${endPage }">
-		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewSingView.rv?pageNum=${i}'">${i}</button>
+		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewNowClosedList.rv?pageNum=${i}&mvCode=${mvCode }'">${i}</button>
 	</c:forEach>
 	<!-- 아직 보여줄 것이 남아 있다 -->
 	<c:if test="${endPage < totalPage }">
-		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewSingView.rv?pageNum=${endPage+1}'">다음</button>
+		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewNowClosedList.rv?pageNum=${endPage+1}&mvCode=${mvCode }''">다음</button>
 	</c:if>
 </div>
 <footer><div id="footer"><jsp:include page="../public/footer.jsp"></jsp:include></div></footer>

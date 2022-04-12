@@ -53,7 +53,7 @@
 				</tr>
 				
 		</table>
-			<div id="payinfo"><table id="payInfoTable"><tr><td>무통장 입금 : 카카오뱅크 :1111-333-4444-5555 </td><td>${reservation.finalPrice }원</td></tr></table></div>
+			<div id="payinfo"><table id="payInfoTable"><tr><td>무통장 입금 : 카카오뱅크 :1111-333-4444-5555 </td><td>${reservation.finalPrice }</td></tr></table></div>
 			<div id="main1">
 		 		<button  class="main" onclick="location.href='main.do'" ><b>메인으로 가기</b></button>
 		 		<button class="main" onclick="location.href='myticket.si'"><b>예약 현황</b></button>

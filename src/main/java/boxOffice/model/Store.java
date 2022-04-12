@@ -3,9 +3,20 @@ package boxOffice.model;
 
 public class Store {
 	
-	int pdCode;
-	String pdName;
-	int pdPrice;
+	private int pdCode;
+	private String pdName;
+	private int pdPrice;
+	private String image;
+	
+	
+	
+	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public int getPdCode() {
 		return pdCode;
 	}

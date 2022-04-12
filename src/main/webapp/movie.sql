@@ -16,8 +16,7 @@ mvContent VARCHAR2(4000), --줄거리
 mvPrice NUMBER,--영화가격
 mvGrade VARCHAR2(10), -- 평점
 movieStar NUMBER(10), -- 평점(별)
-mvAge VARCHAR2(30)
--- 관람 연령
+mvAge VARCHAR2(30) -- 관람 연령
 );
  select * from movie;
  

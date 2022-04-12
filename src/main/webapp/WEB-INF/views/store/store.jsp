@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">@import url("css/store.css");
+<style type="text/css">@import url("css/store2.css");
 @font-face
  {
 	    font-family: 'Arita-dotum-Medium';
@@ -16,8 +16,6 @@
 	    font-weight: normal;
 	    font-style: normal;
 	}	
-	
-	
 	
 
 </style>
@@ -32,63 +30,17 @@
 			<img class="hero_header" src="images/store/pop.jpg" alt="">
     
     <div class="products">
-     
-	     <c:forEach items="${list }" var="val">    
-	      <a href="store2.st">
-		        <img src="#">
-		        <p>${val.pdName }</p>
-		        <p class="price">${val.pdPrice }</p>
-	      </a>
-		</c:forEach>     
-	
-	
+    
+	<c:forEach  items="${list7 }" var="val">
       <a href="store2.st">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">89,000</p>
+	        <img src="images/store/${val.image }">
+	        <p>${val.pdName }</p>
+	        <p class="price">${val.pdPrice}</p>
       </a>
+      </c:forEach>
       
-      <a href="store2.st">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">69,000</p>
-      </a>
       
-      <a href="store2.st">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">79,000</p>
-      </a>
       
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">29,000</p>
-      </a>
-      
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">99,000</p>
-      </a>
-      
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">39,000</p>
-      </a>
-      
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">99,000</p>
-      </a>
-      
-      <a href="#">
-	        <img src="#">
-	        <p>팝콘</p>
-	        <p class="price">79,000</p>
-      </a>
       
       <div class="clearfix"></div>
     </div>
