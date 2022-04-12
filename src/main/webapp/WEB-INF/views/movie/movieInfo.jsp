@@ -14,6 +14,17 @@
 	crossorigin="anonymous">
 <link href="css/movieInfo.css?update" rel="stylesheet" type="text/css">
 
+<style type="text/css">
+@font-face {
+	font-family: 'Arita-dotum-Medium';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+</style>
+
 <link rel="icon" href="images/logo/boxoffice.png">
 </head>
 <body>

@@ -11,4 +11,5 @@ a[id="category1"] { color: black; font-size: 20px; margin-left: 1130px; }
 /** 현재 상영중 **/
 a[id="category2"] { color: black; font-size: 20px; }
 /** 상영 종료 **/
-a[id="category3"] { color: black; font-size: 20px; }	
+a[id="category3"] { color: black; font-size: 20px; }
+
