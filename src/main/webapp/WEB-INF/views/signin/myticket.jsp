@@ -2,11 +2,13 @@
     pageEncoding="UTF-8"%>
     <%@include file="../public/sessionChk.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <%@taglib prefix="ftm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Ticket&Review</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <style type="text/css">@import url("css/ticket3.css");
 @font-face
  	 {
@@ -59,26 +61,6 @@
 					</c:if>
 				</tbody>
 			</table>
-				<div id="pagebar1" align="center">
-					<c:if test="${startPage1 > PAGE_PER_BLOCK1 }">
-						<button
-							onclick="location.href='myTicket.si?pageNum1=${startPage1-1}&currentPage1=${currentPage1}'">이전</button>
-					</c:if>
-					<c:forEach var="i" begin="${startPage1}" end="${endPage1}">
-						<c:if test="${currentPage1== i }">
-							<button onclick="location.href='myTicket.si?pageNum1=${i}&currentPage1=${currentPage1}'"
-								disabled="disabled">${i}</button>
-						</c:if>
-						<c:if test="${currentPage1!= i }">
-							<button onclick="location.href='myTicket.si?pageNum1=${i}&currentPage1=${currentPage1}'">${i}</button>
-						</c:if>
-					</c:forEach>
-					<!-- 보여줄 것이 남아있다 -->
-					<c:if test="${endPage1 < totalPage1 }">
-						<button
-							onclick="location.href='myTicket.si?pageNum1=${endPage1+1}&currentPage1=${currentPage1}'">다음</button>
-					</c:if>
-				</div>
 
 </div>
 			
@@ -114,26 +96,6 @@
 					</c:if>
 				</tbody>
 			</table>
-				<div id="pagebar2" align="center">
-					<c:if test="${startPage2 > PAGE_PER_BLOCK2 }">
-						<button
-							onclick="location.href='myTicket.si?pageNum=${startPage2-1}&currentPage2=${currentPage2}'">이전</button>
-					</c:if>
-					<c:forEach var="i" begin="${startPage2}" end="${endPage2}">
-						<c:if test="${currentPage2== i }">
-							<button onclick="location.href='myTicket.si?pageNum2=${i}&currentPage2=${currentPage2}'"
-								disabled="disabled">${i}</button>
-						</c:if>
-						<c:if test="${currentPage2!= i }">
-							<button onclick="location.href='myTicket.si?pageNum2=${i}&currentPage2=${currentPage2}'">${i}</button>
-						</c:if>
-					</c:forEach>
-					<!-- 보여줄 것이 남아있다 -->
-					<c:if test="${endPage2 < totalPage2 }">
-						<button
-							onclick="location.href='myTicket.si?pageNum2=${endPage2+1}&currentPage2=${currentPage2}'">다음</button>
-					</c:if>
-				</div>
 
 </div>
 			
@@ -141,5 +103,7 @@
 		</div>
 	</section>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

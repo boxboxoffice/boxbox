@@ -1,4 +1,3 @@
-d
 html, body {
 	margin:0;
 	padding:0;
@@ -29,12 +28,6 @@ header{
 	margin-left: -650px;
 	margin-top : 10%;
 }
-#footcontent{
-	width :1300px;
-	position: absolute;
-	left:50%;
-	margin-left: -650px;
-}
 section{
 	position: absolute;
 	left: 0;
@@ -42,17 +35,8 @@ section{
 	top: 55px;
 	color:white;
     width: 100%;
-	height: 1650px;
+	height: 1000px;
 	z-index: 1;
-}
-footer{
-	position: absolute;
-	background: white;
-	height: 130px;
-    width: 100%;
-    left:0;
-    top:1630px;
-	z-index: 300;
 }
 #title1{
 	color: black;
@@ -125,7 +109,7 @@ a[id="category3"] {
 	position: absolute;
 	top: 200px;
 	left: 150px;
-	height: 1500px;
+	height: 800px;
 	width: 1000px;
 	background-color: white;
 }
