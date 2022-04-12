@@ -8,7 +8,7 @@ create table review( -- 리뷰게시판
  rvTitle VARCHAR2(100), --리뷰게시판 제목
  rvContent VARCHAR2(4000), --리뷰게시판 내용
  id VARCHAR2(20), --사용자 id
- rvGrade NUMBER, -- 평점
+ mvGrade NUMBER(10), -- 평점
  rvLike NUMBER, -- 좋아요
  rvDate DATE, -- 게시글 작성날짜
  rvDel VARCHAR2(2) default 'n', -- 게시글 삭제

@@ -86,4 +86,7 @@ public class ReviewDao {
 	public int getNowClosedTotal(int mvCode) {
 		return (int) session.selectOne("reviewns.getNowClosedTotal", mvCode);
 	}
+	public int getCodeTotal(int mvCode) {
+		return (int)session.selectOne("reviewns.getCodeTotal", mvCode);
+	}
 }

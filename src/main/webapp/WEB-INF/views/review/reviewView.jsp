@@ -34,32 +34,32 @@
 		<thead id="thead">
 		<tr>
 			<th colspan="3"><h1>${review.mvTitle }</h1></th>
-			<th colspan="2"><c:if test="${review.rvGrade == 1 }">
+			<th colspan="2"><c:if test="${review.mvGrade == 1 }">
 					평점<br><font size="6">⭐1</font>
-				</c:if> <c:if test="${review.rvGrade == 2 }">
+				</c:if> <c:if test="${review.mvGrade == 2 }">
 					평점<br><font size="6">⭐2</font>
 				</c:if>
-				<c:if test="${review.rvGrade == 3 }">
+				<c:if test="${review.mvGrade == 3 }">
 					평점<br><font size="6">⭐3</font>
 				</c:if>
-				<c:if test="${review.rvGrade == 4 }">
+				<c:if test="${review.mvGrade == 4 }">
 					평점<br><font size="6">⭐4</font>
-				</c:if> <c:if test="${review.rvGrade == 5 }">
+				</c:if> <c:if test="${review.mvGrade == 5 }">
 					평점<br><font size="6">⭐5</font>
 				</c:if>
-				<c:if test="${review.rvGrade == 6 }">
+				<c:if test="${review.mvGrade == 6 }">
 					평점<br><font size="6">⭐6</font>
 				</c:if>
-				<c:if test="${review.rvGrade == 7 }">
+				<c:if test="${review.mvGrade == 7 }">
 					평점<br><font size="6">⭐7</font>
 				</c:if> 
-				<c:if test="${review.rvGrade == 8 }">
+				<c:if test="${review.mvGrade == 8 }">
 					평점<br><font size="6">⭐8</font>
 				</c:if>
-				<c:if test="${review.rvGrade == 9 }">
+				<c:if test="${review.mvGrade == 9 }">
 					평점<br><font size="6">⭐9</font>
 				</c:if>
-				<c:if test="${review.rvGrade == 10 }">
+				<c:if test="${review.mvGrade == 10 }">
 					평점<br><font size="6">⭐10</font>
 				</c:if></th>
 		</tr>

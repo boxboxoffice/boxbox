@@ -57,7 +57,7 @@
 							<td width="35%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }</a></td>
 								<td>${review.mvTitle }</td>
 								<td>${review.id }</td>
-								<td>⭐${review.rvGrade }</td>
+								<td>⭐${review.mvGrade }</td>
 								<td>${review.rvLike }</td>
 								<c:if test="${review.rvReadCount >= 50}">
 									<td style="font-weight: bold;">⚡️${review.rvReadCount }⚡️</td>

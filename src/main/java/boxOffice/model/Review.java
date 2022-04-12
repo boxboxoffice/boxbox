@@ -8,7 +8,7 @@ public class Review {
 	 private String rvTitle;
 	 private String rvContent;
 	 private String id;
-	 private int rvGrade;
+	 private int mvGrade;
 	 private int rsCode;
 	 private int rvLike;
 	 private Date rvDate;
@@ -48,11 +48,11 @@ public class Review {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public int getRvGrade() {
-		return rvGrade;
+	public int getMvGrade() {
+		return mvGrade;
 	}
-	public void setRvGrade(int rvGrade) {
-		this.rvGrade = rvGrade;
+	public void setMvGrade(int mvGrade) {
+		this.mvGrade = mvGrade;
 	}
 	public int getRsCode() {
 		return rsCode;

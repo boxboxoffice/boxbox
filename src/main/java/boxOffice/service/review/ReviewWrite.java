@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import boxOffice.dao.MemberDao;
+import boxOffice.dao.MovieDao;
 import boxOffice.dao.ReviewDao;
 import boxOffice.model.Review;
 
@@ -18,7 +19,7 @@ public class ReviewWrite implements CommandProcess {
 		String rvTitle = request.getParameter("rvTitle");
 		String id= (String)session.getAttribute("id");
 		String mvTitle = request.getParameter("mvTitle");
-		int rvGrade = Integer.parseInt(request.getParameter("rvGrade"));
+		int mvGrade = Integer.parseInt(request.getParameter("mvGrade"));
 		String rvContent = request.getParameter("rvContent");
 		int mvCode = review.getMvCode();
 		
@@ -43,11 +44,23 @@ public class ReviewWrite implements CommandProcess {
 		ReviewDao rd = ReviewDao.getInstance();
 		rd.mvCodeUpdate(review);	// 영화코드 변경
 		
+		MovieDao mv = MovieDao.getInstance();
+		int nowGrade = mv.getGrade(mvCode);
+		int mvCodeCount = rd.getCodeTotal(mvCode);
+		
+		if (mvCodeCount == 0) {
+			int gradeUp = (nowGrade+mvGrade)/2;
+			mv.updateGrade(gradeUp, mvCode);
+		} else {
+			int gradeUp = (nowGrade+mvGrade)/(mvCodeCount+1);
+			mv.updateGrade(gradeUp, mvCode);
+		}
+		
 		review.setRvTitle(rvTitle);
 		review.setId(id);
 		review.setMvTitle(mvTitle);
 		review.setMvCode(mvCode);
-		review.setRvGrade(rvGrade);
+		review.setMvGrade(mvGrade);
 		review.setRvContent(rvContent);
 		
 		int result = rd.insert(review);		// 리뷰등록

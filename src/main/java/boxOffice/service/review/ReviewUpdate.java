@@ -12,12 +12,12 @@ public class ReviewUpdate implements CommandProcess {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		Review review = new Review();
 		String rvTitle = request.getParameter("rvTitle");
-		int rvGrade = Integer.parseInt(request.getParameter("rvGrade"));
+		int mvGrade = Integer.parseInt(request.getParameter("mvGrade"));
 		String rvContent = request.getParameter("rvContent");
 		int rvNum = Integer.parseInt(request.getParameter("rvNum"));
 		
 		review.setRvTitle(rvTitle);
-		review.setRvGrade(rvGrade);
+		review.setMvGrade(mvGrade);
 		review.setRvContent(rvContent);
 		review.setRvNum(rvNum);
 		

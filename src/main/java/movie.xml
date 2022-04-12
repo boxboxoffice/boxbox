@@ -64,11 +64,11 @@
 	<select id="selectMvCode" resultType="_int">
 	select (max(movieCode)+1) mvCode from movie
 	</select>
-	<select id="getStar" resultType="_int">
-	select movieStar from movie where mvCode=#{mvCode}
+	<select id="getGrade" resultType="_int">
+	select mvGrade from movie where mvCode=#{mvCode}
 	</select>
-	<update id="updateMovieStar" parameterType="string">
-	update movie set movieStar=#{nowstar} where mvCode=#{mvCode}
+	<update id="updateGrade" parameterType="string">
+	update movie set mvGrade=#{gradeUp} where mvCode=#{mvCode}
 	</update>
 	
 </mapper>

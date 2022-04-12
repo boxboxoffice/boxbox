@@ -50,7 +50,7 @@
 				</tr>
 				<tr>
 					<th width="15%">평점</th>
-					<td><input class="form-control" type="range" min="1" max="10" class="slider" id="myRange" name="rvGrade">
+					<td><input class="form-control" type="range" min="1" max="10" class="slider" id="myRange" name="mvGrade">
 						<div id="value" align="center" style="font-weight: bold; font-size: 1.2em;"></div></td>
 				</tr>
 				<tr>
