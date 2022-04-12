@@ -26,7 +26,7 @@
 
 <section>
 <div id="maincontent">
-<a id="title1">| Movies</a>
+<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="60px" width="60px"> Movies</a>
 <form action="">
 	<a id="category1" class="mymenu" href="movieNotyet.mv">상영 예정</a>
 	<a id="category2" class="mymenu" href="movieNow.mv">현재 상영중</a>
