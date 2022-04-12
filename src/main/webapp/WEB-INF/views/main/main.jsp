@@ -36,12 +36,12 @@
 <div id="mainEv">
 <div class="evTitle">이벤트</div>
 <div class="event_wrap">
-		<div><img alt="" src="images/event/eventContent3.jpg" height="511px" width="296px" class="img01"></div>
-		<div><img alt="" src="images/event/eventTitle8.jpg" height="250px" width="450px" class="img02"></div>
-		<div><img alt="" src="images/event/eventTitle.jpg" height="250px" width="350px" class="img03"></div>
-		<div><img alt="" src="images/event/eventTitle4.jpg" height="250px" width="246px" class="img04"></div>
-		<div><img alt="" src="images/event/eventTitle2.jpg" height="250px" width="300px" class="img05"></div>
-		<div><img alt="" src="images/event/eventTitle9.jpg" height="250px" width="241px" class="img06"></div>
+		<div><a href="eventView.ev?evNum=14&pageNum=2"><img alt="" src="images/event/eventContent3.jpg" height="511px" width="296px" class="img01"></a></div>
+		<div><a href="eventView.ev?evNum=10&pageNum=2"><img alt="" src="images/event/eventTitle8.jpg" height="250px" width="450px" class="img02"></a></div>
+		<div><a href="eventView.ev?evNum=12&pageNum=2"><img alt="" src="images/event/eventTitle.jpg" height="250px" width="350px" class="img03"></a></div>
+		<div><a href="eventView.ev?evNum=7&pageNum=3"><img alt="" src="images/event/eventTitle4.jpg" height="250px" width="246px" class="img04"></a></div>
+		<div><a href="eventView.ev?evNum=13&pageNum=2"><img alt="" src="images/event/eventTitle2.jpg" height="250px" width="300px" class="img05"></a></div>
+		<div><a href="eventView.ev?evNum=1&pageNum=4"><img alt="" src="images/event/eventTitle9.jpg" height="250px" width="241px" class="img06"></a></div>
 </div>
 </div>
 <br />

@@ -7,7 +7,17 @@
 <head>
 <meta charset="UTF-8">
 <title>BoxOffice</title>
-<link rel="icon" href="images/logo/tricon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="css/movieNow.css?update" rel="stylesheet" type="text/css">
+<style type="text/css">
+	@font-face
+    {
+       font-family: 'Arita-dotum-Medium';
+       src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+       font-weight: normal;
+       font-style: normal;
+   }
+</style>
 </head>
 <body>
 
@@ -18,10 +28,10 @@
 <div id="maincontent">
 <a id="title1">| Movies</a>
 <form action="">
-      <a id="category1" class="mymenu" href="movieClosed.mv">상영 종료</a>
-      <a id="category2" class="mymenu" href="movieNow.mv"><u>현재 상영중</u></a>
-      <a id="category3" class="mymenu" href="movieNotyet.mv">상영 예정</a>
-    </form>
+      <a id="category1" class="mymenu" href="movieNotyet.mv">상영 예정</a>
+      <a id="category2" class="mymenu" href="movieNow.mv">현재 상영중</a>
+      <a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
+</form>
 <a id="title2">| 현재 상영중</a>
 
 <div id="movieNowBox">
@@ -48,33 +58,17 @@ ${val.openDate } 개봉 --%>
 <td>감독: ${val.director }</td>
 </tr>
 <tr>
-<td>평점: ${val.movieStar }점
-<c:if test="${val.movieStar == 1}">
-			⭐
-			</c:if>
-			<c:if test="${val.movieStar == 2}">
-			⭐⭐
-			</c:if>
-			<c:if test="${val.movieStar == 3}">
-			⭐⭐⭐
-			</c:if>
-			<c:if test="${val.movieStar == 4}">
-			⭐⭐⭐⭐
-			</c:if>
-			<c:if test="${val.movieStar == 5}">
-			⭐⭐⭐⭐⭐
-			</c:if>
-</td>
+<td>평점: ⭐${val.mvGrade }</td>
 </tr>
 <tr>
 <td>주연: ${val.majorActor }</td>
 </tr>
 <tr>
-<td>상영시간: ${val.runningTime }분</td>
+<td>상영시간: ${val.runningTime }</td>
 </tr>
 <tr>
 <td align="center"><a href="ticketing2.re?mvCode=${val.mvCode }" class="button">예매하기</a></td>
-<td width="70px"><a href="reviewNowClosedList.rv?=mvTitle&rvsearch=${val.mvTitle }" class="button">Review</a></td>
+<td width="70px"><a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a></td>
 </tr>
 <tr><br><br></tr>
 </tbody>
@@ -88,25 +82,23 @@ ${val.openDate } 개봉 --%>
 ${"등록된 영화가 존재하지 않습니다" }<br>
 </c:if>
 <c:if test="${startPage>PAGE_PER_BLOK}">
- 	<button onclick="location.href='movieNow.mv?pageNum=${startPage-1}'">이전</button>
+ 	<button class="btn btn-outline-dark btn-sm" onclick="location.href='movieNow.mv?pageNum=${startPage-1}'">이전</button>
 </c:if>
  <c:forEach var="i" begin="${startPage }" end="${endPage }">
 <c:if test="${currentPage==i }">
- <button onclick="location.href='movieNow.mv?pageNum=${i}'" disabled="disabled">${i }</button> 
+ <button class="btn btn-outline-dark btn-sm" onclick="location.href='movieNow.mv?pageNum=${i}'" disabled="disabled">${i }</button> 
 </c:if>
 	
  <c:if test="${currentPage!=i }">
- <button onclick="location.href='movieNow.mv?pageNum=${i}'">${i }</button> 
+ <button class="btn btn-outline-dark btn-sm" onclick="location.href='movieNow.mv?pageNum=${i}'">${i }</button> 
 </c:if>
  </c:forEach>
 <c:if test="${currentPage < totalPage}">
-						<button class="next" onclick="location.href='movieNow.mv?pageNum=${currentPage + 1}'">
-							다음
-						</button>
+						<button class="btn btn-outline-dark btn-sm" onclick="location.href='movieNow.mv?pageNum=${currentPage + 1}'">다음</button>
 					</c:if>
 <c:if test="${endPage<totalPage }">
  
- 		<button onclick="location.href='movieNow.mv?pageNum=${endPage+1}'">다음</button>
+ 		<button class="btn btn-outline-dark btn-sm" onclick="location.href='movieNow.mv?pageNum=${endPage+1}'">다음</button>
 </c:if>
 </div>
 </div>
@@ -117,6 +109,7 @@ ${"등록된 영화가 존재하지 않습니다" }<br>
 
 
 
-<footer><div id="footcontent"><jsp:include page="../public/bottom.jsp"></jsp:include></div></footer>
+<footer><div id="footer"><jsp:include page="../public/footer.jsp"></jsp:include></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
