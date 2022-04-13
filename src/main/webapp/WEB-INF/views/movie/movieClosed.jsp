@@ -26,13 +26,13 @@
 
 <section>
 <div id="maincontent">
-<a id="title1">| Movies</a>
+<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="60px" width="60px"> Movies</a>
 <form action="">
 	<a id="category1" class="mymenu" href="movieNotyet.mv">상영 예정</a>
 	<a id="category2" class="mymenu" href="movieNow.mv">현재 상영중</a>
 	<a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
  </form>
-<a id="title2">| 상영 종료</a>
+<a id="title2"> 상영 종료 </a>
 <div id="movieNowBox">
 <br>
 <c:forEach items="${list }" var="val">
@@ -66,7 +66,6 @@ ${val.openDate } 개봉 --%>
 <td>상영시간: ${val.runningTime }</td>
 </tr>
 <tr>
-<td></td>
 <td width="70px"><a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a></td>
 </tr>
 <tr><br><br></tr>

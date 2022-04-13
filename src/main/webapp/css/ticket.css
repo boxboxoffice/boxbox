@@ -35,7 +35,7 @@ section{
 	top: 55px;
 	color:white;
     width: 100%;
-	height: 1000px;
+	height: 500px;
 	z-index: 1;
 }
 #title1{
@@ -61,21 +61,6 @@ section{
 	left: 230px;
 	width:560px ;
 	height:315px;
-}
-#searchResult
-{
-	color: white;
-	position: absolute;
-	top: 70px;
-	left: 200px;
-}
-#aboutTandR
-{
-	color: white;
-	position: absolute;
-	top: 70px;
-	left: 200px;
-
 }
 
 a[id="category1"] {
@@ -175,11 +160,11 @@ a.button:hover {
 button.button {
 	width:330px;
 	 text-align:center;
-	  background-color:#FFFFFF;
-	   border:0; 
-	    box-shadow: 1px 1px 3px 1px #dadce0;
-	     color : black; 
-	      margin : auto;
+	 background-color:#FFFFFF;
+	 border:0; 
+	 box-shadow: 1px 1px 3px 1px #dadce0;
+	 color : black; 
+	 margin : auto;
 }
 
 button.button:hover {
@@ -204,7 +189,7 @@ section button:hover{
     margin-top: 140px;
     display: flex;
     justify-content: center;
-    height: 800px;    
+    height: 300px;    
 }
 
 .reserve-title {
@@ -373,5 +358,12 @@ section button:hover{
 	margin-left : 70%;
 }
 
+footer {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+color: white;
+}
 
 	

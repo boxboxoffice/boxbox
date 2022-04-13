@@ -33,7 +33,7 @@
       <a id="category2" class="mymenu" href="movieNow.mv">현재 상영중</a>
       <a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
 </form>
-<a id="title2">현재 상영중</a>
+<a id="title2"> 현재 상영중 </a>
 <div id="movieNowBox">
 <br>
 <c:forEach items="${list }" var="val">
@@ -68,7 +68,7 @@ ${val.openDate } 개봉 --%>
 </tr>
 <tr>
 <td align="center"><a href="ticketing2.re?mvCode=${val.mvCode }" class="button">예매하기</a></td>
-<td width="70px"><a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a></td>
+<td width="50px"><a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a></td>
 </tr>
 <tr><br><br></tr>
 </tbody>

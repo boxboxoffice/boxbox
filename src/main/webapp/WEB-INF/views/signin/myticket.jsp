@@ -64,16 +64,16 @@
 
 </div>
 			
-<a id="title5">| 이전 내역</a>
+<a id="title5">| 구매 내역</a>
 <br><br>
 <div id="maincontent5">
 
 <table class="boardtable">
 				<thead>
 					<tr>
-						<th>티켓번호</th>
-						<th width="40%">타이틀</th>
-						<th>결제여부</th>
+						<th>상품 번호</th>
+						<th width="40%">상품명</th>
+						<th>상품 가격</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -102,7 +102,6 @@
 
 		</div>
 	</section>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

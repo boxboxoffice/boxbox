@@ -157,7 +157,7 @@ body {font-family:  'Arita-dotum-Medium';}
 <body class="bg-light">
 	<div class="container" align="center" style="width: 60%">
 		<div class="py-5 text-center">
-			<img class="d-block mx-auto mb-4" src="images/logo/boxoffice.png" alt="logo" width="75" height="75">
+			  <a href="main.do"><img class="d-block mx-auto mb-4" src="images/logo/boxoffice.png" alt="logo" width="75" height="75"></a>
 			<h2>회원가입</h2>
 		</div>
 		

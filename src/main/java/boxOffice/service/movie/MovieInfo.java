@@ -11,14 +11,15 @@ import boxOffice.model.Movie;
 
 public class MovieInfo implements CommandProcess  {
 	
+
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		//HttpSession session = request.getSession();
 		
-		//int movieCode=(int)session.getAttribute("movieCode");
-		int movieCode = Integer.parseInt(request.getParameter("movieCode"));
+		//int mvCode=(int)session.getAttribute("mvCode");
+		int mvCode = Integer.parseInt(request.getParameter("mvCode"));
 		MovieDao md = MovieDao.getInstance();
-		Movie mv = md.select(movieCode);
-		//Movie movie = md.select(movieCode);
+		Movie mv = md.select(mvCode);
+		//Movie movie = md.select(mvCode);
 		//request.setAttribute("movie", movie);
 
 
@@ -42,7 +43,7 @@ public class MovieInfo implements CommandProcess  {
 		
 		int number=total-startRow+1;
 		
-		List<Movie> list = md.selectList(movieCode, startRow, endRow);
+		List<Movie> list = md.selectList(mvCode, startRow, endRow);
 		
 		
 		int totalPage=(int)Math.ceil((double)total/ROW_PER_PAGE);//총페이지

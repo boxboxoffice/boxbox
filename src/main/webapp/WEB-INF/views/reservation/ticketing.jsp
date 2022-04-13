@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <title>Ticket&Review</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<style type="text/css">@import url("css/ticket2.css"); @font-face
+<style type="text/css">@import url("css/ticket.css"); @font-face
  {
 	    font-family: 'Arita-dotum-Medium';
 	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
@@ -22,33 +22,32 @@
 
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
 
-	<section>   
-		<div id="maincontent">
-			<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px"> 영화 선택</a>
-			
-				<div class="reserve-container">
-			        <div class="movie-part">
-			            <div class="reserve-title">영화</div>
-			            <c:forEach items="${list }" var="val">            
-			            	<div class="movie-list-container">
-			            		<button class="movie-list-button" onclick="location.href='ticketing2.re?mvCode=${val.mvCode }'" >${val.mvTitle }</button>            
-			           		</div>            
-			            </c:forEach>
-		            
-		       			</div>
-		       			 <div class="theater-part">
-		           			 <div class="reserve-title">극장</div>                     
-		       			 </div>
-		        			<div class="day-part">
-		        				<div class="reserve-title">날짜</div>           
-		        			</div>        
-		        				<div class="time-part">
-		        					<div class="reserve-title">시간</div>
-		       					</div>
-			     </div>       
-		 
-		</div>
-	</section>
+<section>   
+	<div id="maincontent">
+		<a id="title1"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px"> 영화 선택</a>
+		
+			<div class="reserve-container">
+		        <div class="movie-part">
+		            <div class="reserve-title">영화</div>
+		            <c:forEach items="${list }" var="val">            
+		            	<div class="movie-list-container">
+		            		<button class="movie-list-button" onclick="location.href='ticketing2.re?mvCode=${val.mvCode }'" >${val.mvTitle }</button>            
+		           		</div>            
+		            </c:forEach>
+	       		</div>
+	       			
+	       			 <div class="theater-part">
+	           			 <div class="reserve-title">극장</div>                     
+	       			 </div>
+	        		<div class="day-part">
+	        			<div class="reserve-title">날짜</div>           
+	        		</div>        
+	        		<div class="time-part">
+	        			<div class="reserve-title">시간</div>
+	       			</div>
+		     </div>       
+	</div>
+</section>
             
 <script>
 	var movieListButton = document.getElementsByClassName("movie-list-button");
@@ -75,7 +74,6 @@
 	
 	function reverse(){}
 	
-
 </script>
 <footer><div id="footer"><jsp:include page="../public/footer.jsp"></jsp:include></div></footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
