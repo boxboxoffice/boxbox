@@ -61,7 +61,7 @@
 <div class="mainContainer" align="center" style="position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
 	<main class="form-signin" style="width: 400px;">
 	  <form action="signIn.si" method="post">
-	    <img class="mb-4" src="images/logo/boxoffice.png" alt="" width="75" height="75">
+	    <a href="main.do"><img class="mb-4" src="images/logo/boxoffice.png" alt="logo" width="75" height="75"></a>
 	    <h1 class="h3 mb-3 fw-normal">로그인</h1>
 	
 	    <div class="form-floating">
