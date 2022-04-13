@@ -68,32 +68,18 @@
 <td><b>감독: </b> ${movie.director }</td>
 </tr>
 <tr>
-<td><b>등급: </b> ${movie.mvGrade }</td>
-</tr>
-<tr>
-<td><b>평점: </b> ${movie.movieStar }점
-<c:if test="${movie.movieStar == 1}">
-			⭐
-			</c:if>
-			<c:if test="${movie.movieStar == 2}">
-			⭐⭐
-			</c:if>
-			<c:if test="${movie.movieStar == 3}">
-			⭐⭐⭐
-			</c:if>
-			<c:if test="${movie.movieStar == 4}">
-			⭐⭐⭐⭐
-			</c:if>
-			<c:if test="${movie.movieStar == 5}">
-			⭐⭐⭐⭐⭐
-			</c:if>
-</td>
+<c:if test="${movie.mvGrade == 0 }">
+	<td><b>평점: </b>미개봉</td>
+</c:if>
+<c:if test="${movie.mvGrade != 0 }">
+	<td><b>평점: </b> ⭐${movie.mvGrade }</td>
+</c:if>
 </tr>
 <tr>
 <td><b>주연 배우: </b> ${movie.majorActor }</td>
 </tr>
 <tr>
-<td><b>상영시간: </b> ${movie.runningTime }분</td>
+<td><b>상영시간: </b> ${movie.runningTime }</td>
 </tr>
 <tr>
 <td><b>개봉일: </b> ${movie.openDate }</td>

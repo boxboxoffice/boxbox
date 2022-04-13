@@ -66,7 +66,6 @@ ${val.openDate } 개봉 --%>
 <td>상영시간: ${val.runningTime }</td>
 </tr>
 <tr>
-<td></td>
 <td width="70px"><a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a></td>
 </tr>
 <tr><br><br></tr>
