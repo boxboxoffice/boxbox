@@ -33,11 +33,11 @@
 	<a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
  </form>
 <a id="title2"> 상영 종료 </a>
-<div id="movieNowBox">
+<div id="movieClosedBox">
 <br>
 <c:forEach items="${list }" var="val">
 <div id="movieList${val }">
-<%-- <a href="#"><img alt="포스터" src="images/poster/${val.poster }" width="240"></a>
+<%-- <a href="#"><img alt="포스터" src="images/posters/${val.poster }" width="240"></a>
 <br>
 ${val.mvTitle }
 <br>
@@ -66,7 +66,7 @@ ${val.openDate } 개봉 --%>
 <td>상영시간: ${val.runningTime }</td>
 </tr>
 <tr>
-<td width="70px"><a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a></td>
+<td width="100px"><a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a></td>
 </tr>
 <tr><br><br></tr>
 </tbody>
