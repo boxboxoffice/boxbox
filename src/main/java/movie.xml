@@ -67,6 +67,9 @@
 	<select id="getGrade" resultType="_int">
 	select mvGrade from movie where mvCode=#{mvCode}
 	</select>
+	<select id="getStar" resultType="_int">
+	select movieStar from movie where mvCode=#{mvCode}
+	</select>
 	<update id="updateGrade" parameterType="string">
 	update movie set mvGrade=#{gradeUp} where mvCode=#{mvCode}
 	</update>

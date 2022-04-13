@@ -33,7 +33,7 @@
       <a id="category2" class="mymenu" href="movieNow.mv">현재 상영중</a>
       <a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
 </form>
-<a id="title2">현재 상영중</a>
+<a id="title2"> 현재 상영중 </a>
 <div id="movieNowBox">
 <br>
 <c:forEach items="${list }" var="val">
