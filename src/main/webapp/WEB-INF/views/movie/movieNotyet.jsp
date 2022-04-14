@@ -35,7 +35,7 @@
 			<a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
 		</form>
 		<a id="title2"> 상영 예정 </a>
-		<div id="movieNBox">
+		<div id="movieNotyetBox">
 			<br>
 			<c:forEach items="${list }" var="val">
 			
