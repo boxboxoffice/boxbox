@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -54,11 +53,9 @@
       </c:if>
     </form>
 <a id="title2"> MovieInfo </a>
-<br><br>
 <div id="movieInfoBox">
 <div id="mvList" style="top:20px; font-size:100%">
 <a href="#"><img alt="포스터" src="images/posters/${movie.poster }" width="360"></a>
-<br><br>
 <table class="movieTable2">
 <tbody>
 <tr>
@@ -71,7 +68,12 @@
 <td><b>감독: </b> ${movie.director }</td>
 </tr>
 <tr>
+<c:if test="${movie.mvGrade == 0 }">
+	<td><b>평점: </b>미개봉</td>
+</c:if>
+<c:if test="${movie.mvGrade != 0 }">
 	<td><b>평점: </b> ⭐${movie.mvGrade }</td>
+</c:if>
 </tr>
 <tr>
 <td><b>주연 배우: </b> ${movie.majorActor }</td>
