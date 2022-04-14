@@ -54,8 +54,9 @@
     </form>
 <a id="title2"> MovieInfo </a>
 <div id="movieInfoBox">
-<div id="mvList" style="top:20px; font-size:100%">
+<div id="movieList" style="top:20px; font-size:100%">
 <a href="#"><img alt="포스터" src="images/posters/${movie.poster }" width="360"></a>
+<br><br>
 <table class="movieTable2">
 <tbody>
 <tr>
