@@ -17,11 +17,14 @@
 	<select id="reviewNowClosedList" parameterType="map" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review where mvCode = #{mvCode} order by rvNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
+	<select id="selectId" resultType="string" parameterType="integer">
+		select id from review where rvNum = #{rvNum}
+	</select>
 	<insert id="insert" parameterType="review">
 		<selectKey keyProperty="rvNum" order="BEFORE" resultType="integer">
 			select nvl(max(rvNum), 0) + 1 rvNum from review
 		</selectKey>
-		insert into review values(#{rvNum}, #{rvTitle}, #{rvContent}, #{id}, #{mvGrade}, 0, sysdate, 'n', #{mvTitle}, #{mvCode}, 0)
+		insert into review values(#{rvNum}, #{rvTitle}, #{rvContent}, #{id}, #{mvGrade}, 0, sysdate, 'n', #{mvTitle}, #{mvCode}, 0, 0)
 	</insert>
 	<update id="readCountUpdate" parameterType="integer">
 		update review set rvReadCount = rvReadCount +1 where rvNum = #{rvNum}
@@ -40,6 +43,9 @@
 	</update>
 	<update id="mvCodeUpdate">
 		update review set mvCode = #{mvCode} where rvNum = #{rvNum }
+	</update>
+	<update id="plusCount" parameterType="integer">
+		update review set rpCount = rpCount + 1 where rvNum = #{rvNum }
 	</update>
 	<select id="mylist" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review where id=#{id} order by rvNum desc)a) where rn between #{startRow} and #{endRow}

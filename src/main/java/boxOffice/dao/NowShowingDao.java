@@ -11,7 +11,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import boxOffice.model.NowShowing;
 
-
 public class NowShowingDao {
 	private static NowShowingDao instance = new NowShowingDao();
 	private NowShowingDao() {}

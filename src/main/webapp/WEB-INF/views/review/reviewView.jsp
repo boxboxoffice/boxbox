@@ -89,20 +89,52 @@
 		</tr>
 		</tbody>
 	</table>
-	
-	<br>
-	<div id="button" align="center">
-		<c:if test="${id eq 'master' }">
-			<button class="btn btn-outline-dark btn-sm" onclick="reviewDelMaster()">삭제</button>
-		</c:if>
-		<c:if test="${id == review.id}">
-			<button class="btn btn-outline-dark btn-sm" onclick="reviewDel()">삭제</button>
-			<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewUpdateForm.rv?rvNum=${review.rvNum}&pageNum=${pageNum }'">수정</button>
-		</c:if>
-		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewMain.rv?pageNum=${pageNum}'">목록</button>
-		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewLike.rv?rvNum=${review.rvNum}&id=${id}'">추천👍🏽</button>
-	</div>
 </div>
+<br>
+
+<!-- 댓글 -->
+<div id="replyContainer">
+<form action="replyWrite.rp?rvNum=${review.rvNum}&rpNum=0&ref=0&ref_level=0&ref_step=0" name="rpfrm" method="post">
+		<input type="hidden" name="rvNum" value="${rvNum}" >
+	<table id="replyTable" class="table table-hover">
+		<tr>
+			<th colspan="2" id="rpth">댓글[${replyCount }]</th>
+		</tr>
+		<c:forEach items="${rpList2 }" var="reply">
+		<c:if test="${not empty rpList2 }">
+		<tr>
+			<td>
+				<font style="font-weight: bold; font-size: 1.1em;">${reply.id }</font><br />
+				${reply.rpContent }<br>
+				<font size="2" color="gray">${reply.rpDate }</font>
+			</td>
+		</tr>
+		</c:if>
+		</c:forEach>
+		<tr>
+			<td>
+				<strong>&nbsp${review.id }</strong>
+				<div align="center"><textarea rows="3" cols="115" name="rpContent" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200"></textarea></div>
+				<input class="btn btn-outline-dark btn-sm" type="submit" value="댓글등록" style="float: right; margin-right: 5px;"/>
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<br>
+
+<div id="button" align="center">
+	<c:if test="${id eq 'master' }">
+		<button class="btn btn-outline-dark btn-sm" onclick="reviewDelMaster()">삭제</button>
+	</c:if>
+	<c:if test="${id == review.id}">
+		<button class="btn btn-outline-dark btn-sm" onclick="reviewDel()">삭제</button>
+		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewUpdateForm.rv?rvNum=${review.rvNum}&pageNum=${pageNum }'">수정</button>
+	</c:if>
+	<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewMain.rv?pageNum=${pageNum}'">목록</button>
+	<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewLike.rv?rvNum=${review.rvNum}&id=${id}'">추천👍🏽</button>
+</div>
+
 <footer><div id="footer"><jsp:include page="../public/footer.jsp"></jsp:include></div></footer>
 	<script type="text/javascript">
 		function reviewDel() {

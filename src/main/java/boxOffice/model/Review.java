@@ -15,8 +15,15 @@ public class Review {
 	 private String rvDel;
 	 private String mvTitle;
 	 private int mvCode;
+	 private int rpCount;
 	 
-	 public int getMvCode() {
+	 public int getRpCount() {
+		return rpCount;
+	}
+	public void setRpCount(int rpCount) {
+		this.rpCount = rpCount;
+	}
+	public int getMvCode() {
 		return mvCode;
 	}
 	public void setMvCode(int mvCode) {

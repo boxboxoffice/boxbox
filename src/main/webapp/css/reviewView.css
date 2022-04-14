@@ -10,3 +10,10 @@ h1 {color: black;}
 #tbody th { background-color: orange; color: white; vertical-align:middle;}
 
 body {font-family:  'Arita-dotum-Medium';}
+
+
+#replyContainer {width: 60%; margin-left:auto; margin-right:auto;}
+
+#replyTable{width: 100%; word-break:break-all;}
+
+#replyTable tr #rpth {text-align: center; background: #ffcc6c; color: #ffffff;}
