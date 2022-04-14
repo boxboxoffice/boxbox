@@ -160,5 +160,8 @@ public String selectTitle(int mvCode) {
 		return (int)session.update("moviens.updateGrade",map);
 		
 	}
+	public int insert0(Movie movie) {
+		return session.insert("moviens.insert0", movie);
+	}
 
 }

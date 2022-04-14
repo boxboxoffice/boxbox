@@ -60,6 +60,10 @@
 	
 		insert into movie values(#{mvCode}, #{mvTitle}, #{mvTag}, #{openDate}, #{director}, #{majorActor},  #{runningTime}, #{genre}, #{poster,jdbcType=VARCHAR}, #{mvInfo}, #{mvContent}, 10000, 5, 5, #{mvAge})
 	</insert>
+	<insert id="insert0" parameterType="movie">		
+	
+		insert into movie values(#{mvCode}, #{mvTitle}, #{mvTag}, #{openDate}, #{director}, #{majorActor},  #{runningTime}, #{genre}, #{poster,jdbcType=VARCHAR}, #{mvInfo}, #{mvContent}, 10000, 0, 0, #{mvAge})
+	</insert>
 	
 	<select id="selectMvCode" resultType="_int">
 	select (max(mvCode)+1) mvCode from movie

@@ -52,13 +52,19 @@ public class MvUplodeAction implements CommandProcess {
 			movie.setGenre(genre);
 			movie.setMvInfo(mvInfo);
 			movie.setMvContent(mvContent);
+			
+			if (mvTag == 3) {
+				int result = md.insert0(movie);
+				request.setAttribute("result", result);
+			} else {
+				int result = md.insert(movie);
+				request.setAttribute("result", result);
+			}
 					
 		} catch (IOException e) {
 			System.out.println("에러 : " + e.getMessage());
 		}
 		
-		int result = md.insert(movie);
-		request.setAttribute("result", result);
 		
    		return "mvUplode";
 		
