@@ -177,7 +177,7 @@
 			</c:if>
 			<c:if test="${id ne null }">
 			<textarea rows="3" cols="115" name="rpContent" required="required" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200" id="rpTA"></textarea><br />
-				<input class="btn btn-outline-dark btn-sm" name="rpbt" type="submit" value="댓글등록" style="margin-left: 810px;"/>
+				<input class="btn btn-outline-dark btn-sm" id="rpBtn" type="submit" value="댓글등록" style="margin-left: 810px;"/><br><br>
 			</c:if>
 		</div>
 </form>

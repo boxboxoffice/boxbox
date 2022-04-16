@@ -30,3 +30,5 @@ body {font-family:  'Arita-dotum-Medium';}
 #rpUpTA {width: 100%;}
 /* 댓글 수정 누른 후 나오는 수정,취소 버튼 */
 #subCloBtn {float: right;}
+/* 댓글등록버튼 */
+#rpBtn {float: right;}
