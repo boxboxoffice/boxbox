@@ -104,7 +104,11 @@
 		<c:if test="${not empty rpList2 }">
 		<tr>
 			<td>
-				<font style="font-weight: bold; font-size: 1.1em;">${reply.id }</font><br />
+				<font style="font-weight: bold; font-size: 1.1em;">${reply.id }</font>&nbsp
+				<c:if test="${reply.id eq id }">
+					<span onclick="reUdate(${reply.rpNum})">수정&nbsp</span>
+					<span onclick="rpDel(${reply.rpNum})">삭제</span><br />
+				</c:if>
 				${reply.rpContent }<br>
 				<font size="2" color="gray">${reply.rpDate }</font>
 			</td>
@@ -114,8 +118,11 @@
 		<tr>
 			<td>
 				<strong>&nbsp${review.id }</strong>
-				<div align="center"><textarea rows="3" cols="115" name="rpContent" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200"></textarea></div>
-				<input class="btn btn-outline-dark btn-sm" type="submit" value="댓글등록" style="float: right; margin-right: 5px;"/>
+				<div align="center">
+					<textarea rows="3" cols="115" name="rpContent" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200"></textarea><br />
+					<input class="btn btn-outline-dark btn-sm" name="rpbt" type="submit" value="댓글등록" style="margin-left: 810px;"/>
+				</div>
+				
 			</td>
 		</tr>
 	</table>

@@ -28,7 +28,7 @@
 		<div class="movie">
 			<div class="mvimg"><img alt="포스터" src="images/posters/${movie.poster }" height="320px" width="223px" class="img">
 			<span class="mvtk"><a href="ticketing.re">예매하기</a></span>
-			<span class="mvinfo"><a href="#">상세정보</a></span></div>
+			<span class="mvinfo"><a href="movieInfo.mv?mvCode=${movie.mvCode }">상세정보</a></span></div>
 			<span class="mvtg">${movie.mvTitle } ⭐ ${movie.mvGrade }</span>
 		</div>
 	</c:forEach>

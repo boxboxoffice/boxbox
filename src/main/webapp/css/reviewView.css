@@ -16,4 +16,6 @@ body {font-family:  'Arita-dotum-Medium';}
 
 #replyTable{width: 100%; word-break:break-all;}
 
-#replyTable tr #rpth {text-align: center; background: #ffcc6c; color: #ffffff;}
+#replyTable tr #rpth {text-align: center; background: orange; color: #ffffff;}
+
+#replyTable tr td span {font-size: 0.8em; color: orange; text-decoration: none; cursor: pointer;}
