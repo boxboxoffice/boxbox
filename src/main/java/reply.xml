@@ -29,4 +29,13 @@
 		</selectKey>
 		insert into reply values(#{rpNum}, #{rvNum }, #{rpContent}, #{id }, sysdate, 'n', #{ref }, #{ref_level}, #{ref_step})
 	</insert>
+	<update id="update">
+		update reply set rpContent = #{rpContent} where rpNum = #{rpNum}
+	</update>
+	<update id="deleteMaster">
+		update reply set rpDel = 'm' where rpNum = #{rpNum}
+	</update>
+	<delete id="delete">
+		delete from reply where rpNum = #{rpNum}
+	</delete>
 </mapper>

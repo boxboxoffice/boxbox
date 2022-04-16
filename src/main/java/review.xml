@@ -44,8 +44,11 @@
 	<update id="mvCodeUpdate">
 		update review set mvCode = #{mvCode} where rvNum = #{rvNum }
 	</update>
-	<update id="plusCount" parameterType="integer">
-		update review set rpCount = rpCount + 1 where rvNum = #{rvNum }
+	<update id="addCount" parameterType="integer">
+		update review set rpCount = rpCount+1 where rvNum = #{rvNum}
+	</update>
+	<update id="subCount" parameterType="integer">
+		update review set rpCount = rpCount-1 where rvNum = #{rvNum}
 	</update>
 	<select id="mylist" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review where id=#{id} order by rvNum desc)a) where rn between #{startRow} and #{endRow}
@@ -53,6 +56,5 @@
 	<select id="getCodeTotal" resultType="integer">
 		select count(*) from review where mvCode=#{mvCode} and rvDel='n'
 	</select>
-	
 </mapper>
 

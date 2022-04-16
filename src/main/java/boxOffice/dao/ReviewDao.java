@@ -89,8 +89,11 @@ public class ReviewDao {
 	public int getCodeTotal(int mvCode) {
 		return (int)session.selectOne("reviewns.getCodeTotal", mvCode);
 	}
-	public void plusCount(int rvNum) {
-		session.update("reviewns.plusCount", rvNum);
+	public void addCount(int rvNum) {
+		session.update("reviewns.addCount", rvNum);
+	}
+	public void subCount(int rvNum) {
+		session.update("reviewns.subCount", rvNum);
 	}
 	public String selectId(int rvNum) {
 		return (String) session.selectOne("reviewns.selectId", rvNum);

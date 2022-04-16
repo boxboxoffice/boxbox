@@ -36,9 +36,6 @@ public class ReplyWrite implements CommandProcess {
 			reply.setRef_step(ref_step);
 			
 			int resultRe = rpd.insertRe(reply);
-			
-			ReviewDao red = ReviewDao.getInstance();
-			red.plusCount(rvNum);
 
 			request.setAttribute("resultRe", resultRe);
 			request.setAttribute("rvNum", rvNum);
@@ -55,7 +52,7 @@ public class ReplyWrite implements CommandProcess {
 			
 			int result = rpd.insert(reply);
 			ReviewDao rvd = ReviewDao.getInstance();
-			rvd.plusCount(rvNum);
+			rvd.addCount(rvNum);
 			
 			request.setAttribute("result", result);
 			request.setAttribute("rvNum", rvNum);

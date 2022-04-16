@@ -15,6 +15,23 @@
 		console.log(rpUpdate);
 		rpUpdate.style.display = "block";
 	}
+	function closeReply(rpNum) {
+		var rpUpdate = document.getElementById("rpUpdate"+rpNum);
+		console.log(rpUpdate);
+		rpUpdate.style.display = "none";
+	}
+	function replyDel(rpNum) {
+		var con = confirm("댓글을 삭제하시겠습니까?");
+		if(con){
+			location.href="replyDelete.rp?rvNum=${review.rvNum}&rpNum="+rpNum;
+		}
+	}
+	function replyMasterDel(rpNum) {
+		var con = confirm("댓글을 삭제하시겠습니까?");
+		if(con){
+			location.href="replyMasterDelete.rp?rvNum=${review.rvNum}&rpNum="+rpNum;
+		}
+	}
 </script>
 <style type="text/css">
 	@font-face
@@ -82,14 +99,14 @@
 		</tr>
 		<tr>
 			<td>${review.rvNum }</td>
-			<td>${review.id }</td>
+			<td style="font-weight: bold;">${review.id }</td>
 			<td>${review.rvDate }</td>
 			<td>${review.rvLike }👍🏽</td>
 			<c:if test="${review.rvReadCount >= 50}">
 				<td style="font-weight: bold;">⚡️${review.rvReadCount }⚡️</td>
 			</c:if>
 			<c:if test="${review.rvReadCount <= 49}">
-				<td>${review.rvReadCount }</td>
+				<td >${review.rvReadCount }</td>
 			</c:if>
 		</tr>
 		<tr>
@@ -98,7 +115,7 @@
 		</tr>
 		<tr>
 			<th colspan="1">내용</th>
-			<td colspan="4">${review.rvContent }</td>
+			<td colspan="4" id="rvContent">${review.rvContent }</td>
 		</tr>
 		</tbody>
 	</table>
@@ -108,39 +125,54 @@
 <!-- 댓글 -->
 <div id="replyContainer">
 	<div id="rpView">
-		<div align="center" id="rpViewHeader">댓글[${replyCount }]</div><br />
+		<div id="rpViewHeader" align="center">댓글[${replyCount }]</div><br />
 		<c:forEach items="${rpList2 }" var="reply">
-		<c:if test="${not empty rpList2 }">
+		<c:if test="${reply.rpDel eq 'm' }">
+			<span style="font-weight: bold;">관리자에 의해 삭제된 댓글입니다.</span>
+			<hr>
+		</c:if>
+		<c:if test="${not empty rpList2}">
+		<c:if test="${reply.rpDel eq 'n' }">
 		<div id="rpViewBody">
-			<span style="font-weight: bold; font-size: 1.1em;">${reply.id }</span>
+			<span style="font-weight: bold;">${reply.id }</span>
+			<c:if test="${reply.id eq review.id}">
+				<span style="font-size: 0.8em; color: orange;">🧡작성자🧡</span>
+			</c:if>
+			<c:if test="${id eq 'master'}">
+					<span onclick="replyMasterDel(${reply.rpNum})" id="updelbtn">관리자삭제</span>
+			</c:if>
 			<c:if test="${reply.id eq id }">
+			<input type="hidden" value="${reply.rpNum }">
+			<input type="hidden" value="${review.rvNum }">
 				<span onclick="replyUpdate(${reply.rpNum})" id="updelbtn">&nbsp수정&nbsp</span>
 				<span onclick="replyDel(${reply.rpNum})" id="updelbtn">삭제</span>
 			</c:if><br />
-			<span>${reply.rpContent }</span><br>
-			<span id="rpDate">${reply.rpDate }</span><br>
+			<span id="rpContent">${reply.rpContent }</span><br>
+			<span id="rpDate">${reply.rpDate }&nbsp</span>
+			<span onclick="nestedReply(${reply.rpNum})" id="nestedReplyBtn">답글쓰기</span>
+			<br>
 			
 			<!-- 댓글 수정창 -->
-			<div id="rpUpdate${reply.rpNum }" style="display: none;" align="center"><br>
+			<div id="rpUpdate${reply.rpNum }" style="display: none;"><br>
 				<form action="replyUpdate.rp?rvNum=${review.rvNum}&rpNum=${reply.rpNum }" method="post" class="rpupdate_frm">
-					<textarea rows="3" cols="115" name="rpContent" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200" id="rpta">${reply.rpContent }</textarea>
-					<div class="submit_box" style="margin-left: 765px;">
-						<input class="btn btn-outline-dark btn-sm" type="submit" value="댓글수정">
-						<span class="btn btn-outline-dark btn-sm" onclick="closeReply(${rp.rpNum})">취소</span>
-					</div>
+					<textarea rows="3" cols="115" name="rpContent" required="required" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200"  id="rpUpTA"></textarea>
+					<span class="btn btn-outline-dark btn-sm" onclick="closeReply(${reply.rpNum})" id="subCloBtn">취소</span>
+					<input class="btn btn-outline-dark btn-sm" type="submit" value="댓글수정" id="subCloBtn" style="margin-right: 5px;">
 				</form>
+				<br>
 			</div>
 			<hr>
 		</div>
+		</c:if>
 		</c:if>
 		</c:forEach>
 	</div>	
 	
 <form action="replyWrite.rp?rvNum=${review.rvNum}&rpNum=0&ref=0&ref_level=0&ref_step=0" name="rpfrm" method="post">
 	<input type="hidden" name="rvNum" value="${rvNum}" >
-		<strong>&nbsp${review.id }</strong>
+		<strong>${id }</strong>
 		<div align="center">
-			<textarea rows="3" cols="115" name="rpContent" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200"></textarea><br />
+			<textarea rows="3" cols="115" name="rpContent" required="required" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200" id="rpTA"></textarea><br />
 			<input class="btn btn-outline-dark btn-sm" name="rpbt" type="submit" value="댓글등록" style="margin-left: 810px;"/>
 		</div>
 </form>

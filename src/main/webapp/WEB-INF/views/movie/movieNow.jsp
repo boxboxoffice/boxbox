@@ -67,8 +67,11 @@ ${val.openDate } 개봉 --%>
 <td>상영시간: ${val.runningTime }</td>
 </tr>
 <tr>
-<td align=><a href="ticketing2.re?mvCode=${val.mvCode }" class="button">예매하기</a></td>
-<td width="100px"><a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a></td>
+<td>
+	<a href="ticketing2.re?mvCode=${val.mvCode }" class="button">예매하기</a>
+	<a href="reviewNowClosedList.rv?mvCode=${val.mvCode }" class="button">Review</a>
+</td>
+
 </tr>
 <tr><br><br></tr>
 </tbody>

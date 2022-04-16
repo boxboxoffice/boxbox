@@ -54,7 +54,12 @@
 							<th colspan="6">관리자에 의해 삭제된 게시글 입니다.</th>
 						</c:if>
 						<c:if test="${review.rvDel != 'y' and review.rvDel != 'm' }">
-							<td width="30%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }</a></td>
+							<c:if test="${review.rpCount ne 0 }">
+								<td width="30%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }[${review.rpCount }]</a></td>
+							</c:if>
+							<c:if test="${review.rpCount eq 0 }">
+								<td width="30%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }</a></td>
+							</c:if>
 							<td>${review.mvTitle }</td>
 							<td>${review.id }</td>
 							<td>⭐${review.mvGrade }</td>

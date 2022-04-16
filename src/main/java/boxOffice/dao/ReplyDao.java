@@ -49,6 +49,15 @@ public class ReplyDao {
 	public List<Reply> rpList2(int rvNum) {
 		return session.selectList("replyns.rpList2",rvNum);
 	}
+	public int update(Reply reply) {
+		return session.update("replyns.update", reply);
+	}
+	public int delete(int rpNum) {
+		return session.delete("replyns.delete", rpNum);
+	}
+	public int deleteMaster(int rpNum) {
+		return session.update("replyns.deleteMaster", rpNum);
+	}
 
 }
 

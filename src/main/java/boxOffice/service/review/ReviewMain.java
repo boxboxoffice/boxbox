@@ -5,11 +5,14 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import boxOffice.dao.ReplyDao;
 import boxOffice.dao.ReviewDao;
+import boxOffice.model.Reply;
 import boxOffice.model.Review;
 
 public class ReviewMain implements CommandProcess {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
+		/* int rvNum = Integer.parseInt(request.getParameter("rvNum")); */
 		
 		final int ROW_PER_PAGE = 10;
 		final int PAGE_PER_BLOCK = 10;
@@ -32,8 +35,12 @@ public class ReviewMain implements CommandProcess {
 		int endPage = startPage + PAGE_PER_BLOCK - 1;
 		//	만약 endPage가 총페이지보다 크면 endPage는 총페이지로 변경
 		if (endPage > totalPage) endPage = totalPage;
-		List<Review> list = rd.reviewList(startRow, endRow);		
-
+		List<Review> list = rd.reviewList(startRow, endRow);
+		
+		/*
+		 * ReplyDao rpd = ReplyDao.getInstance(); List<Reply> rpList =
+		 * rpd.rpList(rvNum); // 댓글 리스트 int replyCount = rpList.size(); // 댓글 수 가져오기
+		 */
 		request.setAttribute("list", list);
 		request.setAttribute("pageNum", pageNum);
 		request.setAttribute("currentPage", currentPage);
@@ -41,6 +48,7 @@ public class ReviewMain implements CommandProcess {
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
 		request.setAttribute("PAGE_PER_BLOCK", PAGE_PER_BLOCK);
+		/* request.setAttribute("replyCount", replyCount); */
 		
 		return "reviewMain";
 	}

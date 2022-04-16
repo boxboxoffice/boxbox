@@ -109,8 +109,7 @@ delete reply;
 
 drop table reply;
 
-create table reply
-(
+create table reply (
 rpNum number(10) primary key,
 rvNum number(10),
 rpContent varchar2(1000),

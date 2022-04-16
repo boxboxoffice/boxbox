@@ -35,10 +35,8 @@ a.button {
 	font-size:15px;
 	padding:10px 22px;
 	text-decoration:none;
-}
-
-a.button {
 	position:relative;
 	top:1px;
+	margin-right: 30px;
 }
 
