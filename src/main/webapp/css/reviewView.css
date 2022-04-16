@@ -14,8 +14,12 @@ body {font-family:  'Arita-dotum-Medium';}
 
 #replyContainer {width: 60%; margin-left:auto; margin-right:auto;}
 
-#replyTable{width: 100%; word-break:break-all;}
+#rpView{width: 100%; word-break:break-all;}
+/* 리플 헤더*/
+#rpViewHeader {background: orange; color: #ffffff;}
+/* 리플 바디 */
+#replyContainer #rpView #rpViewBody {}
 
-#replyTable tr #rpth {text-align: center; background: orange; color: #ffffff;}
+#updelbtn {font-size: 0.9em; color: orange;}
 
-#replyTable tr td span {font-size: 0.8em; color: orange; text-decoration: none; cursor: pointer;}
+#rpDate {font-size: 0.8em; color: gray;}
