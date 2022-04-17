@@ -62,7 +62,7 @@
 					<ul class="si">
 						<li><a href="memberlist.si">회원목록</a></li>
 						<li><a href="mvUplodeForm.mv">영화등록</a></li>
-						<li><a href="#">이벤트등록</a></li>
+						<li><a href="eventWriteForm.ev">이벤트등록</a></li>
 						<li><a href="logout.si">로그아웃</a></li>
 					</ul>
 				</div>
