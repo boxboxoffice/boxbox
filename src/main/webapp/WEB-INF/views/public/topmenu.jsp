@@ -41,7 +41,7 @@
 				<a href="store.st">스토어</a>
 			</div> -->
 		<div class="signin">
-			<c:if test="${empty id }">
+			<c:if test="${empty id}">
 				<a href="signInForm.do" class="login">로그인</a>
 				<a href="signUpForm.si">회원가입</a>
 			</c:if>
