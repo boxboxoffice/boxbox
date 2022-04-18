@@ -56,5 +56,8 @@
 	<select id="getCodeTotal" resultType="integer">
 		select count(*) from review where mvCode=#{mvCode} and rvDel='n'
 	</select>
+	<select id="gradeSUM" resultType="integer" >
+		select sum(mvGrade) from review where mvCode = #{mvCode} 
+	</select>
 </mapper>
 

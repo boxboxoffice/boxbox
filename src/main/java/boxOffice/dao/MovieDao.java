@@ -153,8 +153,8 @@ public String selectTitle(int mvCode) {
 	public int getGrade(int mvCode) {
 		return (int)session.selectOne("moviens.getGrade",mvCode);
 	}
-	public int updateGrade(int gradeUp, int mvCode) {
-		HashMap<String, Integer> map = new HashMap<String,Integer>();
+	public int updateGrade(double gradeUp, int mvCode) {
+		HashMap<String, Object> map = new HashMap<String,Object>();
 		map.put("gradeUp", gradeUp);
 		map.put("mvCode", mvCode);
 		return (int)session.update("moviens.updateGrade",map);

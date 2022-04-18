@@ -98,4 +98,7 @@ public class ReviewDao {
 	public String selectId(int rvNum) {
 		return (String) session.selectOne("reviewns.selectId", rvNum);
 	}
+	public int gradeSUM(int mvCode) {
+		return (int) session.selectOne("reviewns.gradeSUM", mvCode);
+	}
 }

@@ -2,6 +2,7 @@
 
 .mymenu {
 	display: flex;
+	padding-top: 120px;
 }
 .mym {
     border: solid 0px;

@@ -44,15 +44,31 @@ public class ReviewWrite implements CommandProcess {
 		ReviewDao rd = ReviewDao.getInstance();
 		rd.mvCodeUpdate(review);	// 영화코드 변경
 		
+		int startGrade = 0;
+		if (mvCode == 1) {
+			startGrade = 9;
+		} else if (mvCode == 4) {
+			startGrade = 8;
+		} else if (mvCode == 6) {
+			startGrade = 6;
+		} else if (mvCode == 9) {
+			startGrade = 7;
+		} else if (mvCode == 16) {
+			startGrade = 8;
+		} else if (mvCode == 18) {
+			startGrade = 5;
+		}
+		
 		MovieDao mv = MovieDao.getInstance();
 		int nowGrade = mv.getGrade(mvCode);	// 현재 평균 평점 가져오기
-		int mvCodeCount = rd.getCodeTotal(mvCode);		//	영화별 리뷰 갯수 가져오기
+		double mvCodeCount = rd.getCodeTotal(mvCode);		//	영화별 리뷰 갯수 가져오기
 		
 		if (mvCodeCount == 0) {
-			int gradeUp = (nowGrade+mvGrade)/2;
+			double gradeUp = (nowGrade+mvGrade)/2.0;
 			mv.updateGrade(gradeUp, mvCode);
 		} else {
-			int gradeUp = (nowGrade+mvGrade)/(mvCodeCount+1);
+			int gradeSUM = rd.gradeSUM(mvCode);
+			double gradeUp = Math.round(((startGrade+mvGrade+gradeSUM)/(mvCodeCount+2.0)*10.0))/10.0;
 			mv.updateGrade(gradeUp, mvCode);
 		}
 		
