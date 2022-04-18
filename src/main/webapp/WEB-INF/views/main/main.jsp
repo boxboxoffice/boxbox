@@ -46,7 +46,7 @@
  	 <iframe src="https://www.youtube.com/embed/DBwgHR11A9g?autoplay=1&mute=1" title="YouTube video player" 
  	 			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
  	 			gyroscope; picture-in-picture" allowfullscreen>
- 	 </iframe>
+ 	 	</iframe>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">❮</a>
