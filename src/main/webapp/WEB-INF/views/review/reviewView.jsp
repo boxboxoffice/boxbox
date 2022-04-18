@@ -12,13 +12,19 @@
 <script type="text/javascript">
 	function replyUpdate(rpNum) {
 		var rpUpdate = document.getElementById("rpUpdate"+rpNum);
-		console.log(rpUpdate);
 		rpUpdate.style.display = "block";
+	}
+	function nestedReply(rpNum) {
+		var nestedReply = document.getElementById("nestedReply"+rpNum);
+		nestedReply.style.display = "block";
 	}
 	function closeReply(rpNum) {
 		var rpUpdate = document.getElementById("rpUpdate"+rpNum);
-		console.log(rpUpdate);
 		rpUpdate.style.display = "none";
+	}
+	function closeNestedReply(rpNum) {
+		var nestedReply = document.getElementById("nestedReply"+rpNum);
+		nestedReply.style.display = "none";
 	}
 	function replyDel(rpNum) {
 		var con = confirm("댓글을 삭제하시겠습니까?");
@@ -127,44 +133,91 @@
 	<div id="rpView">
 		<div id="rpViewHeader" align="center">댓글[${replyCount }]</div><br />
 		<c:forEach items="${rpList2 }" var="reply">
-		<c:if test="${reply.rpDel eq 'm' }">
-			<span style="font-weight: bold;">관리자에 의해 삭제된 댓글입니다.</span>
-			<hr>
-		</c:if>
-		<c:if test="${not empty rpList2}">
-		<c:if test="${reply.rpDel eq 'n' }">
-		<div id="rpViewBody">
-			<span style="font-weight: bold;">${reply.id }</span>
-			<c:if test="${reply.id eq review.id}">
-				<span style="font-size: 0.8em; color: orange;">🧡작성자🧡</span>
+		
+		<!-- 대댓글 -->
+			<c:if test="${reply.rpDel eq 'm' }">
+				<span style="font-weight: bold;">관리자에 의해 삭제된 댓글입니다.</span>
+				<hr>
 			</c:if>
-			<c:if test="${id eq 'master'}">
-					<span onclick="replyMasterDel(${reply.rpNum})" id="updelbtn">관리자삭제</span>
+			<c:if test="${not empty rpList2}">
+				<c:if test="${reply.rpDel eq 'n' }">
+					<c:if test="${reply.ref_level > 0 }">
+						<img src="images/reply/level.gif" style="height: 5" width="${reply.ref_level*20}">
+						<span style="font-weight: bold;">${reply.id }</span>
+						<c:if test="${reply.id eq review.id}">
+							<span style="font-size: 0.8em; color: orange;">🧡작성자🧡</span>
+						</c:if>
+						<c:if test="${id eq 'master'}">
+								<span onclick="replyMasterDel(${reply.rpNum})" id="updelbtn">관리자삭제</span>
+						</c:if>
+						<c:if test="${reply.id eq id }">
+						<input type="hidden" value="${reply.rpNum }">
+						<input type="hidden" value="${review.rvNum }">
+							<span onclick="replyUpdate(${reply.rpNum})" id="updelbtn">&nbsp수정&nbsp</span>
+							<span onclick="replyDel(${reply.rpNum})" id="updelbtn">삭제</span>
+						</c:if><br />
+						<img src="images/reply/level.gif" style="height: 5" width="${reply.ref_level*20}">
+						<span id="rpContent">${reply.rpContent }</span><br>
+						<img src="images/reply/level.gif" style="height: 5" width="${reply.ref_level*20}">
+						<span id="rpDate">${reply.rpDate }&nbsp</span>
+						<c:if test="${id ne null }">
+							<span onclick="nestedReply(${reply.rpNum})" id="nestedReplyBtn">답글쓰기</span>
+						</c:if>
+					</c:if>
+				</c:if>
 			</c:if>
-			<c:if test="${reply.id eq id }">
-			<input type="hidden" value="${reply.rpNum }">
-			<input type="hidden" value="${review.rvNum }">
-				<span onclick="replyUpdate(${reply.rpNum})" id="updelbtn">&nbsp수정&nbsp</span>
-				<span onclick="replyDel(${reply.rpNum})" id="updelbtn">삭제</span>
-			</c:if><br />
-			<span id="rpContent">${reply.rpContent }</span><br>
-			<span id="rpDate">${reply.rpDate }&nbsp</span>
-			<span onclick="nestedReply(${reply.rpNum})" id="nestedReplyBtn">답글쓰기</span>
+			
+		<!-- 일반댓글 -->
+			<c:if test="${reply.rpDel eq 'm' }">
+				<span style="font-weight: bold;">관리자에 의해 삭제된 댓글입니다.</span>
+				<hr>
+			</c:if>
+			<c:if test="${not empty rpList2}">
+				<c:if test="${reply.ref_level == 0 }">
+					<c:if test="${reply.rpDel eq 'n' }">
+						<span style="font-weight: bold;">${reply.id }</span>
+						<c:if test="${reply.id eq review.id}">
+							<span style="font-size: 0.8em; color: orange;">🧡작성자🧡</span>
+						</c:if>
+						<c:if test="${id eq 'master'}">
+								<span onclick="replyMasterDel(${reply.rpNum})" id="updelbtn">관리자삭제</span>
+						</c:if>
+						<c:if test="${reply.id eq id }">
+						<input type="hidden" value="${reply.rpNum }">
+						<input type="hidden" value="${review.rvNum }">
+							<span onclick="replyUpdate(${reply.rpNum})" id="updelbtn">&nbsp수정&nbsp</span>
+							<span onclick="replyDel(${reply.rpNum})" id="updelbtn">삭제</span>
+						</c:if><br />
+						<span id="rpContent">${reply.rpContent }</span><br>
+						<span id="rpDate">${reply.rpDate }&nbsp</span>
+						<c:if test="${id ne null }">
+							<span onclick="nestedReply(${reply.rpNum})" id="nestedReplyBtn">답글쓰기</span>
+						</c:if>
+					</c:if>
+				</c:if>
+			</c:if>
 			<br>
+			
 			
 			<!-- 댓글 수정창 -->
 			<div id="rpUpdate${reply.rpNum }" style="display: none;"><br>
-				<form action="replyUpdate.rp?rvNum=${review.rvNum}&rpNum=${reply.rpNum }" method="post" class="rpupdate_frm">
-					<textarea rows="3" cols="115" name="rpContent" required="required" placeholder="댓글을 입력해 주세요 (최대 200자)" maxlength="200"  id="rpUpTA"></textarea>
+				<form action="replyUpdate.rp?rvNum=${review.rvNum}&rpNum=${reply.rpNum }" method="post" class="rpUpdate_frm">
+					<textarea rows="3" cols="115" name="rpContent" required="required" placeholder="수정할 댓글을 입력해 주세요 (최대 200자)" maxlength="200"  id="rpUpTA"></textarea>
 					<span class="btn btn-outline-dark btn-sm" onclick="closeReply(${reply.rpNum})" id="subCloBtn">취소</span>
 					<input class="btn btn-outline-dark btn-sm" type="submit" value="댓글수정" id="subCloBtn" style="margin-right: 5px;">
 				</form>
 				<br>
 			</div>
+			<!-- 대댓글 창 -->
+			<div id="nestedReply${reply.rpNum }" style="display: none;"><br>
+				<form action="replyWrite.rp?rvNum=${review.rvNum}&rpNum=0&ref=${reply.rpNum }&ref_level=1&ref_step=0" method="post" class="nestedReply_frm">
+					<textarea rows="3" cols="115" name="rpContent" required="required" placeholder="답글을 입력해 주세요 (최대 200자)" maxlength="200"  id="rpUpTA"></textarea>
+					<span class="btn btn-outline-dark btn-sm" onclick="closeNestedReply(${reply.rpNum})" id="subCloBtn">취소</span>
+					<input class="btn btn-outline-dark btn-sm" type="submit" value="답글등록" id="subCloBtn" style="margin-right: 5px;">
+				</form>
+				<br>
+			</div>
 			<hr>
-		</div>
-		</c:if>
-		</c:if>
 		</c:forEach>
 	</div>	
 	
@@ -191,7 +244,7 @@
 		<button class="btn btn-outline-dark btn-sm" onclick="reviewDel()">삭제</button>
 		<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewUpdateForm.rv?rvNum=${review.rvNum}&pageNum=${pageNum }'">수정</button>
 	</c:if>
-	<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewMain.rv?pageNum=${pageNum}'">목록</button>
+	<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewMain.rv?pageNum=${pageNum}&mvCode=${review.mvCode }'">목록</button>
 	<button class="btn btn-outline-dark btn-sm" onclick="location.href='reviewLike.rv?rvNum=${review.rvNum}&id=${id}'">추천👍🏽</button>
 </div>
 

@@ -14,28 +14,30 @@ public class ReplyWrite implements CommandProcess {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
 		String id = (String) session.getAttribute("id");
-
+		
+		String rpContent = request.getParameter("rpContent");
 		int rvNum = Integer.parseInt(request.getParameter("rvNum"));
 		int rpNum = Integer.parseInt(request.getParameter("rpNum"));
-		String rpContent = request.getParameter("rpContent");
 		int ref = Integer.parseInt(request.getParameter("ref"));
-
 		Reply reply = new Reply();
+		reply.setRpContent(rpContent);
 		reply.setId(id);
 		reply.setRvNum(rvNum);
 		reply.setRpNum(rpNum);
-		reply.setRpContent(rpContent);
 		reply.setRef(ref);
+		
+		if (ref != 0) { // 답변글일 때 ref는 답변할 글의 replyNum
 
-		if (ref != 0) {
+			ReplyDao rd = ReplyDao.getInstance();
 
-			ReplyDao rpd = ReplyDao.getInstance();
-			
-			int ref_step = rpd.selectStep(ref);
+			int ref_step = rd.selectStep(ref);
 			reply.setRef_level(1);
 			reply.setRef_step(ref_step);
+
 			
-			int resultRe = rpd.insertRe(reply);
+			int resultRe = rd.insertRe(reply);
+			ReviewDao rvd = ReviewDao.getInstance();
+			rvd.addCount(rvNum);
 
 			request.setAttribute("resultRe", resultRe);
 			request.setAttribute("rvNum", rvNum);
@@ -48,9 +50,9 @@ public class ReplyWrite implements CommandProcess {
 			reply.setRef_step(ref_step);
 			reply.setRef_level(ref_level);
 			
-			ReplyDao rpd = ReplyDao.getInstance();
+			ReplyDao rd = ReplyDao.getInstance();
 			
-			int result = rpd.insert(reply);
+			int result = rd.insert(reply);
 			ReviewDao rvd = ReviewDao.getInstance();
 			rvd.addCount(rvNum);
 			
@@ -60,5 +62,6 @@ public class ReplyWrite implements CommandProcess {
 		
 		
 		return "replyWrite";
-	} 
+	}
+
 }

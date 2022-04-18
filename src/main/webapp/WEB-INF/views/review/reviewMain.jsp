@@ -55,12 +55,15 @@
 						</c:if>
 						<c:if test="${review.rvDel != 'y' and review.rvDel != 'm' }">
 							<c:if test="${review.rpCount ne 0 }">
-								<td width="30%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }[${review.rpCount }]</a></td>
+								<td width="30%">
+									<a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}" id="rvTitle">${review.rvTitle }</a>
+									<a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}" id="rpCount">[${review.rpCount }]</a>
+								</td>
 							</c:if>
 							<c:if test="${review.rpCount eq 0 }">
-								<td width="30%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }</a></td>
+								<td width="30%"><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}" id="rvTitle">${review.rvTitle }</a></td>
 							</c:if>
-							<td>${review.mvTitle }</td>
+							<td id="mvTitle">${review.mvTitle }</td>
 							<td>${review.id }</td>
 							<td>⭐${review.mvGrade }</td>
 							<td>${review.rvLike }</td>

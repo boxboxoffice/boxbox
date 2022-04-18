@@ -32,3 +32,13 @@ body {font-family:  'Arita-dotum-Medium';}
 #subCloBtn {float: right;}
 /* 댓글등록버튼 */
 #rpBtn {float: right;}
+
+/* .re {
+	float: left;
+    display: inline-block;
+    border-left: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+    width: 11px;
+    height: 11px;
+    margin: 17px;
+} */

@@ -2,10 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="replyns">
-	<!-- ref_step 구하기 -->
-	<select id="selectStep" parameterType="integer" resultType="integer">
-		select nvl(max(ref_step), 0) + 1 ref_step from reply where ref = #{ref }
-	</select>
 	<!-- 게시글별 댓글 카운트 -->
 	<select id="rpList" parameterType="integer" resultType="reply"> 
 		select * from (select rowNum rn, e.* from (select * from reply where rvNum = #{rvNum} 
@@ -23,6 +19,9 @@
 		</selectKey>
 		insert into reply values(#{rpNum}, #{rvNum }, #{rpContent}, #{id }, sysdate, 'n', #{rpNum }, #{ref_level}, #{ref_step})
 	</insert>
+	<select id="selectStep" parameterType="integer" resultType="integer">
+		select nvl(max(ref_step), 0) + 1 ref_step from reply where ref = #{ref }
+	</select>
 	<insert id="insertRe" parameterType="reply">
 		<selectKey keyProperty="rpNum" order="BEFORE" resultType="integer">
 			select nvl(max(rpNum), 0) + 1 rpNum from reply
