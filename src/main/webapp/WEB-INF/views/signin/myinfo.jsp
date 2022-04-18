@@ -23,7 +23,7 @@
 <body>
 <div class="mymenu">
 	<div class="mym">
-		<ul>
+			<ul>
 			<li><a href="myReview.si">작성한 리뷰</a></li>
 			<li><a href="reviewWriteForm.rv">리뷰 작성</a></li>
 			<li><a href="myticket.si">예매 내역</a></li>
