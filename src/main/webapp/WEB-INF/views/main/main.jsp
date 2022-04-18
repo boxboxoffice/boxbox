@@ -16,12 +16,55 @@
        font-weight: normal;
        font-style: normal;
    }
-   body {font-family:  'Arita-dotum-Medium';}
 </style>
 </head>
 <link href="css/main.css?update" rel="stylesheet" type="text/css">
 <body>
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
+<br />
+<br />
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <iframe src="https://www.youtube.com/embed/mI9oyFMUlfg?autoplay=1&mute=1 " title="YouTube video player" 
+				frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+				encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <iframe src="https://www.youtube.com/embed/9Z79vlm3zW8?autoplay=1&mute=1" title="YouTube video player" 
+  			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+  			gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+ 	 <iframe src="https://www.youtube.com/embed/DBwgHR11A9g?autoplay=1&mute=1" title="YouTube video player" 
+ 	 			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+ 	 			gyroscope; picture-in-picture" allowfullscreen>
+ 	 </iframe>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
 <p class=rank>박스오피스</p>
 <div id="mv">
 	<c:forEach var="movie" items="${list }">
@@ -48,5 +91,33 @@
 <br />
 <footer><div id="footer"><jsp:include page="../public/footer.jsp"></jsp:include></div></footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </body>
 </html> 
