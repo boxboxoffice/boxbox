@@ -38,5 +38,6 @@ public class StoreDao {
 	public List<Store> callList() {
 		return session.selectList("storest.callList");
 	}
+	
 
 }
