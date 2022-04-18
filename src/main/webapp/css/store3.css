@@ -5,17 +5,20 @@
 }
 
 body {
-font-family: 'Arita-dotum-Medium';
+ font-family: 'Arita-dotum-Medium';
   margin: 0;
   min-width: 992px;
 }
 
+#maincontent{
+	margin-top:5%;
+}
 
 #title1{
 	color: black;
 	font-size: 200%;
 	position: absolute;
-	top: 20px;
+	top: 7%;
 	left: 170px;
 	width :1300px;
 	position: absolute;
@@ -40,8 +43,9 @@ font-family: 'Arita-dotum-Medium';
 
 #main1{
 	position: absolute;
-	margin-top :5%;
+	margin-top :15%;
 	margin-left:5%;
+	height:400px;
 }
 section button:hover{
 	box-shadow:0 0 0 0 rgba(0,0,0,0.25) inset;
@@ -50,7 +54,6 @@ section button:hover{
 
 
 #payInfoTable{
-	margin-top : 10%;
 	margin-left : 40%;
 }
 
