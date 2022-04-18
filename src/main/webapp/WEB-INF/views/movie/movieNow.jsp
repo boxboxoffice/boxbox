@@ -78,7 +78,7 @@ ${val.openDate } 개봉 --%>
 </table>
 </div>
 </c:forEach>
-
+<br><br>
 <br>
 <div align="center">
 <c:if test="${empty list }">

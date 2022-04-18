@@ -66,17 +66,18 @@
 							<tr>
 							</tr>
 							<tr>
-								<br>
-								<br>
+								<br><br>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</c:forEach>
-			<br>
+			<br><br><br>
 			<div align="center">
 				<c:if test="${empty list }">${"등록된 영화가 존재하지 않습니다" }<br>
 				</c:if>
+				
+		
 				<c:if test="${startPage>PAGE_PER_BLOK}">
 					<button class="btn btn-outline-dark btn-sm" onclick="location.href='movieNotyet.mv?pageNum=${startPage-1}'">이전</button>
 				</c:if>

@@ -52,6 +52,7 @@
       <a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
       </c:if>
     </form>
+    <br>
 <a id="title2"> MovieInfo </a>
 <div id="movieInfoBox">
 <div id="movieList" style="top:20px; font-size:100%">
