@@ -11,6 +11,7 @@ public class Store2 implements CommandProcess {
 		
 		
 		String image =request.getParameter("image");
+		System.out.println(image);
 		String pdName =request.getParameter("pdName");
 		
 		

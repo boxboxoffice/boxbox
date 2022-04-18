@@ -33,7 +33,8 @@
     <div class="products">
     
 	<c:forEach  items="${list7 }" var="val">
-      <a href="store2.st">
+      <a href="store2.st?pdCode=${val.pdCode }">
+      <input type="hidden" name="image" value="${val.image }">
 	        <img src="images/store/${val.image }">
 	        <p>${val.pdName }</p>
 	        <p class="price">${val.pdPrice}</p>
