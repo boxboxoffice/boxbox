@@ -140,6 +140,8 @@
    body {font-family:  'Arita-dotum-Medium';}
  * {box-sizing: border-box}
 .mySlides {display: none}
+
+
 iframe {
 	vertical-align: middle;
 	width: 100%;
