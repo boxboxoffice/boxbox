@@ -52,16 +52,17 @@
       <a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
       </c:if>
     </form>
-    <br>
+    <br><br><br><br>
 <a id="title2"> MovieInfo </a>
 <div id="movieInfoBox">
+<a href=https://www.youtube.com/watch?v=W7edvITC9g4><img alt="포스터" src="images/posters/${movie.poster }" width="360"></a>
+</div>
+<br>
 <div id="movieList" style="top:20px; font-size:100%">
-<a href="#"><img alt="포스터" src="images/posters/${movie.poster }" width="360"></a>
-<br><br>
 <table class="movieTable2">
 <tbody>
 <tr>
-<td width="900px"><b>제목: </b>${movie.mvTitle }</td>
+<td width="500px"><b>제목: </b>${movie.mvTitle }</td>
 </tr>
 <tr>
 <td><b>장르: </b>${movie.genre }</td>
@@ -90,7 +91,7 @@
 <td><b>영화 정보: </b></td>
 </tr>
 <tr>
-<td>${movie.mvInfo }</td>
+<td><pre id="textarea">${movie.mvInfo }</pre></td>
 </tr>
 <tr>
 <td><b>줄거리: </b></td> 
@@ -98,7 +99,7 @@
 <tr>
 <td><pre id="textarea">${movie.mvContent }</pre></td>
 </tr>
-<tr height="50px"></tr>
+<tr height="50px" ></tr>
 <tr>
 	<c:if test="${val.mvTag eq 1}">
     <td><a href="reviewNowClosedList.rv?mvCode=${movie.mvTitle }" style="width:300px; text-align:center" class="button2"><b> Review </b></a></td>
