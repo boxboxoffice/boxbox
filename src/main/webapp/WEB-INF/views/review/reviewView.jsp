@@ -58,7 +58,6 @@
 	<img alt="logo" src="images/logo/boxoffice.png" height="60px" width="60px"> Rievew</a>
 </div>
 
-<input type="hidden" name="mvCode" value="${mvCode}">
 <!-- 메인테이블 -->
 <div id="mainContainer" align="center">
 	<table id="mainTable" class="table table-hover">
@@ -117,7 +116,7 @@
 		</tr>
 		<tr>
 			<th colspan="1">제목</th>
-			<td colspan="5" id="rvTitle">${review.rvTitle }</td>
+			<td colspan="5" id="rvTitle">${review.rvTitle }${mvCode}</td>
 		</tr>
 		<tr>
 			<th colspan="1">내용</th>
