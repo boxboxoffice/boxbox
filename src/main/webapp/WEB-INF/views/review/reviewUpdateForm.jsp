@@ -22,6 +22,7 @@
 <header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
 	<div id="mainContainer" align="center">
 		<form action="reviewUpdate.rv" method="post" name="frm" onsubmit="return chk()">
+		<input type="hidden" name="mvCode" value=${mvCode }>
 		<input type="hidden" name="rvNum" value="${rvNum }">
 		<input type="hidden" name="pageNum" value="${pageNum}">
 			<table id="mainTable" class="table table-hover">
