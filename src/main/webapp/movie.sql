@@ -15,7 +15,7 @@ poster VARCHAR2(300), -- 포스터
 mvInfo VARCHAR2(2000), -- 영화 정보
 mvContent VARCHAR2(4000), --줄거리
 mvPrice NUMBER,--영화가격
-mvGrade NUMBER(2, 1), -- 평점
+mvGrade NUMBER, -- 평점
 movieStar NUMBER(10), -- 평점(별)
 mvAge VARCHAR2(30) -- 관람 연령
 );

@@ -17,6 +17,7 @@
 		    font-weight: normal;
 		    font-style: normal;
 	    }
+	  #logoImage {width: 80%; margin-left:auto; margin-right:auto;}
 </style>
 </head>
 <body>
@@ -26,8 +27,12 @@
 
 <section>
 <div id="maincontent">
-		<a id="title1" href="myinfo.si" class="mymenu"><img alt="로고" src="images/logo/boxoffice.png" height="70px" width="70px">마이페이지</a> 
-		 <a id="title2">| 예약정보</a>
+		<!-- 로고이미지 링크 -->
+	<div id="logoImage">
+		<a class="navbar-brand" href="myinfo.si" style="font-size: 1.8em; color: black;"><img alt="로고" src="images/logo/boxoffice.png" height="60px" width="60px"> MyPage</a>&nbsp>&nbsp&nbsp&nbsp
+		<a class="navbar-brand" href="myticket.si" style="font-size: 1.5em; color: black;"><img alt="로고" src="images/logo/boxoffice.png" height="30px" width="30px"> MyTicket</a>
+	</div>	 
+	<a id="title2">| 예약정보</a>
 						
 <div id="maincontent4">
 

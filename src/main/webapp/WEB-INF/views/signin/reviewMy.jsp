@@ -16,12 +16,17 @@
        font-weight: normal;
        font-style: normal;
    }
+   #logoImage {width: 70%; margin-left:auto; margin-right:auto; margin-bottom: 50px; margin-top: 60px;}
 </style>
 </head>
 <body>
 	<!-- topNavBar -->
 	<header><div id="headbar"><jsp:include page="../public/topmenu.jsp"></jsp:include></div></header>
-	<!-- Review NavBar-->
+	<!-- 로고이미지 링크 -->
+	<div id="logoImage">
+		<a class="navbar-brand" href="myinfo.si" style="font-size: 1.8em; color: black;"><img alt="로고" src="images/logo/boxoffice.png" height="60px" width="60px"> MyPage</a>&nbsp>&nbsp&nbsp&nbsp
+		<a class="navbar-brand" href="myReview.si" style="font-size: 1.5em; color: black;"><img alt="로고" src="images/logo/boxoffice.png" height="30px" width="30px"> MyReview</a>
+	</div>
 	<!-- Review Table -->
 	<div id="mainContainer" align="center">
 	<table id="mainTable" class="table table-hover">

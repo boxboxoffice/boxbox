@@ -19,8 +19,13 @@
        font-style: normal;
    }
    body {font-family:  'Arita-dotum-Medium';}
+   #logoImage {width: 58%; margin-left:auto; margin-right:auto;}
 </style>
 <body>
+<!-- 로고이미지 링크 -->
+	<div id="logoImage">
+		<a class="navbar-brand" href="myinfo.si" style="font-size: 1.8em; color: black;"><img alt="로고" src="images/logo/boxoffice.png" height="60px" width="60px"> MyPage</a>
+	</div>
 <div class="mymenu">
 	<div class="mym">
 		<ul>
