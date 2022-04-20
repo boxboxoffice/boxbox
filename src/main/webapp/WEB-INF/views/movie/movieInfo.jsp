@@ -71,10 +71,10 @@
 <td><b>감독: </b> ${movie.director }</td>
 </tr>
 <tr>
-<c:if test="${movie.mvGrade == 0 }">
+<c:if test="${movie.mvGrade == '0' }">
 	<td><b>평점: </b>미개봉</td>
 </c:if>
-<c:if test="${movie.mvGrade != 0 }">
+<c:if test="${movie.mvGrade != '0' }">
 	<td><b>평점: </b> ⭐${movie.mvGrade }</td>
 </c:if>
 </tr>
