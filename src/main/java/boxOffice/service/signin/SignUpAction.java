@@ -20,7 +20,7 @@ public class SignUpAction implements CommandProcess {
 			String postcode = request.getParameter("postcode");
 			String roadAddress = request.getParameter("roadAddress");
 			String detailAddress = request.getParameter("detailAddress");
-			String address = postcode + roadAddress + detailAddress;
+			String address = postcode +" "+ roadAddress +" "+ detailAddress;
 			
 			Member member = new Member();
 			member.setId(id);

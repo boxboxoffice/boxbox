@@ -24,9 +24,16 @@
 <br />
 <br />
 <div class="slideshow-container">
-
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
+ 	 <iframe width="560" height="315" src="https://www.youtube.com/embed/h3rKe6DdC18?autoplay=1&mute=1" title="YouTube video player" 
+ 	 		frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+ 	 		gyroscope; picture-in-picture" allowfullscreen>
+ 	 </iframe>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
   <iframe src="https://www.youtube.com/embed/mI9oyFMUlfg?autoplay=1&mute=1 " title="YouTube video player" 
 				frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
 				encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -34,19 +41,11 @@
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
+  <div class="numbertext">3 / 3</div>
   <iframe src="https://www.youtube.com/embed/9Z79vlm3zW8?autoplay=1&mute=1" title="YouTube video player" 
   			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
   			gyroscope; picture-in-picture" allowfullscreen>
   </iframe>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
- 	 <iframe src="https://www.youtube.com/embed/DBwgHR11A9g?autoplay=1&mute=1" title="YouTube video player" 
- 	 			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
- 	 			gyroscope; picture-in-picture" allowfullscreen>
- 	 	</iframe>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">❮</a>

@@ -24,7 +24,7 @@
 	select * from (select rowNum rn, a.* from(select * from movie where mvTag = 1 order by mvCode )a) where rn between #{startRow} and #{endRow} 
 	</select>
 	<select id="selectComingList" resultType="movie">
-	select * from (select rowNum rn, a.* from(select * from movie where mvTag = 3 order by mvCode )a) where rn between #{startRow} and #{endRow}
+	select * from (select rowNum rn, a.* from(select * from movie where mvTag = 3 order by openDate )a) where rn between #{startRow} and #{endRow}
 	</select>
 	
 	<select id="searchMovielist" resultType="movie">
