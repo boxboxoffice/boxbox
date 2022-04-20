@@ -52,7 +52,7 @@
       <a id="category3" class="mymenu" href="movieClosed.mv">상영 종료</a>
       </c:if>
     </form>
-    <br><br><br><br>
+    <br><br>
 <a id="title2"> MovieInfo </a>
 <div id="movieInfoBox">
 <a href=https://www.youtube.com/watch?v=W7edvITC9g4><img alt="포스터" src="images/posters/${movie.poster }" width="360"></a>

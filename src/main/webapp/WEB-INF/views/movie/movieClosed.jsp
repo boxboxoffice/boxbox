@@ -34,7 +34,7 @@
  </form>
 <a id="title2"> 상영 종료 </a>
 <div id="movieClosedBox">
-<br><br><br><br><br>
+<br><br><br>
 <c:forEach items="${list }" var="val">
 <div id="movieList${val }">
 <%-- <a href="#"><img alt="포스터" src="images/posters/${val.poster }" width="240"></a>

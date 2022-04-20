@@ -36,7 +36,7 @@
 		</form>
 		<a id="title2"> 상영 예정 </a>
 		<div id="movieNotyetBox">
-			<br><br><br><br><br>
+			<br><br><br>
 			<c:forEach items="${list }" var="val">
 			
 				<div id="movieList${val }">
