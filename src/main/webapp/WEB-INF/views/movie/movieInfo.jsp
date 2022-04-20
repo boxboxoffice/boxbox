@@ -56,6 +56,7 @@
 <a id="title2"> MovieInfo </a>
 <div id="movieInfoBox">
 <a href=https://www.youtube.com/watch?v=W7edvITC9g4><img alt="포스터" src="images/posters/${movie.poster }" width="360"></a>
+<div align="center" style="font-size: 0.8em; color: red;">* 포스터를 클릭하시면 유튜브 동영상으로 이동합니다</div>
 </div>
 <br>
 <div id="movieList" style="top:20px; font-size:100%">
