@@ -27,10 +27,6 @@
 	select * from (select rowNum rn, a.* from(select * from movie where mvTag = 3 order by openDate )a) where rn between #{startRow} and #{endRow}
 	</select>
 	
-	<select id="searchMovielist" resultType="movie">
-	select * from (select rowNum rn, a.* from(select * from movie where lower(mvTitle) like lower('%' ||  #{result} || '%') or majorActor like lower('%' ||  #{result} || '%')  or director like lower('%' ||  #{result} || '%') order by mvTitle desc,actor desc,director desc)a) where rn <![CDATA[<=]]> #{mresultnum}
-	</select>
-	
 	<select id="selectInfo" resultType="movie">
 	select * from (select rowNum rn, a.* from
 	(select * from movie where mvCode=#{mvCode} order by mvCode )a) 
@@ -46,11 +42,11 @@
 	</select>
 	
 	<update id="updateClosed" parameterType="string">
-	update movie set mvTag=1 where mvCode=#{mvCode} and mvTag=2
+		update movie set mvTag=1 where mvCode=#{mvCode} and mvTag=2
 	</update>
 	
 	<update id="updateNow" parameterType="string">
-	update movie set mvTag=2 where mvCode=#{mvCode} and mvTag=3
+		update movie set mvTag=2 where mvCode=#{mvCode} and mvTag=3
 	</update>
 	<select id="selectTitle" resultType="string" parameterType="integer">
 		select mvTitle from movie where mvCode = #{mvCode }
@@ -66,16 +62,14 @@
 	</insert>
 	
 	<select id="selectMvCode" resultType="_int">
-	select (max(mvCode)+1) mvCode from movie
+		select (max(mvCode)+1) mvCode from movie
 	</select>
 	<select id="getGrade" resultType="_int">
-	select mvGrade from movie where mvCode=#{mvCode}
+		select mvGrade from movie where mvCode=#{mvCode}
 	</select>
-	<select id="getStar" resultType="_int">
-	select movieStar from movie where mvCode=#{mvCode}
-	</select>
+	
 	<update id="updateGrade" parameterType="string">
-	update movie set mvGrade=#{gradeUp} where mvCode=#{mvCode}
+		update movie set mvGrade=#{gradeUp} where mvCode=#{mvCode}
 	</update>
 	
 </mapper>

@@ -92,15 +92,6 @@ public class MovieDao {
 		return session.selectList("moviens.selectComingList",map);
 	}
 
-	
-	@SuppressWarnings("unchecked")
-	public List<Movie> searchMovie(String result, String mresultnum) {
-		HashMap<String, String> map=new HashMap<String,String>();
-		map.put("result", result);
-		map.put("mresultnum", mresultnum);
-		return session.selectList("moviens.searchMovielist",map);
-	}
-	
 	public int updateNow(int mvCode) {
 		
 		return (int)session.update("moviens.updateNow",mvCode);
@@ -118,7 +109,7 @@ public class MovieDao {
 		return session.insert("moviens.insert", movie);
 	}
 	
-public String selectTitle(int mvCode) {
+	public String selectTitle(int mvCode) {
 		
 		return (String) session.selectOne("moviens.selectTitle", mvCode);
 	}
@@ -130,10 +121,6 @@ public String selectTitle(int mvCode) {
 	}
 	
 	
-	public int getStar(int mvCode) {
-		
-		return (int)session.selectOne("moviens.getStar",mvCode);
-	}
 	public int updateMovieStar(int nowstar, int mvCode) {
 		HashMap<String, Integer> map=new HashMap<String,Integer>();
 		map.put("nowstar", nowstar);
